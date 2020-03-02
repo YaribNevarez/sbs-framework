@@ -1,0 +1,467 @@
+
+*** Running vivado
+    with args -log platform_sbs_fixedpoint_spike_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source platform_sbs_fixedpoint_spike_0_0.tcl
+
+
+****** Vivado v2019.1.1 (64-bit)
+  **** SW Build 2580384 on Sat Jun 29 08:04:45 MDT 2019
+  **** IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source platform_sbs_fixedpoint_spike_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nevarez/work/vivado/hls'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
+Command: synth_design -top platform_sbs_fixedpoint_spike_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 23072 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1811.090 ; gain = 154.715 ; free physical = 1596 ; free virtual = 22170
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'platform_sbs_fixedpoint_spike_0_0' [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ip/platform_sbs_fixedpoint_spike_0_0/synth/platform_sbs_fixedpoint_spike_0_0.vhd:99]
+	Parameter C_S_AXI_CRTL_BUS_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_CRTL_BUS_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'sbs_fixedpoint_spike' declared at '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike.vhd:12' bound to instance 'U0' of component 'sbs_fixedpoint_spike' [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ip/platform_sbs_fixedpoint_spike_0_0/synth/platform_sbs_fixedpoint_spike_0_0.vhd:204]
+INFO: [Synth 8-638] synthesizing module 'sbs_fixedpoint_spike' [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike.vhd:58]
+	Parameter C_S_AXI_CRTL_BUS_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_CRTL_BUS_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike.vhd:98]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike.vhd:101]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike.vhd:297]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike.vhd:300]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike.vhd:304]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike.vhd:307]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike.vhd:315]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike.vhd:332]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike.vhd:336]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'sbs_fixedpoint_spike_CRTL_BUS_s_axi' declared at '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike_CRTL_BUS_s_axi.vhd:9' bound to instance 'sbs_fixedpoint_spike_CRTL_BUS_s_axi_U' of component 'sbs_fixedpoint_spike_CRTL_BUS_s_axi' [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike.vhd:404]
+INFO: [Synth 8-638] synthesizing module 'sbs_fixedpoint_spike_CRTL_BUS_s_axi' [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike_CRTL_BUS_s_axi.vhd:71]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'sbs_fixedpoint_spike_CRTL_BUS_s_axi' (1#1) [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike_CRTL_BUS_s_axi.vhd:71]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'sbs_fixedpoint_spike_add_64ns_64ns_64_2_1' declared at '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1.vhd:135' bound to instance 'sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1' of component 'sbs_fixedpoint_spike_add_64ns_64ns_64_2_1' [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike.vhd:437]
+INFO: [Synth 8-638] synthesizing module 'sbs_fixedpoint_spike_add_64ns_64ns_64_2_1' [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1.vhd:151]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0' declared at '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1.vhd:10' bound to instance 'sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U' of component 'sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0' [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1.vhd:165]
+INFO: [Synth 8-638] synthesizing module 'sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0' [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1.vhd:20]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_comb_adder' declared at '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1.vhd:112' bound to instance 'u1' of component 'sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_comb_adder' [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_comb_adder' [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1.vhd:122]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_comb_adder' (2#1) [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1.vhd:122]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_comb_adder' declared at '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1.vhd:112' bound to instance 'u2' of component 'sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_comb_adder' [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1.vhd:92]
+INFO: [Synth 8-256] done synthesizing module 'sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0' (3#1) [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'sbs_fixedpoint_spike_add_64ns_64ns_64_2_1' (4#1) [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1.vhd:151]
+INFO: [Synth 8-256] done synthesizing module 'sbs_fixedpoint_spike' (5#1) [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ipshared/43e3/hdl/vhdl/sbs_fixedpoint_spike.vhd:58]
+INFO: [Synth 8-256] done synthesizing module 'platform_sbs_fixedpoint_spike_0_0' (6#1) [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ip/platform_sbs_fixedpoint_spike_0_0/synth/platform_sbs_fixedpoint_spike_0_0.vhd:99]
+WARNING: [Synth 8-3331] design sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0 has unconnected port reset
+WARNING: [Synth 8-3331] design sbs_fixedpoint_spike has unconnected port stream_in_TLAST[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1869.809 ; gain = 213.434 ; free physical = 1571 ; free virtual = 22147
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1873.777 ; gain = 217.402 ; free physical = 1538 ; free virtual = 22115
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1873.777 ; gain = 217.402 ; free physical = 1538 ; free virtual = 22115
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ip/platform_sbs_fixedpoint_spike_0_0/constraints/sbs_fixedpoint_spike_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.srcs/sources_1/bd/platform/ip/platform_sbs_fixedpoint_spike_0_0/constraints/sbs_fixedpoint_spike_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.runs/platform_sbs_fixedpoint_spike_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.runs/platform_sbs_fixedpoint_spike_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2036.488 ; gain = 0.000 ; free physical = 1321 ; free virtual = 21913
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2042.426 ; gain = 5.938 ; free physical = 1320 ; free virtual = 21912
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 2042.426 ; gain = 386.051 ; free physical = 1410 ; free virtual = 22019
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 2042.426 ; gain = 386.051 ; free physical = 1409 ; free virtual = 22019
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.runs/platform_sbs_fixedpoint_spike_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 2042.426 ; gain = 386.051 ; free physical = 1409 ; free virtual = 22019
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'sbs_fixedpoint_spike_CRTL_BUS_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'sbs_fixedpoint_spike_CRTL_BUS_s_axi'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                              011
+*
+                  wridle |                             0010 |                              000
+                  wrdata |                             0100 |                              001
+                  wrresp |                             1000 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'sbs_fixedpoint_spike_CRTL_BUS_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                              110
+*
+                  rdidle |                              010 |                              100
+                  rddata |                              100 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'sbs_fixedpoint_spike_CRTL_BUS_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 2042.426 ; gain = 386.051 ; free physical = 1496 ; free virtual = 22094
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input     31 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               64 Bit    Registers := 3     
+	               32 Bit    Registers := 18    
+	               31 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 5     
+	                5 Bit    Registers := 6     
+	                4 Bit    Registers := 10    
+	                2 Bit    Registers := 19    
+	                1 Bit    Registers := 41    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 3     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 7     
+	   3 Input      4 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 19    
+	   4 Input      2 Bit        Muxes := 12    
+	   2 Input      1 Bit        Muxes := 28    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module sbs_fixedpoint_spike_CRTL_BUS_s_axi 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 3     
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_comb_adder 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 1     
+Module sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 3     
+	                1 Bit    Registers := 1     
+Module sbs_fixedpoint_spike 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input     31 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 3     
+	               32 Bit    Registers := 12    
+	               31 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 5     
+	                5 Bit    Registers := 5     
+	                4 Bit    Registers := 10    
+	                2 Bit    Registers := 18    
+	                1 Bit    Registers := 32    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 3     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 19    
+	   4 Input      2 Bit        Muxes := 12    
+	   2 Input      1 Bit        Muxes := 27    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design sbs_fixedpoint_spike_add_64ns_64ns_64_2_1 has unconnected port reset
+WARNING: [Synth 8-3331] design sbs_fixedpoint_spike has unconnected port stream_in_TLAST[0]
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[0]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[1]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[2]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[3]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[4]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[5]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[6]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[7]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[8]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[9]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[9]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[10]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[10]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[11]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[11]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[12]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[12]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[13]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[13]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[14]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[14]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[15]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[15]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[16]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[16]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[17]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[17]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[18]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[18]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[19]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[19]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[20]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[20]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[21]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[21]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[22]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[22]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[23]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[23]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[24]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[24]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[25]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[25]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[26]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[27]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[27]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[28]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[29]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[29]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[30]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[30]' (FDE) to 'U0/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1/sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U/bin_s1_reg[31] )
+WARNING: [Synth 8-3332] Sequential element (sbs_fixedpoint_spike_CRTL_BUS_s_axi_U/FSM_onehot_wstate_reg[0]) is unused and will be removed from module sbs_fixedpoint_spike.
+WARNING: [Synth 8-3332] Sequential element (sbs_fixedpoint_spike_CRTL_BUS_s_axi_U/FSM_onehot_rstate_reg[0]) is unused and will be removed from module sbs_fixedpoint_spike.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 2042.426 ; gain = 386.051 ; free physical = 1382 ; free virtual = 21996
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2042.426 ; gain = 386.051 ; free physical = 627 ; free virtual = 21217
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 2042.426 ; gain = 386.051 ; free physical = 584 ; free virtual = 21174
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 2042.426 ; gain = 386.051 ; free physical = 571 ; free virtual = 21161
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 2042.426 ; gain = 386.051 ; free physical = 511 ; free virtual = 21102
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 2042.426 ; gain = 386.051 ; free physical = 508 ; free virtual = 21098
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 2042.426 ; gain = 386.051 ; free physical = 581 ; free virtual = 21172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 2042.426 ; gain = 386.051 ; free physical = 599 ; free virtual = 21190
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 2042.426 ; gain = 386.051 ; free physical = 695 ; free virtual = 21286
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 2042.426 ; gain = 386.051 ; free physical = 705 ; free virtual = 21296
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    79|
+|2     |LUT1   |    67|
+|3     |LUT2   |    45|
+|4     |LUT3   |   218|
+|5     |LUT4   |   190|
+|6     |LUT5   |    33|
+|7     |LUT6   |    94|
+|8     |FDRE   |   954|
+|9     |FDSE   |     1|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------------------------------------------------+------------------------------------------------------------------+------+
+|      |Instance                                                     |Module                                                            |Cells |
++------+-------------------------------------------------------------+------------------------------------------------------------------+------+
+|1     |top                                                          |                                                                  |  1681|
+|2     |  U0                                                         |sbs_fixedpoint_spike                                              |  1681|
+|3     |    sbs_fixedpoint_spike_CRTL_BUS_s_axi_U                    |sbs_fixedpoint_spike_CRTL_BUS_s_axi                               |   294|
+|4     |    sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1             |sbs_fixedpoint_spike_add_64ns_64ns_64_2_1                         |   153|
+|5     |      sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_U |sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0              |   153|
+|6     |        u1                                                   |sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_comb_adder   |    41|
+|7     |        u2                                                   |sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_AddSubnS_0_comb_adder_0 |    10|
++------+-------------------------------------------------------------+------------------------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 2042.426 ; gain = 386.051 ; free physical = 709 ; free virtual = 21300
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 2042.426 ; gain = 217.402 ; free physical = 772 ; free virtual = 21363
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 2042.426 ; gain = 386.051 ; free physical = 785 ; free virtual = 21376
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 79 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2045.395 ; gain = 0.000 ; free physical = 617 ; free virtual = 21211
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+78 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 2045.395 ; gain = 612.555 ; free physical = 716 ; free virtual = 21308
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2045.395 ; gain = 0.000 ; free physical = 716 ; free virtual = 21308
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.runs/platform_sbs_fixedpoint_spike_0_0_synth_1/platform_sbs_fixedpoint_spike_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP platform_sbs_fixedpoint_spike_0_0, cache-ID = 5dd2f2aa3689ea73
+INFO: [Coretcl 2-1174] Renamed 6 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2069.406 ; gain = 0.000 ; free physical = 1344 ; free virtual = 21935
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.runs/platform_sbs_fixedpoint_spike_0_0_synth_1/platform_sbs_fixedpoint_spike_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file platform_sbs_fixedpoint_spike_0_0_utilization_synth.rpt -pb platform_sbs_fixedpoint_spike_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 20 11:11:55 2020...

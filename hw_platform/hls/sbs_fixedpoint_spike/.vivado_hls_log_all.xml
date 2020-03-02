@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'sum' is power-on initialization." projectName="sbs_fixedpoint_spike" solutionName="sbs_fixedpoint_spike" date="2020-02-12T09:44:56.932+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'random_value' is power-on initialization." projectName="sbs_fixedpoint_spike" solutionName="sbs_fixedpoint_spike" date="2020-02-12T09:44:56.928+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'channel_dest_V' is power-on initialization." projectName="sbs_fixedpoint_spike" solutionName="sbs_fixedpoint_spike" date="2020-02-12T09:44:56.924+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'channel_id_V' is power-on initialization." projectName="sbs_fixedpoint_spike" solutionName="sbs_fixedpoint_spike" date="2020-02-12T09:44:56.920+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'channel_user_V' is power-on initialization." projectName="sbs_fixedpoint_spike" solutionName="sbs_fixedpoint_spike" date="2020-02-12T09:44:56.910+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'channel_strb_V' is power-on initialization." projectName="sbs_fixedpoint_spike" solutionName="sbs_fixedpoint_spike" date="2020-02-12T09:44:56.906+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'channel_keep_V' is power-on initialization." projectName="sbs_fixedpoint_spike" solutionName="sbs_fixedpoint_spike" date="2020-02-12T09:44:56.904+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ip_index' is power-on initialization." projectName="sbs_fixedpoint_spike" solutionName="sbs_fixedpoint_spike" date="2020-02-12T09:44:56.901+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'sbs_fixedpoint_spike' consists of the following:&#xA;&#x9;'icmp' operation ('icmp_ln43', ../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:43) [92]  (2.78 ns)&#xA;&#x9;blocking operation 1.96 ns on control path)" projectName="sbs_fixedpoint_spike" solutionName="sbs_fixedpoint_spike" date="2020-02-12T09:44:56.819+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (4.732ns) exceeds the target (target clock period: 4ns, clock uncertainty: 0.5ns, effective delay budget: 3.5ns)." projectName="sbs_fixedpoint_spike" solutionName="sbs_fixedpoint_spike" date="2020-02-12T09:44:56.815+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Loop contains subloop(s) not being unrolled or flattened." projectName="sbs_fixedpoint_spike" solutionName="sbs_fixedpoint_spike" date="2020-02-12T09:44:56.810+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:26:8) in function 'sbs_fixedpoint_spike' : &#xA;&#xA;&#xA;the outer loop is not a perfect loop because there is nontrivial logic in the loop header." projectName="sbs_fixedpoint_spike" solutionName="sbs_fixedpoint_spike" date="2020-02-12T09:44:56.769+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.1' (../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:40) in function 'sbs_fixedpoint_spike': cannot completely unroll a loop with a variable trip count." projectName="sbs_fixedpoint_spike" solutionName="sbs_fixedpoint_spike" date="2020-02-12T09:44:56.664+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

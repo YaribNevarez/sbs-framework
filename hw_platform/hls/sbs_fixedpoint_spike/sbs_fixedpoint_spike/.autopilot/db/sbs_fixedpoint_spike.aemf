@@ -1,0 +1,1079 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1581497097000">
+  <ports id="1" name="stream_in_V_data_V" type="PortType" originalName="stream_in.V.data.V" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="stream_in_V_keep_V" type="PortType" originalName="stream_in.V.keep.V" bitwidth="4">
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="stream_in_V_strb_V" type="PortType" originalName="stream_in.V.strb.V" bitwidth="4">
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="stream_in_V_user_V" type="PortType" originalName="stream_in.V.user.V" bitwidth="2">
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="stream_in_V_last_V" type="PortType" originalName="stream_in.V.last.V" bitwidth="1">
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="6" name="stream_in_V_id_V" type="PortType" originalName="stream_in.V.id.V" bitwidth="5">
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="7" name="stream_in_V_dest_V" type="PortType" originalName="stream_in.V.dest.V" bitwidth="6">
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="8" name="stream_out_V_data_V" type="PortType" originalName="stream_out.V.data.V" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="9" name="stream_out_V_keep_V" type="PortType" originalName="stream_out.V.keep.V" bitwidth="4" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="10" name="stream_out_V_strb_V" type="PortType" originalName="stream_out.V.strb.V" bitwidth="4" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="11" name="stream_out_V_user_V" type="PortType" originalName="stream_out.V.user.V" bitwidth="2" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="12" name="stream_out_V_last_V" type="PortType" originalName="stream_out.V.last.V" bitwidth="1" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="13" name="stream_out_V_id_V" type="PortType" originalName="stream_out.V.id.V" bitwidth="5" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="14" name="stream_out_V_dest_V" type="PortType" originalName="stream_out.V.dest.V" bitwidth="6" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="15" name="layerSize" type="PortType" originalName="layerSize" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="16" name="vectorSize" type="PortType" originalName="vectorSize" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <edges id="126" source_obj="//@ports.15" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="128" source_obj="//@ports.14" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="129" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="132" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="134" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="137" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="138" source_obj="//@blocks.11/@node_objs.1" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="139" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="140" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="141" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="142" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="143" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="144" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="145" edge_type="CtrlEdge" source_obj="//@blocks.12" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="146" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="147" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="151" source_obj="//@ports.0" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="152" source_obj="//@ports.1" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="153" source_obj="//@ports.2" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="154" source_obj="//@ports.3" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="155" source_obj="//@ports.4" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="156" source_obj="//@ports.5" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="157" source_obj="//@ports.6" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="159" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="160" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="161" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="168" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="170" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="172" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="174" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="176" sink_obj="//@blocks.3/@node_objs.4"/>
+  <edges id="177" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.3/@node_objs.5"/>
+  <edges id="179" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="182" sink_obj="//@blocks.4/@node_objs.1"/>
+  <edges id="183" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.4/@node_objs.2"/>
+  <edges id="186" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="187" source_obj="//@blocks.5/@node_objs.2" sink_obj="//@blocks.5/@node_objs.0" is_back_edge="1"/>
+  <edges id="188" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.5/@node_objs.0" is_back_edge="1"/>
+  <edges id="191" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.5/@node_objs.1"/>
+  <edges id="192" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.5/@node_objs.2"/>
+  <edges id="195" source_obj="//@blocks.5/@node_objs.1" sink_obj="//@blocks.5/@node_objs.3"/>
+  <edges id="196" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.5/@node_objs.3"/>
+  <edges id="197" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.5/@node_objs.3"/>
+  <edges id="199" source_obj="//@ports.0" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="200" source_obj="//@ports.1" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="201" source_obj="//@ports.2" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="202" source_obj="//@ports.3" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="203" source_obj="//@ports.4" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="204" source_obj="//@ports.5" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="205" source_obj="//@ports.6" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="207" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="208" sink_obj="//@blocks.6/@node_objs.2"/>
+  <edges id="210" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@blocks.6/@node_objs.3"/>
+  <edges id="212" source_obj="//@blocks.6/@node_objs.3" sink_obj="//@blocks.6/@node_objs.4"/>
+  <edges id="213" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.6/@node_objs.4"/>
+  <edges id="214" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.6/@node_objs.4"/>
+  <edges id="216" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="218" source_obj="//@blocks.7/@node_objs.0" sink_obj="//@blocks.7/@node_objs.1"/>
+  <edges id="219" sink_obj="//@blocks.7/@node_objs.1"/>
+  <edges id="220" source_obj="//@blocks.7/@node_objs.0" sink_obj="//@blocks.7/@node_objs.2"/>
+  <edges id="223" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.7/@node_objs.3"/>
+  <edges id="224" source_obj="//@blocks.7/@node_objs.2" sink_obj="//@blocks.7/@node_objs.4"/>
+  <edges id="225" source_obj="//@blocks.7/@node_objs.3" sink_obj="//@blocks.7/@node_objs.4"/>
+  <edges id="226" source_obj="//@blocks.7/@node_objs.4" sink_obj="//@blocks.7/@node_objs.5"/>
+  <edges id="227" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.7/@node_objs.5"/>
+  <edges id="228" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.7/@node_objs.5"/>
+  <edges id="229" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="230" source_obj="//@blocks.8/@node_objs.0" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="231" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="232" sink_obj="//@blocks.8/@node_objs.2"/>
+  <edges id="233" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="234" sink_obj="//@blocks.8/@node_objs.4"/>
+  <edges id="235" sink_obj="//@blocks.8/@node_objs.5"/>
+  <edges id="236" sink_obj="//@blocks.8/@node_objs.6"/>
+  <edges id="239" source_obj="//@blocks.8/@node_objs.7" sink_obj="//@ports.7"/>
+  <edges id="240" source_obj="//@blocks.8/@node_objs.7" sink_obj="//@ports.8"/>
+  <edges id="241" source_obj="//@blocks.8/@node_objs.7" sink_obj="//@ports.9"/>
+  <edges id="242" source_obj="//@blocks.8/@node_objs.7" sink_obj="//@ports.10"/>
+  <edges id="243" source_obj="//@blocks.8/@node_objs.7" sink_obj="//@ports.11"/>
+  <edges id="244" source_obj="//@blocks.8/@node_objs.7" sink_obj="//@ports.12"/>
+  <edges id="245" source_obj="//@blocks.8/@node_objs.7" sink_obj="//@ports.13"/>
+  <edges id="247" source_obj="//@blocks.8/@node_objs.2" sink_obj="//@blocks.8/@node_objs.7"/>
+  <edges id="248" source_obj="//@blocks.8/@node_objs.3" sink_obj="//@blocks.8/@node_objs.7"/>
+  <edges id="249" source_obj="//@blocks.8/@node_objs.4" sink_obj="//@blocks.8/@node_objs.7"/>
+  <edges id="250" source_obj="//@blocks.8/@node_objs.1" sink_obj="//@blocks.8/@node_objs.7"/>
+  <edges id="251" source_obj="//@blocks.8/@node_objs.5" sink_obj="//@blocks.8/@node_objs.7"/>
+  <edges id="252" source_obj="//@blocks.8/@node_objs.6" sink_obj="//@blocks.8/@node_objs.7"/>
+  <edges id="253" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.8/@node_objs.8"/>
+  <edges id="254" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="255" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.10/@node_objs.0"/>
+  <edges id="256" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="257" source_obj="//@blocks.11/@node_objs.0" sink_obj="//@blocks.11/@node_objs.1"/>
+  <edges id="260" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.11/@node_objs.2"/>
+  <edges id="416" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="417" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="418" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.12"/>
+  <edges id="419" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3"/>
+  <edges id="420" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.4"/>
+  <edges id="421" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.4"/>
+  <edges id="422" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.5"/>
+  <edges id="423" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.6"/>
+  <edges id="424" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.11"/>
+  <edges id="425" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.7"/>
+  <edges id="426" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.10"/>
+  <edges id="427" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.9"/>
+  <edges id="428" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.8"/>
+  <edges id="429" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.9"/>
+  <edges id="430" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.10"/>
+  <edges id="431" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.5" is_back_edge="1"/>
+  <edges id="432" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.1" is_back_edge="1"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.3/@node_objs.4"/>
+  <edges id="-1" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.5/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.7/@node_objs.3"/>
+  <edges id="-1" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.8/@node_objs.7"/>
+  <edges id="-1" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.6/@node_objs.2" sink_obj="//@blocks.6/@node_objs.3"/>
+  <edges id="-1" source_obj="//@blocks.6/@node_objs.2" sink_obj="//@blocks.7/@node_objs.2"/>
+  <blocks id="52" name="codeRepl" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_57</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="vectorSize_read" originalName="vectorSize" bitwidth="32" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataInputObjs>vectorSize</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="layerSize_read" originalName="layerSize" bitwidth="32" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>layerSize</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="add_ln46" lineNumber="46" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." rtlName="add_ln46_fu_177_p2" contextFuncName="sbs_fixedpoint_spike" bitwidth="32" opcode="add" nodeLabel="1.0" m_display="0" m_delay="2.55" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="46" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="add_ln48" lineNumber="48" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." rtlName="add_ln48_fu_182_p2" contextFuncName="sbs_fixedpoint_spike" bitwidth="32" opcode="add" nodeLabel="1.0" m_display="0" m_delay="2.55" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="48" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="_ln26" lineNumber="26" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" opcode="br" nodeLabel="1.0" m_display="0" m_delay="1.76" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="26" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <controlInputObjs>block_57</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp">
+      <validLinenumbers>46</validLinenumbers>
+      <validLinenumbers>48</validLinenumbers>
+      <validLinenumbers>26</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="57" name="block_57" type="BlockType">
+    <controlInputObjs>codeRepl</controlInputObjs>
+    <controlInputObjs>hls_label_0_end</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>hls_label_0_begin</controlOutputObjs>
+    <controlOutputObjs>block_123</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="empty" lineNumber="26" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" bitwidth="32" opcode="phi" nodeLabel="2.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="26" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <controlInputObjs>codeRepl</controlInputObjs>
+      <controlInputObjs>hls_label_0_end</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="ip_index_write_ln26" lineNumber="26" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" opcode="store" nodeLabel="2.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="26" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>phi</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="icmp_ln26" lineNumber="26" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." rtlName="icmp_ln26_fu_193_p2" contextFuncName="sbs_fixedpoint_spike" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="2.47" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="26" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="_ln26" lineNumber="26" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="26" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_123</controlInputObjs>
+      <controlInputObjs>hls_label_0_begin</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp">
+      <validLinenumbers>26</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="64" name="hls_label_0_begin" type="BlockType">
+    <controlInputObjs>block_57</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_76</controlOutputObjs>
+    <controlOutputObjs>block_80</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="icmp_ln29" lineNumber="29" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." rtlName="icmp_ln29_fu_198_p2" contextFuncName="sbs_fixedpoint_spike" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="2.47" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="29" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="empty_2" lineNumber="31" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" bitwidth="54" opcode="read" nodeLabel="2.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="31" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>stream_in_V_data_V</dataInputObjs>
+      <dataInputObjs>stream_in_V_keep_V</dataInputObjs>
+      <dataInputObjs>stream_in_V_strb_V</dataInputObjs>
+      <dataInputObjs>stream_in_V_user_V</dataInputObjs>
+      <dataInputObjs>stream_in_V_last_V</dataInputObjs>
+      <dataInputObjs>stream_in_V_id_V</dataInputObjs>
+      <dataInputObjs>stream_in_V_dest_V</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="_ln29" lineNumber="29" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="29" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_80</controlInputObjs>
+      <controlInputObjs>block_76</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp">
+      <validLinenumbers>29</validLinenumbers>
+      <validLinenumbers>31</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="76" name="block_76" type="BlockType">
+    <controlInputObjs>hls_label_0_begin</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_80</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="channel_keep_V_write_ln31" lineNumber="31" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" opcode="store" nodeLabel="2.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="31" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>read</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="channel_strb_V_write_ln31" lineNumber="31" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" opcode="store" nodeLabel="2.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="31" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>read</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="channel_user_V_write_ln31" lineNumber="31" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" opcode="store" nodeLabel="2.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="31" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>read</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="channel_id_V_write_ln31" lineNumber="31" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" opcode="store" nodeLabel="2.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="31" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>read</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="channel_dest_V_write_ln31" lineNumber="31" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" opcode="store" nodeLabel="2.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="31" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>read</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="_ln33" lineNumber="33" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="33" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <controlInputObjs>block_80</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp">
+      <validLinenumbers>31</validLinenumbers>
+      <validLinenumbers>33</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="80" name="block_80" type="BlockType">
+    <controlInputObjs>hls_label_0_begin</controlInputObjs>
+    <controlInputObjs>block_76</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_86</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="random_value_write_ln32" lineNumber="32" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" opcode="store" nodeLabel="2.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="32" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>read</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="sum_write_ln39" lineNumber="39" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" opcode="store" nodeLabel="2.0" m_display="0" m_delay="1.76" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="39" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="_ln40" lineNumber="40" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" opcode="br" nodeLabel="2.0" m_display="0" m_delay="1.76" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="40" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <controlInputObjs>block_86</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp">
+      <validLinenumbers>32</validLinenumbers>
+      <validLinenumbers>39</validLinenumbers>
+      <validLinenumbers>40</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="86" name="block_86" type="BlockType">
+    <controlInputObjs>block_80</controlInputObjs>
+    <controlInputObjs>._crit_edge28</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_94</controlOutputObjs>
+    <controlOutputObjs>hls_label_0_end</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="tmp_data_V_2" lineNumber="40" originalName="val" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" bitwidth="31" opcode="phi" nodeLabel="3.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="40" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <controlInputObjs>block_80</controlInputObjs>
+      <controlInputObjs>._crit_edge28</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="icmp_ln40" lineNumber="40" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." rtlName="icmp_ln40_fu_270_p2" contextFuncName="sbs_fixedpoint_spike" bitwidth="1" opcode="icmp" nodeLabel="3.0" m_display="0" m_delay="2.47" m_topoIndex="31" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="40" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="84" name="add_ln40" lineNumber="40" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." rtlName="add_ln40_fu_275_p2" contextFuncName="sbs_fixedpoint_spike" bitwidth="31" opcode="add" nodeLabel="3.0" m_display="0" m_delay="2.52" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="40" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="_ln40" lineNumber="40" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="40" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>hls_label_0_end</controlInputObjs>
+      <controlInputObjs>block_94</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp">
+      <validLinenumbers>40</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="94" name="block_94" type="BlockType">
+    <controlInputObjs>block_86</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_102</controlOutputObjs>
+    <controlOutputObjs>._crit_edge28</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="empty_3" lineNumber="42" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" bitwidth="54" opcode="read" nodeLabel="3.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="42" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>stream_in_V_data_V</dataInputObjs>
+      <dataInputObjs>stream_in_V_keep_V</dataInputObjs>
+      <dataInputObjs>stream_in_V_strb_V</dataInputObjs>
+      <dataInputObjs>stream_in_V_user_V</dataInputObjs>
+      <dataInputObjs>stream_in_V_last_V</dataInputObjs>
+      <dataInputObjs>stream_in_V_id_V</dataInputObjs>
+      <dataInputObjs>stream_in_V_dest_V</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="89" name="sum_load" lineNumber="43" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" bitwidth="64" opcode="load" nodeLabel="3.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="43" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="90" name="random_value_load" lineNumber="43" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" bitwidth="32" opcode="load" nodeLabel="3.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="43" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="92" name="icmp_ln43" lineNumber="43" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." rtlName="icmp_ln43_fu_293_p2" contextFuncName="sbs_fixedpoint_spike" bitwidth="1" opcode="icmp" nodeLabel="3.0" m_display="0" m_delay="2.77" m_isOnCriticalPath="true" m_isStartOfPath="true" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="43" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="93" name="_ln43" lineNumber="43" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="43" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>._crit_edge28</controlInputObjs>
+      <controlInputObjs>block_102</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp">
+      <validLinenumbers>42</validLinenumbers>
+      <validLinenumbers>43</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="102" name="block_102" type="BlockType">
+    <controlInputObjs>block_94</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>._crit_edge29</controlOutputObjs>
+    <controlOutputObjs>block_112</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="96" name="add_ln45" lineNumber="45" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." rtlName="sbs_fixedpoint_spike_add_64ns_64ns_64_2_1_U1" contextFuncName="sbs_fixedpoint_spike" bitwidth="64" opcode="add" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="2.63" m_topoIndex="42" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="45" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="97" name="sum_write_ln45" lineNumber="45" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" opcode="store" nodeLabel="5.0" m_display="0" m_delay="1.76" m_topoIndex="47" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="45" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>add</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="icmp_ln46" lineNumber="46" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." rtlName="icmp_ln46_fu_325_p2" contextFuncName="sbs_fixedpoint_spike" bitwidth="1" opcode="icmp" nodeLabel="5.0" m_display="0" m_delay="2.77" m_topoIndex="48" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="46" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="99" name="icmp_ln46_1" lineNumber="46" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." rtlName="icmp_ln46_1_fu_309_p2" contextFuncName="sbs_fixedpoint_spike" bitwidth="1" opcode="icmp" nodeLabel="3.0" m_display="0" m_delay="2.47" m_topoIndex="43" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="46" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="100" name="and_ln46" lineNumber="46" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." rtlName="and_ln46_fu_329_p2" contextFuncName="sbs_fixedpoint_spike" bitwidth="1" opcode="and" nodeLabel="6.0" m_display="0" m_delay="0.97" m_topoIndex="49" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="46" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="101" name="_ln46" lineNumber="46" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" opcode="br" nodeLabel="6.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="46" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>and</dataInputObjs>
+      <controlInputObjs>block_112</controlInputObjs>
+      <controlInputObjs>._crit_edge29</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp">
+      <validLinenumbers>45</validLinenumbers>
+      <validLinenumbers>46</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="112" name="block_112" type="BlockType">
+    <controlInputObjs>block_102</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>._crit_edge29</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="103" name="ip_index_load_1" lineNumber="48" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" bitwidth="32" opcode="load" nodeLabel="6.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="48" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="104" name="tmp_last_V" lineNumber="48" originalName="val" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." rtlName="tmp_last_V_fu_333_p2" contextFuncName="sbs_fixedpoint_spike" bitwidth="1" opcode="icmp" nodeLabel="6.0" m_display="0" m_delay="2.47" m_topoIndex="52" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="48" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="105" name="tmp_keep_V_1" lineNumber="50" originalName="tmp.keep.V" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" bitwidth="4" opcode="load" nodeLabel="6.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="50" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="106" name="tmp_strb_V_1" lineNumber="50" originalName="tmp.strb.V" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" bitwidth="4" opcode="load" nodeLabel="6.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="50" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="107" name="tmp_user_V_1" lineNumber="50" originalName="tmp.user.V" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" bitwidth="2" opcode="load" nodeLabel="6.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="50" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="108" name="tmp_id_V_1" lineNumber="50" originalName="tmp.id.V" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" bitwidth="5" opcode="load" nodeLabel="6.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="50" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="109" name="tmp_dest_V_1" lineNumber="50" originalName="tmp.dest.V" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" bitwidth="6" opcode="load" nodeLabel="6.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="50" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="110" name="stream_out_V_data_V_write_ln50" lineNumber="50" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" opcode="write" nodeLabel="6.0" nodeLatency="1" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="50" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>stream_out_V_data_V</dataOutputObjs>
+      <dataOutputObjs>stream_out_V_keep_V</dataOutputObjs>
+      <dataOutputObjs>stream_out_V_strb_V</dataOutputObjs>
+      <dataOutputObjs>stream_out_V_user_V</dataOutputObjs>
+      <dataOutputObjs>stream_out_V_last_V</dataOutputObjs>
+      <dataOutputObjs>stream_out_V_id_V</dataOutputObjs>
+      <dataOutputObjs>stream_out_V_dest_V</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="111" name="_ln51" lineNumber="51" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" opcode="br" nodeLabel="7.0" m_display="0" m_topoIndex="59" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="51" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <controlInputObjs>._crit_edge29</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp">
+      <validLinenumbers>48</validLinenumbers>
+      <validLinenumbers>50</validLinenumbers>
+      <validLinenumbers>51</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="114" name="._crit_edge29" type="BlockType">
+    <controlInputObjs>block_102</controlInputObjs>
+    <controlInputObjs>block_112</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>._crit_edge28</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="113" name="_ln52" lineNumber="52" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" opcode="br" nodeLabel="7.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="52" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <controlInputObjs>._crit_edge28</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp">
+      <validLinenumbers>52</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="116" name="._crit_edge28" type="BlockType">
+    <controlInputObjs>block_94</controlInputObjs>
+    <controlInputObjs>._crit_edge29</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_86</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="115" name="_ln40" lineNumber="40" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" opcode="br" nodeLabel="7.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="40" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <controlInputObjs>block_86</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp">
+      <validLinenumbers>40</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="121" name="hls_label_0_end" type="BlockType">
+    <controlInputObjs>block_86</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_57</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="118" name="ip_index_load" lineNumber="26" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" bitwidth="32" opcode="load" nodeLabel="3.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="26" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="119" name="add_ln26" lineNumber="26" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." rtlName="add_ln26_fu_314_p2" contextFuncName="sbs_fixedpoint_spike" bitwidth="32" opcode="add" nodeLabel="3.0" m_display="0" m_delay="2.55" m_topoIndex="45" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="26" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="120" name="_ln26" lineNumber="26" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="26" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+      <controlInputObjs>block_57</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp">
+      <validLinenumbers>26</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="123" name="block_123" type="BlockType">
+    <controlInputObjs>block_57</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="122" name="_ln55" lineNumber="55" fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" fileDirectory=".." contextFuncName="sbs_fixedpoint_spike" opcode="ret" nodeLabel="2.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp" linenumber="55" fileDirectory="/home/nevarez/work/vivado/hls" functionName="sbs_fixedpoint_spike"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp">
+      <validLinenumbers>55</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <regnodes realName="zext_ln43_reg_410">
+    <nodeIds>91</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln45_reg_419">
+    <nodeIds>95</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln43_reg_415">
+    <nodeIds>92</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_data_V_2_reg_158">
+    <nodeIds>81</nodeIds>
+  </regnodes>
+  <regnodes realName="sum_load_reg_405">
+    <nodeIds>89</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_keep_V_1_reg_454">
+    <nodeIds>105</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_id_V_1_reg_469">
+    <nodeIds>108</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln46_1_reg_424">
+    <nodeIds>99</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln46_reg_440">
+    <nodeIds>98</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_strb_V_1_reg_459">
+    <nodeIds>106</nodeIds>
+  </regnodes>
+  <regnodes realName="vectorSize_read_reg_364">
+    <nodeIds>42</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_dest_V_1_reg_474">
+    <nodeIds>109</nodeIds>
+  </regnodes>
+  <regnodes realName="and_ln46_reg_445">
+    <nodeIds>100</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_last_V_reg_449">
+    <nodeIds>104</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln26_reg_429">
+    <nodeIds>119</nodeIds>
+  </regnodes>
+  <regnodes realName="layerSize_read_reg_370">
+    <nodeIds>43</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_data_V_3_reg_392">
+    <nodeIds>82</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_user_V_1_reg_464">
+    <nodeIds>107</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln48_reg_381">
+    <nodeIds>50</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln40_reg_400">
+    <nodeIds>84</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln45_reg_434">
+    <nodeIds>96</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln46_reg_376">
+    <nodeIds>49</nodeIds>
+  </regnodes>
+  <regnodes realName="empty_reg_147">
+    <nodeIds>53</nodeIds>
+  </regnodes>
+  <expressionNodes realName="add_ln26_fu_314">
+    <nodeIds>119</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln46_1_fu_309">
+    <nodeIds>99</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln45_fu_299">
+    <nodeIds>95</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln40_fu_275">
+    <nodeIds>84</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_phi_fu_151">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln46_fu_329">
+    <nodeIds>100</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln26_fu_193">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_strb_V_fu_208">
+    <nodeIds>66</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_id_V_fu_216">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_last_V_fu_333">
+    <nodeIds>104</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_data_V_3_fu_266">
+    <nodeIds>82</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_dest_V_fu_220">
+    <nodeIds>69</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln43_fu_289">
+    <nodeIds>91</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln46_fu_177">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln29_fu_198">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_data_V_2_phi_fu_162">
+    <nodeIds>81</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln48_fu_182">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln46_fu_325">
+    <nodeIds>98</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="grp_fu_169">
+    <nodeIds>62</nodeIds>
+    <nodeIds>88</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln40_fu_270">
+    <nodeIds>83</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_keep_V_fu_204">
+    <nodeIds>65</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln43_fu_293">
+    <nodeIds>92</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_user_V_fu_212">
+    <nodeIds>67</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_fu_303">
+    <nodeIds>96</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="grp_load_fu_173">
+    <nodeIds>118</nodeIds>
+    <nodeIds>103</nodeIds>
+  </ioNodes>
+  <ioNodes realName="tmp_id_V_1_load_fu_354">
+    <nodeIds>108</nodeIds>
+  </ioNodes>
+  <ioNodes realName="tmp_strb_V_1_load_fu_344">
+    <nodeIds>106</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln39_store_fu_260">
+    <nodeIds>78</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_read_fu_104">
+    <nodeIds>61</nodeIds>
+    <nodeIds>87</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln31_store_fu_242">
+    <nodeIds>73</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln31_store_fu_230">
+    <nodeIds>71</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln32_store_fu_254">
+    <nodeIds>77</nodeIds>
+  </ioNodes>
+  <ioNodes realName="layerSize_read_read_fu_98">
+    <nodeIds>43</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln31_store_fu_224">
+    <nodeIds>70</nodeIds>
+  </ioNodes>
+  <ioNodes realName="tmp_keep_V_1_load_fu_339">
+    <nodeIds>105</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln26_store_fu_187">
+    <nodeIds>54</nodeIds>
+  </ioNodes>
+  <ioNodes realName="random_value_load_load_fu_285">
+    <nodeIds>90</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln31_store_fu_248">
+    <nodeIds>74</nodeIds>
+  </ioNodes>
+  <ioNodes realName="sum_load_load_fu_281">
+    <nodeIds>89</nodeIds>
+  </ioNodes>
+  <ioNodes realName="tmp_dest_V_1_load_fu_359">
+    <nodeIds>109</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln31_store_fu_236">
+    <nodeIds>72</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_write_fu_122">
+    <nodeIds>110</nodeIds>
+  </ioNodes>
+  <ioNodes realName="tmp_user_V_1_load_fu_349">
+    <nodeIds>107</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln45_store_fu_320">
+    <nodeIds>97</nodeIds>
+  </ioNodes>
+  <ioNodes realName="vectorSize_read_read_fu_92">
+    <nodeIds>42</nodeIds>
+  </ioNodes>
+  <ioPorts name="layerSize">
+    <contents name="read">
+      <nodeIds>43</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="stream_in_V_data_V">
+    <contents name="read">
+      <nodeIds>61</nodeIds>
+      <nodeIds>87</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="stream_in_V_dest_V">
+    <contents name="read">
+      <nodeIds>61</nodeIds>
+      <nodeIds>87</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="stream_in_V_id_V">
+    <contents name="read">
+      <nodeIds>61</nodeIds>
+      <nodeIds>87</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="stream_in_V_keep_V">
+    <contents name="read">
+      <nodeIds>61</nodeIds>
+      <nodeIds>87</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="stream_in_V_last_V">
+    <contents name="read">
+      <nodeIds>61</nodeIds>
+      <nodeIds>87</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="stream_in_V_strb_V">
+    <contents name="read">
+      <nodeIds>61</nodeIds>
+      <nodeIds>87</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="stream_in_V_user_V">
+    <contents name="read">
+      <nodeIds>61</nodeIds>
+      <nodeIds>87</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="stream_out_V_data_V">
+    <contents name="write">
+      <nodeIds>110</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="stream_out_V_dest_V">
+    <contents name="write">
+      <nodeIds>110</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="stream_out_V_id_V">
+    <contents name="write">
+      <nodeIds>110</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="stream_out_V_keep_V">
+    <contents name="write">
+      <nodeIds>110</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="stream_out_V_last_V">
+    <contents name="write">
+      <nodeIds>110</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="stream_out_V_strb_V">
+    <contents name="write">
+      <nodeIds>110</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="stream_out_V_user_V">
+    <contents name="write">
+      <nodeIds>110</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="vectorSize">
+    <contents name="read">
+      <nodeIds>42</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="122" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="83" stage="1" latency="1"/>
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="87" stage="1" latency="1"/>
+      <operations id="88" stage="1" latency="1"/>
+      <operations id="89" stage="1" latency="1"/>
+      <operations id="90" stage="1" latency="1"/>
+      <operations id="91" stage="1" latency="1"/>
+      <operations id="92" stage="1" latency="1"/>
+      <operations id="93" stage="1" latency="1"/>
+      <operations id="95" stage="1" latency="1"/>
+      <operations id="96" stage="2" latency="2"/>
+      <operations id="99" stage="1" latency="1"/>
+      <operations id="117" stage="1" latency="1"/>
+      <operations id="118" stage="1" latency="1"/>
+      <operations id="119" stage="1" latency="1"/>
+      <operations id="120" stage="1" latency="1"/>
+    </states>
+    <states id="5">
+      <operations id="96" stage="1" latency="2"/>
+    </states>
+    <states id="6">
+      <operations id="97" stage="1" latency="1"/>
+      <operations id="98" stage="1" latency="1"/>
+    </states>
+    <states id="7">
+      <operations id="100" stage="1" latency="1"/>
+      <operations id="101" stage="1" latency="1"/>
+      <operations id="103" stage="1" latency="1"/>
+      <operations id="104" stage="1" latency="1"/>
+      <operations id="105" stage="1" latency="1"/>
+      <operations id="106" stage="1" latency="1"/>
+      <operations id="107" stage="1" latency="1"/>
+      <operations id="108" stage="1" latency="1"/>
+      <operations id="109" stage="1" latency="1"/>
+      <operations id="110" stage="2" latency="2"/>
+    </states>
+    <states id="8">
+      <operations id="110" stage="1" latency="2"/>
+      <operations id="111" stage="1" latency="1"/>
+      <operations id="113" stage="1" latency="1"/>
+      <operations id="115" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="3">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="sbs_fixedpoint_spike" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>7</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="1" mMaxLatency="1">
+      <basicBlocks>52</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="Loop 1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1" mType="1">
+      <subRegions>4</subRegions>
+      <subRegions>5</subRegions>
+      <subRegions>6</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Region 1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>57</basicBlocks>
+      <basicBlocks>64</basicBlocks>
+      <basicBlocks>76</basicBlocks>
+      <basicBlocks>80</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="5" mTag="Loop 1.1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1" mType="1">
+      <basicBlocks>86</basicBlocks>
+      <basicBlocks>94</basicBlocks>
+      <basicBlocks>102</basicBlocks>
+      <basicBlocks>112</basicBlocks>
+      <basicBlocks>114</basicBlocks>
+      <basicBlocks>116</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="6" mTag="Region 2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>121</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="7" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>123</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

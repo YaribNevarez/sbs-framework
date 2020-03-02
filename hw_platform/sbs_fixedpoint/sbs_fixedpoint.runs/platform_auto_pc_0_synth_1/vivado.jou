@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.1 (64-bit)
+# SW Build 2580384 on Sat Jun 29 08:04:45 MDT 2019
+# IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
+# Start of session at: Thu Feb 20 11:13:10 2020
+# Process ID: 24412
+# Current directory: /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.runs/platform_auto_pc_0_synth_1
+# Command line: vivado -log platform_auto_pc_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source platform_auto_pc_0.tcl
+# Log file: /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.runs/platform_auto_pc_0_synth_1/platform_auto_pc_0.vds
+# Journal file: /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.runs/platform_auto_pc_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source platform_auto_pc_0.tcl -notrace

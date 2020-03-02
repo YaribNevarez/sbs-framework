@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.1 (64-bit)
+# SW Build 2580384 on Sat Jun 29 08:04:45 MDT 2019
+# IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
+# Start of session at: Thu Feb 20 11:13:46 2020
+# Process ID: 24785
+# Current directory: /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.runs/platform_axi_dma_0_0_synth_1
+# Command line: vivado -log platform_axi_dma_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source platform_axi_dma_0_0.tcl
+# Log file: /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.runs/platform_axi_dma_0_0_synth_1/platform_axi_dma_0_0.vds
+# Journal file: /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.runs/platform_axi_dma_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source platform_axi_dma_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nevarez/work/vivado/hls'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP platform_axi_dma_0_0, cache-ID = aa697c7b85b5228f.
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 20 11:13:55 2020...

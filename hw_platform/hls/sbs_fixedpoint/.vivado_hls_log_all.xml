@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'i' is power-on initialization." projectName="sbs_fixedpoint" solutionName="sbs_fixedpoint" date="2020-02-18T18:52:28.562+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'sum_V' is power-on initialization." projectName="sbs_fixedpoint" solutionName="sbs_fixedpoint" date="2020-02-18T18:52:28.560+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'random_value_V' is power-on initialization." projectName="sbs_fixedpoint" solutionName="sbs_fixedpoint" date="2020-02-18T18:52:28.559+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'channel_dest_V' is power-on initialization." projectName="sbs_fixedpoint" solutionName="sbs_fixedpoint" date="2020-02-18T18:52:28.558+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'channel_id_V' is power-on initialization." projectName="sbs_fixedpoint" solutionName="sbs_fixedpoint" date="2020-02-18T18:52:28.557+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'channel_last_V' is power-on initialization." projectName="sbs_fixedpoint" solutionName="sbs_fixedpoint" date="2020-02-18T18:52:28.555+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'channel_user_V' is power-on initialization." projectName="sbs_fixedpoint" solutionName="sbs_fixedpoint" date="2020-02-18T18:52:28.553+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'channel_strb_V' is power-on initialization." projectName="sbs_fixedpoint" solutionName="sbs_fixedpoint" date="2020-02-18T18:52:28.552+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'channel_keep_V' is power-on initialization." projectName="sbs_fixedpoint" solutionName="sbs_fixedpoint" date="2020-02-18T18:52:28.551+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ip_index' is power-on initialization." projectName="sbs_fixedpoint" solutionName="sbs_fixedpoint" date="2020-02-18T18:52:28.549+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'sbs_fixedpoint' consists of the following:&#xA;&#x9;'mul' operation ('mul_ln699_3', ../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint.cpp:122) [226]  (5.46 ns)" projectName="sbs_fixedpoint" solutionName="sbs_fixedpoint" date="2020-02-18T18:52:27.927+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (5.4615ns) exceeds the target (target clock period: 4ns, clock uncertainty: 0.5ns, effective delay budget: 3.5ns)." projectName="sbs_fixedpoint" solutionName="sbs_fixedpoint" date="2020-02-18T18:52:27.926+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] The II Violation in module 'sbs_fixedpoint' (Loop: Loop 1.2.1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)&#xA;   between 'store' operation ('i_write_ln105', ../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint.cpp:105) of variable 'add_ln105', ../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint.cpp:105 on static variable 'i' and 'load' operation ('i_load_1', ../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint.cpp:92) on static variable 'i'." projectName="sbs_fixedpoint" solutionName="sbs_fixedpoint" date="2020-02-18T18:52:27.872+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Loop contains subloop(s) not being unrolled or flattened." projectName="sbs_fixedpoint" solutionName="sbs_fixedpoint" date="2020-02-18T18:52:27.869+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] The II Violation in module 'sbs_fixedpoint' (Loop: Loop 1.1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)&#xA;   between 'store' operation ('sum_V_write_ln79', ../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint.cpp:79) of variable 'add_ln700', ../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint.cpp:79 on static variable 'sum_V' and 'load' operation ('sum_V_load', ../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint.cpp:77) on static variable 'sum_V'." projectName="sbs_fixedpoint" solutionName="sbs_fixedpoint" date="2020-02-18T18:52:27.866+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Loop contains subloop(s) not being unrolled or flattened." projectName="sbs_fixedpoint" solutionName="sbs_fixedpoint" date="2020-02-18T18:52:27.862+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated delay (5.46ns) of 'mul' operation ('mul_ln699_3', ../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint.cpp:122) exceeds the target cycle time (target cycle time: 4ns, clock uncertainty: 0.5ns, effective cycle time: 3.5ns)." projectName="sbs_fixedpoint" solutionName="sbs_fixedpoint" date="2020-02-18T18:52:27.861+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'wide_div' consists of the following:&#xA;&#x9;wire read on port 'divisor_V' [3]  (0 ns)&#xA;&#x9;'udiv' operation ('ret.V', ../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint.cpp:24) [6]  (5.24 ns)" projectName="sbs_fixedpoint" solutionName="sbs_fixedpoint" date="2020-02-18T18:52:27.700+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (5.23857ns) exceeds the target (target clock period: 4ns, clock uncertainty: 0.5ns, effective delay budget: 3.5ns)." projectName="sbs_fixedpoint" solutionName="sbs_fixedpoint" date="2020-02-18T18:52:27.699+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated delay (5.24ns) of 'udiv' operation ('ret.V', ../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint.cpp:24) exceeds the target cycle time (target cycle time: 4ns, clock uncertainty: 0.5ns, effective cycle time: 3.5ns)." projectName="sbs_fixedpoint" solutionName="sbs_fixedpoint" date="2020-02-18T18:52:27.688+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint.cpp:59:8) in function 'sbs_fixedpoint' : &#xA;&#xA;&#xA;more than one sub loop." projectName="sbs_fixedpoint" solutionName="sbs_fixedpoint" date="2020-02-18T18:52:27.669+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1.2' (../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint.cpp:87:10) in function 'sbs_fixedpoint' : &#xA;&#xA;&#xA;more than one sub loop." projectName="sbs_fixedpoint" solutionName="sbs_fixedpoint" date="2020-02-18T18:52:27.462+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.3' (../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint.cpp:129) in function 'sbs_fixedpoint': cannot completely unroll a loop with a variable trip count." projectName="sbs_fixedpoint" solutionName="sbs_fixedpoint" date="2020-02-18T18:52:27.428+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.2.2' (../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint.cpp:115) in function 'sbs_fixedpoint': cannot completely unroll a loop with a variable trip count." projectName="sbs_fixedpoint" solutionName="sbs_fixedpoint" date="2020-02-18T18:52:27.155+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.2.1' (../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint.cpp:92) in function 'sbs_fixedpoint' completely: variable loop bound." projectName="sbs_fixedpoint" solutionName="sbs_fixedpoint" date="2020-02-18T18:52:27.154+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.2' (../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint.cpp:87) in function 'sbs_fixedpoint' completely: variable loop bound." projectName="sbs_fixedpoint" solutionName="sbs_fixedpoint" date="2020-02-18T18:52:27.153+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.1' (../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint.cpp:73) in function 'sbs_fixedpoint': cannot completely unroll a loop with a variable trip count." projectName="sbs_fixedpoint" solutionName="sbs_fixedpoint" date="2020-02-18T18:52:27.152+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

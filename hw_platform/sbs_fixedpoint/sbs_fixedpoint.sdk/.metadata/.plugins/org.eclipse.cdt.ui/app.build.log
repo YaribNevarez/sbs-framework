@@ -1,0 +1,23 @@
+12:32:08 **** Auto Build of configuration Debug for project app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: /home/nevarez/work/GITHUB/app-framework-baremetal/libs/utilities/src/toolcom.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -I../../bsp/ps7_cortexa9_0/include -I/home/nevarez/work/GITHUB/app-framework-baremetal/libs/utilities/inc -I/home/nevarez/work/GITHUB/app-framework-baremetal/libs/sbs_neural_network/inc -I/home/nevarez/work/GITHUB/app-framework-baremetal/apps/sbs_app/inc -c -fmessage-length=0 -MT"src_util/toolcom.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"src_util/toolcom.d" -MT"src_util/toolcom.o" -o "src_util/toolcom.o" "/home/nevarez/work/GITHUB/app-framework-baremetal/libs/utilities/src/toolcom.c"
+Finished building: /home/nevarez/work/GITHUB/app-framework-baremetal/libs/utilities/src/toolcom.c
+ 
+Building target: app.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../bsp/ps7_cortexa9_0/lib -o "app.elf"  ./src_util/eventlogger.o ./src_util/miscellaneous.o ./src_util/serialport.o ./src_util/timer.o ./src_util/toolcom.o  ./src_libs/mt19937int.o ./src_libs/sbs_neural_network.o  ./src_app/main.o ./src_app/sbs_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lrsa,-lxil,-lgcc,-lc,--end-group
+Finished building target: app.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 163556	   4752	33574400	33742708	202df74	app.elf
+Finished building: app.elf.size
+ 
+
+12:32:09 Build Finished (took 465ms)
+

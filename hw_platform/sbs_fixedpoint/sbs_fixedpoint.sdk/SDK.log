@@ -1,0 +1,2455 @@
+11:34:02 INFO  : Registering command handlers for SDK TCF services
+11:34:03 INFO  : Launching XSCT server: xsct -n -interactive /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/temp_xsdb_launch_script.tcl
+11:34:05 INFO  : XSCT server has started successfully.
+11:34:05 INFO  : Successfully done setting XSCT server connection channel  
+11:34:05 INFO  : Successfully done setting SDK workspace  
+11:34:05 INFO  : Processing command line option -hwspec /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper.hdf.
+13:26:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:26:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+13:29:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:29:12 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+13:29:12 INFO  : 'jtag frequency' command is executed.
+13:29:12 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:29:12 INFO  : Context for 'APU' is selected.
+13:29:12 INFO  : System reset is completed.
+13:29:15 INFO  : 'after 3000' command is executed.
+13:29:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+13:29:17 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+13:29:17 INFO  : Context for 'APU' is selected.
+13:29:18 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+13:29:18 INFO  : 'configparams force-mem-access 1' command is executed.
+13:29:18 INFO  : Context for 'APU' is selected.
+13:29:18 INFO  : 'ps7_init' command is executed.
+13:29:18 INFO  : 'ps7_post_config' command is executed.
+13:29:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:29:19 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:29:19 INFO  : 'configparams force-mem-access 0' command is executed.
+13:29:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:29:19 INFO  : Memory regions updated for context APU
+13:29:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:29:19 INFO  : 'con' command is executed.
+13:29:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+13:29:19 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+13:31:34 INFO  : Disconnected from the channel tcfchan#1.
+13:31:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:31:35 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+13:31:35 INFO  : 'jtag frequency' command is executed.
+13:31:35 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:31:35 INFO  : Context for 'APU' is selected.
+13:31:35 INFO  : System reset is completed.
+13:31:38 INFO  : 'after 3000' command is executed.
+13:31:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+13:31:41 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+13:31:41 INFO  : Context for 'APU' is selected.
+13:31:42 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+13:31:42 INFO  : 'configparams force-mem-access 1' command is executed.
+13:31:42 INFO  : Context for 'APU' is selected.
+13:31:43 INFO  : 'ps7_init' command is executed.
+13:31:43 INFO  : 'ps7_post_config' command is executed.
+13:31:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:31:43 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:31:43 INFO  : 'configparams force-mem-access 0' command is executed.
+13:31:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:31:43 INFO  : Memory regions updated for context APU
+13:31:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:31:43 INFO  : 'con' command is executed.
+13:31:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+13:31:43 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+13:34:46 INFO  : Disconnected from the channel tcfchan#2.
+13:34:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:34:49 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+13:34:49 INFO  : 'jtag frequency' command is executed.
+13:34:49 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:34:49 INFO  : Context for 'APU' is selected.
+13:34:49 INFO  : System reset is completed.
+13:34:52 INFO  : 'after 3000' command is executed.
+13:34:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+13:34:54 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+13:34:54 INFO  : Context for 'APU' is selected.
+13:34:55 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+13:34:55 INFO  : 'configparams force-mem-access 1' command is executed.
+13:34:55 INFO  : Context for 'APU' is selected.
+13:34:56 INFO  : 'ps7_init' command is executed.
+13:34:56 INFO  : 'ps7_post_config' command is executed.
+13:34:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:34:57 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:34:57 INFO  : 'configparams force-mem-access 0' command is executed.
+13:34:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:34:57 INFO  : Memory regions updated for context APU
+13:34:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:34:57 INFO  : 'con' command is executed.
+13:34:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+13:34:57 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+13:35:23 INFO  : Disconnected from the channel tcfchan#3.
+13:35:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:35:24 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+13:35:24 INFO  : 'jtag frequency' command is executed.
+13:35:24 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:35:24 INFO  : Context for 'APU' is selected.
+13:35:24 INFO  : System reset is completed.
+13:35:27 INFO  : 'after 3000' command is executed.
+13:35:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+13:35:30 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+13:35:30 INFO  : Context for 'APU' is selected.
+13:35:31 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+13:35:31 INFO  : 'configparams force-mem-access 1' command is executed.
+13:35:31 INFO  : Context for 'APU' is selected.
+13:35:32 INFO  : 'ps7_init' command is executed.
+13:35:32 INFO  : 'ps7_post_config' command is executed.
+13:35:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:35:32 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:35:32 INFO  : 'configparams force-mem-access 0' command is executed.
+13:35:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:35:32 INFO  : Memory regions updated for context APU
+13:35:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:35:32 INFO  : 'con' command is executed.
+13:35:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+13:35:32 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+13:41:09 INFO  : Disconnected from the channel tcfchan#4.
+13:41:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:41:12 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+13:41:12 INFO  : 'jtag frequency' command is executed.
+13:41:12 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:41:12 INFO  : Context for 'APU' is selected.
+13:41:12 INFO  : System reset is completed.
+13:41:15 INFO  : 'after 3000' command is executed.
+13:41:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+13:41:17 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+13:41:17 INFO  : Context for 'APU' is selected.
+13:41:19 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+13:41:19 INFO  : 'configparams force-mem-access 1' command is executed.
+13:41:19 INFO  : Context for 'APU' is selected.
+13:41:19 INFO  : 'ps7_init' command is executed.
+13:41:19 INFO  : 'ps7_post_config' command is executed.
+13:41:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:41:19 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:41:19 INFO  : 'configparams force-mem-access 0' command is executed.
+13:41:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:41:19 INFO  : Memory regions updated for context APU
+13:41:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:41:19 INFO  : 'con' command is executed.
+13:41:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+13:41:19 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+13:43:26 INFO  : Disconnected from the channel tcfchan#5.
+13:43:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:43:32 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+13:43:32 INFO  : 'jtag frequency' command is executed.
+13:43:32 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:43:32 INFO  : Context for 'APU' is selected.
+13:43:32 INFO  : System reset is completed.
+13:43:35 INFO  : 'after 3000' command is executed.
+13:43:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+13:43:37 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+13:43:37 INFO  : Context for 'APU' is selected.
+13:43:38 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+13:43:38 INFO  : 'configparams force-mem-access 1' command is executed.
+13:43:38 INFO  : Context for 'APU' is selected.
+13:43:39 INFO  : 'ps7_init' command is executed.
+13:43:39 INFO  : 'ps7_post_config' command is executed.
+13:43:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:43:40 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:43:40 INFO  : 'configparams force-mem-access 0' command is executed.
+13:43:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:43:40 INFO  : Memory regions updated for context APU
+13:43:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:43:40 INFO  : 'con' command is executed.
+13:43:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+13:43:40 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+13:44:10 INFO  : Disconnected from the channel tcfchan#6.
+13:44:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:44:19 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+13:44:19 INFO  : 'jtag frequency' command is executed.
+13:44:19 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:44:19 INFO  : Context for 'APU' is selected.
+13:44:19 INFO  : System reset is completed.
+13:44:22 INFO  : 'after 3000' command is executed.
+13:44:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+13:44:25 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+13:44:25 INFO  : Context for 'APU' is selected.
+13:44:26 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+13:44:26 INFO  : 'configparams force-mem-access 1' command is executed.
+13:44:26 INFO  : Context for 'APU' is selected.
+13:44:27 INFO  : 'ps7_init' command is executed.
+13:44:27 INFO  : 'ps7_post_config' command is executed.
+13:44:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:44:27 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:44:27 INFO  : 'configparams force-mem-access 0' command is executed.
+13:44:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:44:27 INFO  : Memory regions updated for context APU
+13:44:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:44:27 INFO  : 'con' command is executed.
+13:44:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+13:44:27 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+13:45:40 INFO  : Disconnected from the channel tcfchan#7.
+13:45:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:45:43 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+13:45:43 INFO  : 'jtag frequency' command is executed.
+13:45:43 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:45:43 INFO  : Context for 'APU' is selected.
+13:45:43 INFO  : System reset is completed.
+13:45:46 INFO  : 'after 3000' command is executed.
+13:45:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+13:45:48 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+13:45:48 INFO  : Context for 'APU' is selected.
+13:45:50 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+13:45:50 INFO  : 'configparams force-mem-access 1' command is executed.
+13:45:50 INFO  : Context for 'APU' is selected.
+13:45:50 INFO  : 'ps7_init' command is executed.
+13:45:50 INFO  : 'ps7_post_config' command is executed.
+13:45:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:45:51 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:45:51 INFO  : 'configparams force-mem-access 0' command is executed.
+13:45:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:45:51 INFO  : Memory regions updated for context APU
+13:45:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:45:51 INFO  : 'con' command is executed.
+13:45:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+13:45:51 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+13:47:45 INFO  : Disconnected from the channel tcfchan#8.
+13:47:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:47:47 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+13:47:47 INFO  : 'jtag frequency' command is executed.
+13:47:47 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:47:47 INFO  : Context for 'APU' is selected.
+13:47:47 INFO  : System reset is completed.
+13:47:50 INFO  : 'after 3000' command is executed.
+13:47:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+13:47:53 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+13:47:53 INFO  : Context for 'APU' is selected.
+13:47:54 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+13:47:54 INFO  : 'configparams force-mem-access 1' command is executed.
+13:47:54 INFO  : Context for 'APU' is selected.
+13:47:54 INFO  : 'ps7_init' command is executed.
+13:47:54 INFO  : 'ps7_post_config' command is executed.
+13:47:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:47:55 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:47:55 INFO  : 'configparams force-mem-access 0' command is executed.
+13:47:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:47:55 INFO  : Memory regions updated for context APU
+13:47:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:47:55 INFO  : 'con' command is executed.
+13:47:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+13:47:55 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+13:52:18 INFO  : Disconnected from the channel tcfchan#9.
+13:52:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:52:22 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+13:52:22 INFO  : 'jtag frequency' command is executed.
+13:52:22 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:52:22 INFO  : Context for 'APU' is selected.
+13:52:22 INFO  : System reset is completed.
+13:52:25 INFO  : 'after 3000' command is executed.
+13:52:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+13:52:28 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+13:52:28 INFO  : Context for 'APU' is selected.
+13:52:29 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+13:52:29 INFO  : 'configparams force-mem-access 1' command is executed.
+13:52:29 INFO  : Context for 'APU' is selected.
+13:52:29 INFO  : 'ps7_init' command is executed.
+13:52:29 INFO  : 'ps7_post_config' command is executed.
+13:52:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:52:30 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:52:30 INFO  : 'configparams force-mem-access 0' command is executed.
+13:52:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:52:30 INFO  : Memory regions updated for context APU
+13:52:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:52:30 INFO  : 'con' command is executed.
+13:52:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+13:52:30 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+13:54:55 INFO  : Disconnected from the channel tcfchan#10.
+13:54:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:54:58 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+13:54:58 INFO  : 'jtag frequency' command is executed.
+13:54:58 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:54:58 INFO  : Context for 'APU' is selected.
+13:54:58 INFO  : System reset is completed.
+13:55:01 INFO  : 'after 3000' command is executed.
+13:55:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+13:55:03 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+13:55:03 INFO  : Context for 'APU' is selected.
+13:55:05 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+13:55:05 INFO  : 'configparams force-mem-access 1' command is executed.
+13:55:05 INFO  : Context for 'APU' is selected.
+13:55:05 INFO  : 'ps7_init' command is executed.
+13:55:05 INFO  : 'ps7_post_config' command is executed.
+13:55:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:55:06 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:55:06 INFO  : 'configparams force-mem-access 0' command is executed.
+13:55:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:55:06 INFO  : Memory regions updated for context APU
+13:55:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:55:06 INFO  : 'con' command is executed.
+13:55:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+13:55:06 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+13:55:45 INFO  : Disconnected from the channel tcfchan#11.
+13:55:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:55:49 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+13:55:49 INFO  : 'jtag frequency' command is executed.
+13:55:49 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:55:49 INFO  : Context for 'APU' is selected.
+13:55:50 INFO  : System reset is completed.
+13:55:53 INFO  : 'after 3000' command is executed.
+13:55:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+13:55:55 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+13:55:55 INFO  : Context for 'APU' is selected.
+13:55:56 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+13:55:56 INFO  : 'configparams force-mem-access 1' command is executed.
+13:55:56 INFO  : Context for 'APU' is selected.
+13:55:56 INFO  : 'ps7_init' command is executed.
+13:55:56 INFO  : 'ps7_post_config' command is executed.
+13:55:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:55:57 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:55:57 INFO  : 'configparams force-mem-access 0' command is executed.
+13:55:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:55:57 INFO  : Memory regions updated for context APU
+13:55:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:55:57 INFO  : 'con' command is executed.
+13:55:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+13:55:57 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+13:59:00 INFO  : Disconnected from the channel tcfchan#12.
+13:59:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:59:02 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+13:59:02 INFO  : 'jtag frequency' command is executed.
+13:59:02 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:59:02 INFO  : Context for 'APU' is selected.
+13:59:03 INFO  : System reset is completed.
+13:59:06 INFO  : 'after 3000' command is executed.
+13:59:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+13:59:08 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+13:59:08 INFO  : Context for 'APU' is selected.
+13:59:09 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+13:59:09 INFO  : 'configparams force-mem-access 1' command is executed.
+13:59:09 INFO  : Context for 'APU' is selected.
+13:59:10 INFO  : 'ps7_init' command is executed.
+13:59:10 INFO  : 'ps7_post_config' command is executed.
+13:59:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:59:10 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:59:10 INFO  : 'configparams force-mem-access 0' command is executed.
+13:59:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:59:10 INFO  : Memory regions updated for context APU
+13:59:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:59:10 INFO  : 'con' command is executed.
+13:59:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+13:59:10 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+14:00:38 INFO  : Disconnected from the channel tcfchan#13.
+14:01:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:01:46 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+14:01:46 INFO  : 'jtag frequency' command is executed.
+14:01:46 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:01:46 INFO  : Context for 'APU' is selected.
+14:01:46 INFO  : System reset is completed.
+14:01:49 INFO  : 'after 3000' command is executed.
+14:01:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+14:01:51 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+14:01:51 INFO  : Context for 'APU' is selected.
+14:01:53 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+14:01:53 INFO  : 'configparams force-mem-access 1' command is executed.
+14:01:53 INFO  : Context for 'APU' is selected.
+14:01:54 INFO  : 'ps7_init' command is executed.
+14:01:54 INFO  : 'ps7_post_config' command is executed.
+14:01:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:01:54 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:01:54 INFO  : 'configparams force-mem-access 0' command is executed.
+14:01:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:01:54 INFO  : Memory regions updated for context APU
+14:01:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:01:54 INFO  : 'con' command is executed.
+14:01:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+14:01:54 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+14:03:38 INFO  : Disconnected from the channel tcfchan#14.
+14:03:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:03:42 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+14:03:42 INFO  : 'jtag frequency' command is executed.
+14:03:42 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:03:42 INFO  : Context for 'APU' is selected.
+14:03:42 INFO  : System reset is completed.
+14:03:45 INFO  : 'after 3000' command is executed.
+14:03:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+14:03:48 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+14:03:48 INFO  : Context for 'APU' is selected.
+14:03:49 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+14:03:49 INFO  : 'configparams force-mem-access 1' command is executed.
+14:03:49 INFO  : Context for 'APU' is selected.
+14:03:50 INFO  : 'ps7_init' command is executed.
+14:03:50 INFO  : 'ps7_post_config' command is executed.
+14:03:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:03:50 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:03:50 INFO  : 'configparams force-mem-access 0' command is executed.
+14:03:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:03:50 INFO  : Memory regions updated for context APU
+14:03:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:03:50 INFO  : 'con' command is executed.
+14:03:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+14:03:50 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+14:05:42 INFO  : Disconnected from the channel tcfchan#15.
+14:05:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:05:45 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+14:05:45 INFO  : 'jtag frequency' command is executed.
+14:05:45 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:05:45 INFO  : Context for 'APU' is selected.
+14:05:45 INFO  : System reset is completed.
+14:05:48 INFO  : 'after 3000' command is executed.
+14:05:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+14:05:50 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+14:05:51 INFO  : Context for 'APU' is selected.
+14:05:52 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+14:05:52 INFO  : 'configparams force-mem-access 1' command is executed.
+14:05:52 INFO  : Context for 'APU' is selected.
+14:05:52 INFO  : 'ps7_init' command is executed.
+14:05:52 INFO  : 'ps7_post_config' command is executed.
+14:05:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:05:53 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:05:53 INFO  : 'configparams force-mem-access 0' command is executed.
+14:05:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:05:53 INFO  : Memory regions updated for context APU
+14:05:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:05:53 INFO  : 'con' command is executed.
+14:05:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+14:05:53 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+14:08:31 INFO  : Disconnected from the channel tcfchan#16.
+14:08:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:08:34 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+14:08:34 INFO  : 'jtag frequency' command is executed.
+14:08:34 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:08:34 INFO  : Context for 'APU' is selected.
+14:08:35 INFO  : System reset is completed.
+14:08:38 INFO  : 'after 3000' command is executed.
+14:08:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+14:08:40 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+14:08:40 INFO  : Context for 'APU' is selected.
+14:08:41 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+14:08:41 INFO  : 'configparams force-mem-access 1' command is executed.
+14:08:41 INFO  : Context for 'APU' is selected.
+14:08:42 INFO  : 'ps7_init' command is executed.
+14:08:42 INFO  : 'ps7_post_config' command is executed.
+14:08:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:08:42 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:08:42 INFO  : 'configparams force-mem-access 0' command is executed.
+14:08:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:08:43 INFO  : Memory regions updated for context APU
+14:08:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:08:43 INFO  : 'con' command is executed.
+14:08:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+14:08:43 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+14:10:37 INFO  : Disconnected from the channel tcfchan#17.
+14:10:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:10:41 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+14:10:41 INFO  : 'jtag frequency' command is executed.
+14:10:41 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:10:41 INFO  : Context for 'APU' is selected.
+14:10:41 INFO  : System reset is completed.
+14:10:44 INFO  : 'after 3000' command is executed.
+14:10:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+14:10:46 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+14:10:46 INFO  : Context for 'APU' is selected.
+14:10:47 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+14:10:47 INFO  : 'configparams force-mem-access 1' command is executed.
+14:10:47 INFO  : Context for 'APU' is selected.
+14:10:48 INFO  : 'ps7_init' command is executed.
+14:10:48 INFO  : 'ps7_post_config' command is executed.
+14:10:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:10:48 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:10:48 INFO  : 'configparams force-mem-access 0' command is executed.
+14:10:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:10:49 INFO  : Memory regions updated for context APU
+14:10:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:10:49 INFO  : 'con' command is executed.
+14:10:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+14:10:49 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+14:17:15 INFO  : Disconnected from the channel tcfchan#18.
+14:17:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:17:29 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+14:17:29 INFO  : 'jtag frequency' command is executed.
+14:17:29 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:17:29 INFO  : Context for 'APU' is selected.
+14:17:29 INFO  : System reset is completed.
+14:17:32 INFO  : 'after 3000' command is executed.
+14:17:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+14:17:35 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+14:17:35 INFO  : Context for 'APU' is selected.
+14:17:36 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+14:17:36 INFO  : 'configparams force-mem-access 1' command is executed.
+14:17:36 INFO  : Context for 'APU' is selected.
+14:17:37 INFO  : 'ps7_init' command is executed.
+14:17:37 INFO  : 'ps7_post_config' command is executed.
+14:17:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:17:37 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:17:37 INFO  : 'configparams force-mem-access 0' command is executed.
+14:17:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:17:37 INFO  : Memory regions updated for context APU
+14:17:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:17:38 INFO  : 'con' command is executed.
+14:17:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+14:17:38 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+14:22:46 INFO  : Disconnected from the channel tcfchan#19.
+14:22:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:22:49 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+14:22:49 INFO  : 'jtag frequency' command is executed.
+14:22:49 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:22:49 INFO  : Context for 'APU' is selected.
+14:22:49 INFO  : System reset is completed.
+14:22:52 INFO  : 'after 3000' command is executed.
+14:22:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+14:22:55 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+14:22:55 INFO  : Context for 'APU' is selected.
+14:22:56 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+14:22:56 INFO  : 'configparams force-mem-access 1' command is executed.
+14:22:56 INFO  : Context for 'APU' is selected.
+14:22:57 INFO  : 'ps7_init' command is executed.
+14:22:57 INFO  : 'ps7_post_config' command is executed.
+14:22:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:22:57 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:22:57 INFO  : 'configparams force-mem-access 0' command is executed.
+14:22:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:22:57 INFO  : Memory regions updated for context APU
+14:22:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:22:57 INFO  : 'con' command is executed.
+14:22:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+14:22:57 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+14:24:16 INFO  : Disconnected from the channel tcfchan#20.
+14:24:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:24:19 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+14:24:19 INFO  : 'jtag frequency' command is executed.
+14:24:19 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:24:19 INFO  : Context for 'APU' is selected.
+14:24:20 INFO  : System reset is completed.
+14:24:23 INFO  : 'after 3000' command is executed.
+14:24:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+14:24:25 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+14:24:25 INFO  : Context for 'APU' is selected.
+14:24:26 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+14:24:26 INFO  : 'configparams force-mem-access 1' command is executed.
+14:24:26 INFO  : Context for 'APU' is selected.
+14:24:27 INFO  : 'ps7_init' command is executed.
+14:24:27 INFO  : 'ps7_post_config' command is executed.
+14:24:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:24:27 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:24:27 INFO  : 'configparams force-mem-access 0' command is executed.
+14:24:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:24:27 INFO  : Memory regions updated for context APU
+14:24:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:24:27 INFO  : 'con' command is executed.
+14:24:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+14:24:27 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+14:25:36 INFO  : Disconnected from the channel tcfchan#21.
+14:25:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:25:39 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+14:25:39 INFO  : 'jtag frequency' command is executed.
+14:25:39 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:25:39 INFO  : Context for 'APU' is selected.
+14:25:39 INFO  : System reset is completed.
+14:25:42 INFO  : 'after 3000' command is executed.
+14:25:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+14:25:44 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+14:25:45 INFO  : Context for 'APU' is selected.
+14:25:46 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+14:25:46 INFO  : 'configparams force-mem-access 1' command is executed.
+14:25:46 INFO  : Context for 'APU' is selected.
+14:25:46 INFO  : 'ps7_init' command is executed.
+14:25:47 INFO  : 'ps7_post_config' command is executed.
+14:25:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:25:47 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:25:47 INFO  : 'configparams force-mem-access 0' command is executed.
+14:25:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:25:47 INFO  : Memory regions updated for context APU
+14:25:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:25:47 INFO  : 'con' command is executed.
+14:25:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+14:25:47 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+14:27:21 INFO  : Disconnected from the channel tcfchan#22.
+14:27:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:27:24 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+14:27:24 INFO  : 'jtag frequency' command is executed.
+14:27:24 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:27:24 INFO  : Context for 'APU' is selected.
+14:27:25 INFO  : System reset is completed.
+14:27:28 INFO  : 'after 3000' command is executed.
+14:27:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+14:27:30 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+14:27:30 INFO  : Context for 'APU' is selected.
+14:27:31 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+14:27:31 INFO  : 'configparams force-mem-access 1' command is executed.
+14:27:31 INFO  : Context for 'APU' is selected.
+14:27:32 INFO  : 'ps7_init' command is executed.
+14:27:32 INFO  : 'ps7_post_config' command is executed.
+14:27:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:27:32 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:27:32 INFO  : 'configparams force-mem-access 0' command is executed.
+14:27:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:27:32 INFO  : Memory regions updated for context APU
+14:27:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:27:33 INFO  : 'con' command is executed.
+14:27:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+14:27:33 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+14:35:32 INFO  : Disconnected from the channel tcfchan#23.
+15:37:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:37:20 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+15:37:20 INFO  : 'jtag frequency' command is executed.
+15:37:20 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:37:20 INFO  : Context for 'APU' is selected.
+15:37:20 INFO  : System reset is completed.
+15:37:23 INFO  : 'after 3000' command is executed.
+15:37:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+15:37:26 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+15:37:26 INFO  : Context for 'APU' is selected.
+15:37:27 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+15:37:27 INFO  : 'configparams force-mem-access 1' command is executed.
+15:37:27 INFO  : Context for 'APU' is selected.
+15:37:28 INFO  : 'ps7_init' command is executed.
+15:37:28 INFO  : 'ps7_post_config' command is executed.
+15:37:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:37:28 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:37:28 INFO  : 'configparams force-mem-access 0' command is executed.
+15:37:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:37:28 INFO  : Memory regions updated for context APU
+15:37:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:37:28 INFO  : 'con' command is executed.
+15:37:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+15:37:28 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+10:35:50 INFO  : Disconnected from the channel tcfchan#24.
+10:35:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:35:51 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+10:35:51 INFO  : 'jtag frequency' command is executed.
+10:35:51 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:35:51 INFO  : Context for 'APU' is selected.
+10:35:51 INFO  : System reset is completed.
+10:35:54 INFO  : 'after 3000' command is executed.
+10:35:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+10:35:57 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+10:35:57 INFO  : Context for 'APU' is selected.
+10:35:58 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+10:35:58 INFO  : 'configparams force-mem-access 1' command is executed.
+10:35:58 INFO  : Context for 'APU' is selected.
+10:35:58 INFO  : 'ps7_init' command is executed.
+10:35:58 INFO  : 'ps7_post_config' command is executed.
+10:35:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:35:59 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:35:59 INFO  : 'configparams force-mem-access 0' command is executed.
+10:35:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:35:59 INFO  : Memory regions updated for context APU
+10:35:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:35:59 INFO  : 'con' command is executed.
+10:35:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+10:35:59 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+10:36:48 INFO  : Disconnected from the channel tcfchan#25.
+10:36:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:36:50 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+10:36:50 INFO  : 'jtag frequency' command is executed.
+10:36:50 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:36:50 INFO  : Context for 'APU' is selected.
+10:36:50 INFO  : System reset is completed.
+10:36:53 INFO  : 'after 3000' command is executed.
+10:36:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+10:36:56 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+10:36:56 INFO  : Context for 'APU' is selected.
+10:36:57 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+10:36:57 INFO  : 'configparams force-mem-access 1' command is executed.
+10:36:57 INFO  : Context for 'APU' is selected.
+10:36:58 INFO  : 'ps7_init' command is executed.
+10:36:58 INFO  : 'ps7_post_config' command is executed.
+10:36:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:36:58 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:36:58 INFO  : 'configparams force-mem-access 0' command is executed.
+10:36:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:36:58 INFO  : Memory regions updated for context APU
+10:36:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:36:58 INFO  : 'con' command is executed.
+10:36:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+10:36:58 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+10:37:55 INFO  : Disconnected from the channel tcfchan#26.
+10:37:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:37:57 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+10:37:57 INFO  : 'jtag frequency' command is executed.
+10:37:57 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:37:57 INFO  : Context for 'APU' is selected.
+10:37:57 INFO  : System reset is completed.
+10:38:00 INFO  : 'after 3000' command is executed.
+10:38:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+10:38:03 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+10:38:03 INFO  : Context for 'APU' is selected.
+10:38:04 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+10:38:04 INFO  : 'configparams force-mem-access 1' command is executed.
+10:38:04 INFO  : Context for 'APU' is selected.
+10:38:04 INFO  : 'ps7_init' command is executed.
+10:38:04 INFO  : 'ps7_post_config' command is executed.
+10:38:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:38:05 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:38:05 INFO  : 'configparams force-mem-access 0' command is executed.
+10:38:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:38:05 INFO  : Memory regions updated for context APU
+10:38:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:38:05 INFO  : 'con' command is executed.
+10:38:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+10:38:05 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+10:39:23 INFO  : Disconnected from the channel tcfchan#27.
+13:17:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:17:09 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+13:17:09 INFO  : 'jtag frequency' command is executed.
+13:17:09 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:17:09 INFO  : Context for 'APU' is selected.
+13:17:09 INFO  : System reset is completed.
+13:17:12 INFO  : 'after 3000' command is executed.
+13:17:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+13:17:14 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+13:17:14 INFO  : Context for 'APU' is selected.
+13:17:14 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+13:17:14 INFO  : 'configparams force-mem-access 1' command is executed.
+13:17:14 INFO  : Context for 'APU' is selected.
+13:17:14 INFO  : 'ps7_init' command is executed.
+13:17:14 INFO  : 'ps7_post_config' command is executed.
+13:17:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:17:15 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:17:15 INFO  : 'configparams force-mem-access 0' command is executed.
+13:17:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:17:15 INFO  : Memory regions updated for context APU
+13:17:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:17:15 INFO  : 'con' command is executed.
+13:17:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+13:17:15 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+13:17:45 INFO  : Disconnected from the channel tcfchan#28.
+13:17:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:18:00 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+13:18:00 INFO  : 'jtag frequency' command is executed.
+13:18:00 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:18:00 INFO  : Context for 'APU' is selected.
+13:18:00 INFO  : System reset is completed.
+13:18:03 INFO  : 'after 3000' command is executed.
+13:18:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+13:18:05 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+13:18:05 INFO  : Context for 'APU' is selected.
+13:18:07 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+13:18:07 INFO  : 'configparams force-mem-access 1' command is executed.
+13:18:07 INFO  : Context for 'APU' is selected.
+13:18:07 INFO  : 'ps7_init' command is executed.
+13:18:07 INFO  : 'ps7_post_config' command is executed.
+13:18:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:18:07 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:18:07 INFO  : 'configparams force-mem-access 0' command is executed.
+13:18:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:18:07 INFO  : Memory regions updated for context APU
+13:18:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:18:08 INFO  : 'con' command is executed.
+13:18:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+13:18:08 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+13:19:03 INFO  : Disconnected from the channel tcfchan#29.
+13:19:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:19:11 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+13:19:11 INFO  : 'jtag frequency' command is executed.
+13:19:11 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:19:11 INFO  : Context for 'APU' is selected.
+13:19:11 INFO  : System reset is completed.
+13:19:14 INFO  : 'after 3000' command is executed.
+13:19:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+13:19:16 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+13:19:16 INFO  : Context for 'APU' is selected.
+13:19:18 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+13:19:18 INFO  : 'configparams force-mem-access 1' command is executed.
+13:19:18 INFO  : Context for 'APU' is selected.
+13:19:18 INFO  : 'ps7_init' command is executed.
+13:19:18 INFO  : 'ps7_post_config' command is executed.
+13:19:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:19:18 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:19:18 INFO  : 'configparams force-mem-access 0' command is executed.
+13:19:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:19:19 INFO  : Memory regions updated for context APU
+13:19:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:19:19 INFO  : 'con' command is executed.
+13:19:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+13:19:19 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+13:52:23 INFO  : Disconnected from the channel tcfchan#30.
+14:42:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:42:20 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+14:42:20 INFO  : 'jtag frequency' command is executed.
+14:42:20 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:42:20 INFO  : Context for 'APU' is selected.
+14:42:20 INFO  : System reset is completed.
+14:42:23 INFO  : 'after 3000' command is executed.
+14:42:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+14:42:26 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+14:42:26 INFO  : Context for 'APU' is selected.
+14:42:26 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+14:42:26 INFO  : 'configparams force-mem-access 1' command is executed.
+14:42:26 INFO  : Context for 'APU' is selected.
+14:42:26 INFO  : 'ps7_init' command is executed.
+14:42:26 INFO  : 'ps7_post_config' command is executed.
+14:42:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:42:26 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:42:26 INFO  : 'configparams force-mem-access 0' command is executed.
+14:42:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:42:26 INFO  : Memory regions updated for context APU
+14:42:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:42:27 INFO  : 'con' command is executed.
+14:42:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+14:42:27 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+14:59:14 INFO  : Disconnected from the channel tcfchan#31.
+15:09:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:09:04 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+15:09:04 INFO  : 'jtag frequency' command is executed.
+15:09:04 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:09:05 INFO  : Context for 'APU' is selected.
+15:09:05 INFO  : System reset is completed.
+15:09:08 INFO  : 'after 3000' command is executed.
+15:09:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+15:09:10 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+15:09:10 INFO  : Context for 'APU' is selected.
+15:09:10 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+15:09:10 INFO  : 'configparams force-mem-access 1' command is executed.
+15:09:10 INFO  : Context for 'APU' is selected.
+15:09:10 INFO  : 'ps7_init' command is executed.
+15:09:10 INFO  : 'ps7_post_config' command is executed.
+15:09:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:09:11 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:09:11 INFO  : 'configparams force-mem-access 0' command is executed.
+15:09:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:09:11 INFO  : Memory regions updated for context APU
+15:09:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:09:11 INFO  : 'con' command is executed.
+15:09:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+15:09:11 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+15:15:37 INFO  : Disconnected from the channel tcfchan#32.
+15:15:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:15:38 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+15:15:38 INFO  : 'jtag frequency' command is executed.
+15:15:38 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:15:38 INFO  : Context for 'APU' is selected.
+15:15:38 INFO  : System reset is completed.
+15:15:41 INFO  : 'after 3000' command is executed.
+15:15:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+15:15:44 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+15:15:44 INFO  : Context for 'APU' is selected.
+15:15:45 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+15:15:45 INFO  : 'configparams force-mem-access 1' command is executed.
+15:15:45 INFO  : Context for 'APU' is selected.
+15:15:45 INFO  : 'ps7_init' command is executed.
+15:15:45 INFO  : 'ps7_post_config' command is executed.
+15:15:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:15:46 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:15:46 INFO  : 'configparams force-mem-access 0' command is executed.
+15:15:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:15:46 INFO  : Memory regions updated for context APU
+15:15:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:15:46 INFO  : 'con' command is executed.
+15:15:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+15:15:46 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+15:31:03 INFO  : Disconnected from the channel tcfchan#33.
+16:11:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:11:09 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+16:11:09 INFO  : 'jtag frequency' command is executed.
+16:11:09 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:11:09 INFO  : Context for 'APU' is selected.
+16:11:09 INFO  : System reset is completed.
+16:11:12 INFO  : 'after 3000' command is executed.
+16:11:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+16:11:15 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+16:11:15 INFO  : Context for 'APU' is selected.
+16:11:15 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+16:11:15 INFO  : 'configparams force-mem-access 1' command is executed.
+16:11:15 INFO  : Context for 'APU' is selected.
+16:11:15 INFO  : 'ps7_init' command is executed.
+16:11:15 INFO  : 'ps7_post_config' command is executed.
+16:11:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:11:16 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:11:16 INFO  : 'configparams force-mem-access 0' command is executed.
+16:11:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:11:16 INFO  : Memory regions updated for context APU
+16:11:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:11:16 INFO  : 'con' command is executed.
+16:11:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+16:11:16 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+16:13:04 INFO  : Disconnected from the channel tcfchan#34.
+16:13:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:13:06 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+16:13:07 INFO  : 'jtag frequency' command is executed.
+16:13:07 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:13:07 INFO  : Context for 'APU' is selected.
+16:13:07 INFO  : System reset is completed.
+16:13:10 INFO  : 'after 3000' command is executed.
+16:13:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+16:13:12 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+16:13:12 INFO  : Context for 'APU' is selected.
+16:13:13 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+16:13:13 INFO  : 'configparams force-mem-access 1' command is executed.
+16:13:13 INFO  : Context for 'APU' is selected.
+16:13:14 INFO  : 'ps7_init' command is executed.
+16:13:14 INFO  : 'ps7_post_config' command is executed.
+16:13:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:13:14 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:13:14 INFO  : 'configparams force-mem-access 0' command is executed.
+16:13:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:13:14 INFO  : Memory regions updated for context APU
+16:13:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:13:14 INFO  : 'con' command is executed.
+16:13:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+16:13:14 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+16:56:25 INFO  : Disconnected from the channel tcfchan#35.
+16:56:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:56:29 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+16:56:29 INFO  : 'jtag frequency' command is executed.
+16:56:30 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:56:30 INFO  : Context for 'APU' is selected.
+16:56:30 INFO  : System reset is completed.
+16:56:33 INFO  : 'after 3000' command is executed.
+16:56:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+16:56:35 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+16:56:35 INFO  : Context for 'APU' is selected.
+16:56:36 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+16:56:36 INFO  : 'configparams force-mem-access 1' command is executed.
+16:56:36 INFO  : Context for 'APU' is selected.
+16:56:37 INFO  : 'ps7_init' command is executed.
+16:56:37 INFO  : 'ps7_post_config' command is executed.
+16:56:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:56:37 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:56:37 INFO  : 'configparams force-mem-access 0' command is executed.
+16:56:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:56:37 INFO  : Memory regions updated for context APU
+16:56:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:56:37 INFO  : 'con' command is executed.
+16:56:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+16:56:37 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+16:56:56 INFO  : Disconnected from the channel tcfchan#36.
+16:56:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:56:58 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+16:56:58 INFO  : 'jtag frequency' command is executed.
+16:56:58 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:56:58 INFO  : Context for 'APU' is selected.
+16:56:58 INFO  : System reset is completed.
+16:57:01 INFO  : 'after 3000' command is executed.
+16:57:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+16:57:03 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+16:57:03 INFO  : Context for 'APU' is selected.
+16:57:05 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+16:57:05 INFO  : 'configparams force-mem-access 1' command is executed.
+16:57:05 INFO  : Context for 'APU' is selected.
+16:57:05 INFO  : 'ps7_init' command is executed.
+16:57:05 INFO  : 'ps7_post_config' command is executed.
+16:57:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:57:05 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:57:05 INFO  : 'configparams force-mem-access 0' command is executed.
+16:57:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:57:05 INFO  : Memory regions updated for context APU
+16:57:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:57:05 INFO  : 'con' command is executed.
+16:57:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+16:57:05 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+17:00:20 INFO  : Disconnected from the channel tcfchan#37.
+17:00:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:00:23 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+17:00:23 INFO  : 'jtag frequency' command is executed.
+17:00:23 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:00:23 INFO  : Context for 'APU' is selected.
+17:00:23 INFO  : System reset is completed.
+17:00:26 INFO  : 'after 3000' command is executed.
+17:00:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+17:00:28 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+17:00:28 INFO  : Context for 'APU' is selected.
+17:00:29 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+17:00:29 INFO  : 'configparams force-mem-access 1' command is executed.
+17:00:29 INFO  : Context for 'APU' is selected.
+17:00:30 INFO  : 'ps7_init' command is executed.
+17:00:30 INFO  : 'ps7_post_config' command is executed.
+17:00:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:00:30 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:00:30 INFO  : 'configparams force-mem-access 0' command is executed.
+17:00:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:00:30 INFO  : Memory regions updated for context APU
+17:00:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:00:30 INFO  : 'con' command is executed.
+17:00:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+17:00:30 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+17:02:59 INFO  : Disconnected from the channel tcfchan#38.
+17:07:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:07:53 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+17:07:53 INFO  : 'jtag frequency' command is executed.
+17:07:53 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:07:53 INFO  : Context for 'APU' is selected.
+17:07:54 INFO  : System reset is completed.
+17:07:57 INFO  : 'after 3000' command is executed.
+17:07:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+17:07:59 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+17:07:59 INFO  : Context for 'APU' is selected.
+17:08:00 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+17:08:00 INFO  : 'configparams force-mem-access 1' command is executed.
+17:08:00 INFO  : Context for 'APU' is selected.
+17:08:01 INFO  : 'ps7_init' command is executed.
+17:08:01 INFO  : 'ps7_post_config' command is executed.
+17:08:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:08:01 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:08:01 INFO  : 'configparams force-mem-access 0' command is executed.
+17:08:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:08:01 INFO  : Memory regions updated for context APU
+17:08:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:08:01 INFO  : 'con' command is executed.
+17:08:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+17:08:01 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+17:08:44 INFO  : Disconnected from the channel tcfchan#39.
+17:08:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:08:47 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+17:08:47 INFO  : 'jtag frequency' command is executed.
+17:08:47 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:08:47 INFO  : Context for 'APU' is selected.
+17:08:47 INFO  : System reset is completed.
+17:08:50 INFO  : 'after 3000' command is executed.
+17:08:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+17:08:52 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+17:08:52 INFO  : Context for 'APU' is selected.
+17:08:54 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+17:08:54 INFO  : 'configparams force-mem-access 1' command is executed.
+17:08:54 INFO  : Context for 'APU' is selected.
+17:08:54 INFO  : 'ps7_init' command is executed.
+17:08:54 INFO  : 'ps7_post_config' command is executed.
+17:08:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:08:55 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:08:55 INFO  : 'configparams force-mem-access 0' command is executed.
+17:08:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:08:55 INFO  : Memory regions updated for context APU
+17:08:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:08:55 INFO  : 'con' command is executed.
+17:08:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+17:08:55 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+17:50:54 INFO  : Disconnected from the channel tcfchan#40.
+17:51:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:51:00 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+17:51:00 INFO  : 'jtag frequency' command is executed.
+17:51:00 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:51:00 INFO  : Context for 'APU' is selected.
+17:51:00 INFO  : System reset is completed.
+17:51:03 INFO  : 'after 3000' command is executed.
+17:51:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+17:51:06 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+17:51:06 INFO  : Context for 'APU' is selected.
+17:51:07 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+17:51:07 INFO  : 'configparams force-mem-access 1' command is executed.
+17:51:07 INFO  : Context for 'APU' is selected.
+17:51:07 INFO  : 'ps7_init' command is executed.
+17:51:07 INFO  : 'ps7_post_config' command is executed.
+17:51:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:51:08 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:51:08 INFO  : 'configparams force-mem-access 0' command is executed.
+17:51:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:51:08 INFO  : Memory regions updated for context APU
+17:51:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:51:08 INFO  : 'con' command is executed.
+17:51:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+17:51:08 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+17:52:15 INFO  : Disconnected from the channel tcfchan#41.
+17:52:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:52:19 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+17:52:19 INFO  : 'jtag frequency' command is executed.
+17:52:19 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:52:19 INFO  : Context for 'APU' is selected.
+17:52:19 INFO  : System reset is completed.
+17:52:22 INFO  : 'after 3000' command is executed.
+17:52:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+17:52:24 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+17:52:24 INFO  : Context for 'APU' is selected.
+17:52:26 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+17:52:26 INFO  : 'configparams force-mem-access 1' command is executed.
+17:52:26 INFO  : Context for 'APU' is selected.
+17:52:26 INFO  : 'ps7_init' command is executed.
+17:52:26 INFO  : 'ps7_post_config' command is executed.
+17:52:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:52:26 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:52:26 INFO  : 'configparams force-mem-access 0' command is executed.
+17:52:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:52:26 INFO  : Memory regions updated for context APU
+17:52:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:52:27 INFO  : 'con' command is executed.
+17:52:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+17:52:27 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+18:10:35 INFO  : Disconnected from the channel tcfchan#42.
+13:30:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:30:53 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+13:30:53 INFO  : 'jtag frequency' command is executed.
+13:30:53 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:30:53 INFO  : Context for 'APU' is selected.
+13:30:53 INFO  : System reset is completed.
+13:30:56 INFO  : 'after 3000' command is executed.
+13:30:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+13:30:58 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+13:30:58 INFO  : Context for 'APU' is selected.
+13:31:00 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+13:31:00 INFO  : 'configparams force-mem-access 1' command is executed.
+13:31:00 INFO  : Context for 'APU' is selected.
+13:31:00 INFO  : 'ps7_init' command is executed.
+13:31:00 INFO  : 'ps7_post_config' command is executed.
+13:31:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:31:00 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:31:00 INFO  : 'configparams force-mem-access 0' command is executed.
+13:31:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:31:00 INFO  : Memory regions updated for context APU
+13:31:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:31:00 INFO  : 'con' command is executed.
+13:31:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+13:31:00 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+13:48:54 INFO  : Disconnected from the channel tcfchan#43.
+13:48:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:48:57 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+13:48:57 INFO  : 'jtag frequency' command is executed.
+13:48:57 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:48:57 INFO  : Context for 'APU' is selected.
+13:48:57 INFO  : System reset is completed.
+13:49:00 INFO  : 'after 3000' command is executed.
+13:49:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+13:49:03 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+13:49:03 INFO  : Context for 'APU' is selected.
+13:49:04 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+13:49:04 INFO  : 'configparams force-mem-access 1' command is executed.
+13:49:04 INFO  : Context for 'APU' is selected.
+13:49:04 INFO  : 'ps7_init' command is executed.
+13:49:04 INFO  : 'ps7_post_config' command is executed.
+13:49:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:49:05 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:49:05 INFO  : 'configparams force-mem-access 0' command is executed.
+13:49:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:49:05 INFO  : Memory regions updated for context APU
+13:49:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:49:05 INFO  : 'con' command is executed.
+13:49:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+13:49:05 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+14:12:52 INFO  : Disconnected from the channel tcfchan#44.
+14:12:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:12:54 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+14:12:54 INFO  : 'jtag frequency' command is executed.
+14:12:54 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:12:54 INFO  : Context for 'APU' is selected.
+14:12:55 INFO  : System reset is completed.
+14:12:58 INFO  : 'after 3000' command is executed.
+14:12:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+14:13:00 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+14:13:00 INFO  : Context for 'APU' is selected.
+14:13:02 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+14:13:02 INFO  : 'configparams force-mem-access 1' command is executed.
+14:13:02 INFO  : Context for 'APU' is selected.
+14:13:02 INFO  : 'ps7_init' command is executed.
+14:13:02 INFO  : 'ps7_post_config' command is executed.
+14:13:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:13:02 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:13:02 INFO  : 'configparams force-mem-access 0' command is executed.
+14:13:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:13:02 INFO  : Memory regions updated for context APU
+14:13:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:13:02 INFO  : 'con' command is executed.
+14:13:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+14:13:02 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+15:28:04 INFO  : Disconnected from the channel tcfchan#45.
+17:10:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:10:29 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+17:10:29 INFO  : 'jtag frequency' command is executed.
+17:10:29 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:10:29 INFO  : Context for 'APU' is selected.
+17:10:30 INFO  : System reset is completed.
+17:10:33 INFO  : 'after 3000' command is executed.
+17:10:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+17:10:35 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+17:10:35 INFO  : Context for 'APU' is selected.
+17:10:35 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+17:10:35 INFO  : 'configparams force-mem-access 1' command is executed.
+17:10:35 INFO  : Context for 'APU' is selected.
+17:10:35 INFO  : 'ps7_init' command is executed.
+17:10:35 INFO  : 'ps7_post_config' command is executed.
+17:10:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:10:36 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:10:36 INFO  : 'configparams force-mem-access 0' command is executed.
+17:10:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:10:36 INFO  : Memory regions updated for context APU
+17:10:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:10:36 INFO  : 'con' command is executed.
+17:10:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+17:10:36 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+17:12:19 INFO  : Disconnected from the channel tcfchan#46.
+17:12:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:12:22 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+17:12:22 INFO  : 'jtag frequency' command is executed.
+17:12:22 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:12:22 INFO  : Context for 'APU' is selected.
+17:12:22 INFO  : System reset is completed.
+17:12:25 INFO  : 'after 3000' command is executed.
+17:12:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+17:12:27 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+17:12:27 INFO  : Context for 'APU' is selected.
+17:12:29 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+17:12:29 INFO  : 'configparams force-mem-access 1' command is executed.
+17:12:29 INFO  : Context for 'APU' is selected.
+17:12:29 INFO  : 'ps7_init' command is executed.
+17:12:29 INFO  : 'ps7_post_config' command is executed.
+17:12:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:12:29 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:12:29 INFO  : 'configparams force-mem-access 0' command is executed.
+17:12:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:12:29 INFO  : Memory regions updated for context APU
+17:12:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:12:29 INFO  : 'con' command is executed.
+17:12:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+17:12:29 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+17:14:09 INFO  : Disconnected from the channel tcfchan#47.
+17:15:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:15:09 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+17:15:09 INFO  : 'jtag frequency' command is executed.
+17:15:09 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:15:09 INFO  : Context for 'APU' is selected.
+17:15:09 INFO  : System reset is completed.
+17:15:12 INFO  : 'after 3000' command is executed.
+17:15:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+17:15:15 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+17:15:15 INFO  : Context for 'APU' is selected.
+17:15:16 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+17:15:16 INFO  : 'configparams force-mem-access 1' command is executed.
+17:15:16 INFO  : Context for 'APU' is selected.
+17:15:17 INFO  : 'ps7_init' command is executed.
+17:15:17 INFO  : 'ps7_post_config' command is executed.
+17:15:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:15:17 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:15:17 INFO  : 'configparams force-mem-access 0' command is executed.
+17:15:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:15:17 INFO  : Memory regions updated for context APU
+17:15:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:15:17 INFO  : 'con' command is executed.
+17:15:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+17:15:17 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+17:18:55 INFO  : Disconnected from the channel tcfchan#48.
+17:18:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:18:58 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+17:18:58 INFO  : 'jtag frequency' command is executed.
+17:18:58 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:18:58 INFO  : Context for 'APU' is selected.
+17:18:58 INFO  : System reset is completed.
+17:19:01 INFO  : 'after 3000' command is executed.
+17:19:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+17:19:03 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+17:19:03 INFO  : Context for 'APU' is selected.
+17:19:05 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+17:19:05 INFO  : 'configparams force-mem-access 1' command is executed.
+17:19:05 INFO  : Context for 'APU' is selected.
+17:19:05 INFO  : 'ps7_init' command is executed.
+17:19:05 INFO  : 'ps7_post_config' command is executed.
+17:19:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:19:05 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:19:05 INFO  : 'configparams force-mem-access 0' command is executed.
+17:19:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:19:05 INFO  : Memory regions updated for context APU
+17:19:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:19:05 INFO  : 'con' command is executed.
+17:19:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+17:19:05 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+17:22:00 INFO  : Disconnected from the channel tcfchan#49.
+17:22:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:22:04 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+17:22:04 INFO  : 'jtag frequency' command is executed.
+17:22:04 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:22:04 INFO  : Context for 'APU' is selected.
+17:22:04 INFO  : System reset is completed.
+17:22:07 INFO  : 'after 3000' command is executed.
+17:22:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+17:22:09 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+17:22:09 INFO  : Context for 'APU' is selected.
+17:22:11 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+17:22:11 INFO  : 'configparams force-mem-access 1' command is executed.
+17:22:11 INFO  : Context for 'APU' is selected.
+17:22:11 INFO  : 'ps7_init' command is executed.
+17:22:11 INFO  : 'ps7_post_config' command is executed.
+17:22:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:22:11 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:22:11 INFO  : 'configparams force-mem-access 0' command is executed.
+17:22:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:22:11 INFO  : Memory regions updated for context APU
+17:22:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:22:11 INFO  : 'con' command is executed.
+17:22:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+17:22:11 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+18:00:46 INFO  : Disconnected from the channel tcfchan#50.
+18:00:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:00:49 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+18:00:49 INFO  : 'jtag frequency' command is executed.
+18:00:49 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:00:49 INFO  : Context for 'APU' is selected.
+18:00:49 INFO  : System reset is completed.
+18:00:52 INFO  : 'after 3000' command is executed.
+18:00:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+18:00:55 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+18:00:55 INFO  : Context for 'APU' is selected.
+18:00:56 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+18:00:56 INFO  : 'configparams force-mem-access 1' command is executed.
+18:00:56 INFO  : Context for 'APU' is selected.
+18:00:56 INFO  : 'ps7_init' command is executed.
+18:00:56 INFO  : 'ps7_post_config' command is executed.
+18:00:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:00:57 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:00:57 INFO  : 'configparams force-mem-access 0' command is executed.
+18:00:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:00:57 INFO  : Memory regions updated for context APU
+18:00:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:00:57 INFO  : 'con' command is executed.
+18:00:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+18:00:57 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+11:28:45 INFO  : Disconnected from the channel tcfchan#51.
+11:28:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:28:49 INFO  : Jtag cable 'Digilent Zybo Z7 210351A8231FA' is selected.
+11:28:49 INFO  : 'jtag frequency' command is executed.
+11:28:49 INFO  : Sourcing of '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:28:49 INFO  : Context for 'APU' is selected.
+11:28:49 INFO  : System reset is completed.
+11:28:52 INFO  : 'after 3000' command is executed.
+11:28:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1' command is executed.
+11:28:55 INFO  : FPGA configured successfully with bitstream "/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit"
+11:28:55 INFO  : Context for 'APU' is selected.
+11:28:56 INFO  : Hardware design information is loaded from '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf'.
+11:28:56 INFO  : 'configparams force-mem-access 1' command is executed.
+11:28:56 INFO  : Context for 'APU' is selected.
+11:28:57 INFO  : 'ps7_init' command is executed.
+11:28:57 INFO  : 'ps7_post_config' command is executed.
+11:28:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:28:57 INFO  : The application '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:28:57 INFO  : 'configparams force-mem-access 0' command is executed.
+11:28:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA" && level==0} -index 1
+fpga -file /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/platform_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+loadhw -hw /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/platform_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+dow /home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/app/Debug/app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:28:57 INFO  : Memory regions updated for context APU
+11:28:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:28:57 INFO  : 'con' command is executed.
+11:28:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A8231FA"} -index 0
+con
+----------------End of Script----------------
+
+11:28:57 INFO  : Launch script is exported to file '/home/nevarez/work/vivado/sbs_fixedpoint/sbs_fixedpoint.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/app.tcl'
+11:29:51 INFO  : Disconnected from the channel tcfchan#52.

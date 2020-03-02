@@ -1,0 +1,256 @@
+
+
+================================================================
+== Vivado HLS Report for 'sbs_fixedpoint_spike'
+================================================================
+* Date:           Wed Feb 12 09:44:56 2020
+
+* Version:        2019.1.1 (Build 2579327 on Sat Jun 29 09:16:32 MDT 2019)
+* Project:        sbs_fixedpoint_spike
+* Solution:       sbs_fixedpoint_spike
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   4.00|     4.732|        0.50|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |             |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1     |    ?|    ?|         ?|          -|          -|     ?|    no    |
+        | + Loop 1.1  |    ?|    ?|   2 ~ 5  |          -|          -|     ?|    no    |
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 8
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 8 3 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 4 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.00>
+ST_1 : Operation 9 [1/1] (1.00ns)   --->   "%vectorSize_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %vectorSize)"   --->   Operation 9 'read' 'vectorSize_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 10 [1/1] (1.00ns)   --->   "%layerSize_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %layerSize)"   --->   Operation 10 'read' 'layerSize_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+
+State 2 <SV = 1> <Delay = 2.55>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %stream_in_V_data_V), !map !42"   --->   Operation 11 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %stream_in_V_keep_V), !map !48"   --->   Operation 12 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %stream_in_V_strb_V), !map !52"   --->   Operation 13 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i2* %stream_in_V_user_V), !map !56"   --->   Operation 14 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %stream_in_V_last_V), !map !60"   --->   Operation 15 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i5* %stream_in_V_id_V), !map !64"   --->   Operation 16 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i6* %stream_in_V_dest_V), !map !68"   --->   Operation 17 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %stream_out_V_data_V), !map !72"   --->   Operation 18 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %stream_out_V_keep_V), !map !76"   --->   Operation 19 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %stream_out_V_strb_V), !map !80"   --->   Operation 20 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i2* %stream_out_V_user_V), !map !84"   --->   Operation 21 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %stream_out_V_last_V), !map !88"   --->   Operation 22 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i5* %stream_out_V_id_V), !map !92"   --->   Operation 23 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i6* %stream_out_V_dest_V), !map !96"   --->   Operation 24 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %layerSize), !map !100"   --->   Operation 25 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %vectorSize), !map !106"   --->   Operation 26 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([21 x i8]* @sbs_fixedpoint_spike_1) nounwind"   --->   Operation 27 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %stream_in_V_data_V, i4* %stream_in_V_keep_V, i4* %stream_in_V_strb_V, i2* %stream_in_V_user_V, i1* %stream_in_V_last_V, i5* %stream_in_V_id_V, i6* %stream_in_V_dest_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:12]   --->   Operation 28 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %stream_out_V_data_V, i4* %stream_out_V_keep_V, i4* %stream_out_V_strb_V, i2* %stream_out_V_user_V, i1* %stream_out_V_last_V, i5* %stream_out_V_id_V, i6* %stream_out_V_dest_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:13]   --->   Operation 29 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %layerSize, [10 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [9 x i8]* @p_str4, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:14]   --->   Operation 30 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %vectorSize, [10 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [9 x i8]* @p_str4, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:15]   --->   Operation 31 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [9 x i8]* @p_str4, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:16]   --->   Operation 32 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (2.55ns)   --->   "%add_ln46 = add nsw i32 %vectorSize_read, -1" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:46]   --->   Operation 33 'add' 'add_ln46' <Predicate = true> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 34 [1/1] (2.55ns)   --->   "%add_ln48 = add nsw i32 %layerSize_read, -1" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:48]   --->   Operation 34 'add' 'add_ln48' <Predicate = true> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 35 [1/1] (1.76ns)   --->   "br label %0" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:26]   --->   Operation 35 'br' <Predicate = true> <Delay = 1.76>
+
+State 3 <SV = 2> <Delay = 3.45>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%empty = phi i32 [ 0, %codeRepl ], [ %add_ln26, %hls_label_0_end ]" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:26]   --->   Operation 36 'phi' 'empty' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "store i32 %empty, i32* @ip_index, align 4" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:26]   --->   Operation 37 'store' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (2.47ns)   --->   "%icmp_ln26 = icmp slt i32 %empty, %layerSize_read" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:26]   --->   Operation 38 'icmp' 'icmp_ln26' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "br i1 %icmp_ln26, label %hls_label_0_begin, label %7" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:26]   --->   Operation 39 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str5)" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:27]   --->   Operation 40 'specregionbegin' 'tmp' <Predicate = (icmp_ln26)> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:28]   --->   Operation 41 'specpipeline' <Predicate = (icmp_ln26)> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (2.47ns)   --->   "%icmp_ln29 = icmp eq i32 %empty, 0" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:29]   --->   Operation 42 'icmp' 'icmp_ln29' <Predicate = (icmp_ln26)> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%empty_2 = call { i32, i4, i4, i2, i1, i5, i6 } @_ssdm_op_Read.axis.volatile.i32P.i4P.i4P.i2P.i1P.i5P.i6P(i32* %stream_in_V_data_V, i4* %stream_in_V_keep_V, i4* %stream_in_V_strb_V, i2* %stream_in_V_user_V, i1* %stream_in_V_last_V, i5* %stream_in_V_id_V, i6* %stream_in_V_dest_V)" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:31]   --->   Operation 43 'read' 'empty_2' <Predicate = (icmp_ln26)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%tmp_data_V = extractvalue { i32, i4, i4, i2, i1, i5, i6 } %empty_2, 0" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:31]   --->   Operation 44 'extractvalue' 'tmp_data_V' <Predicate = (icmp_ln26)> <Delay = 0.00>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "br i1 %icmp_ln29, label %1, label %2" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:29]   --->   Operation 45 'br' <Predicate = (icmp_ln26)> <Delay = 0.00>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%tmp_keep_V = extractvalue { i32, i4, i4, i2, i1, i5, i6 } %empty_2, 1" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:31]   --->   Operation 46 'extractvalue' 'tmp_keep_V' <Predicate = (icmp_ln26 & icmp_ln29)> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%tmp_strb_V = extractvalue { i32, i4, i4, i2, i1, i5, i6 } %empty_2, 2" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:31]   --->   Operation 47 'extractvalue' 'tmp_strb_V' <Predicate = (icmp_ln26 & icmp_ln29)> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%tmp_user_V = extractvalue { i32, i4, i4, i2, i1, i5, i6 } %empty_2, 3" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:31]   --->   Operation 48 'extractvalue' 'tmp_user_V' <Predicate = (icmp_ln26 & icmp_ln29)> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%tmp_id_V = extractvalue { i32, i4, i4, i2, i1, i5, i6 } %empty_2, 5" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:31]   --->   Operation 49 'extractvalue' 'tmp_id_V' <Predicate = (icmp_ln26 & icmp_ln29)> <Delay = 0.00>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%tmp_dest_V = extractvalue { i32, i4, i4, i2, i1, i5, i6 } %empty_2, 6" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:31]   --->   Operation 50 'extractvalue' 'tmp_dest_V' <Predicate = (icmp_ln26 & icmp_ln29)> <Delay = 0.00>
+ST_3 : Operation 51 [1/1] (0.00ns)   --->   "store i4 %tmp_keep_V, i4* @channel_keep_V, align 4" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:31]   --->   Operation 51 'store' <Predicate = (icmp_ln26 & icmp_ln29)> <Delay = 0.00>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "store i4 %tmp_strb_V, i4* @channel_strb_V, align 1" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:31]   --->   Operation 52 'store' <Predicate = (icmp_ln26 & icmp_ln29)> <Delay = 0.00>
+ST_3 : Operation 53 [1/1] (0.00ns)   --->   "store i2 %tmp_user_V, i2* @channel_user_V, align 2" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:31]   --->   Operation 53 'store' <Predicate = (icmp_ln26 & icmp_ln29)> <Delay = 0.00>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "store i5 %tmp_id_V, i5* @channel_id_V, align 4" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:31]   --->   Operation 54 'store' <Predicate = (icmp_ln26 & icmp_ln29)> <Delay = 0.00>
+ST_3 : Operation 55 [1/1] (0.00ns)   --->   "store i6 %tmp_dest_V, i6* @channel_dest_V, align 1" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:31]   --->   Operation 55 'store' <Predicate = (icmp_ln26 & icmp_ln29)> <Delay = 0.00>
+ST_3 : Operation 56 [1/1] (0.00ns)   --->   "br label %2" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:33]   --->   Operation 56 'br' <Predicate = (icmp_ln26 & icmp_ln29)> <Delay = 0.00>
+ST_3 : Operation 57 [1/1] (0.00ns)   --->   "store i32 %tmp_data_V, i32* @random_value, align 4" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:32]   --->   Operation 57 'store' <Predicate = (icmp_ln26)> <Delay = 0.00>
+ST_3 : Operation 58 [1/1] (1.76ns)   --->   "store i64 0, i64* @sum, align 8" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:39]   --->   Operation 58 'store' <Predicate = (icmp_ln26)> <Delay = 1.76>
+ST_3 : Operation 59 [1/1] (1.76ns)   --->   "br label %3" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:40]   --->   Operation 59 'br' <Predicate = (icmp_ln26)> <Delay = 1.76>
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "ret void" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:55]   --->   Operation 60 'ret' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 4.73>
+ST_4 : Operation 61 [1/1] (0.00ns)   --->   "%tmp_data_V_2 = phi i31 [ 0, %2 ], [ %add_ln40, %._crit_edge28 ]" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:40]   --->   Operation 61 'phi' 'tmp_data_V_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 62 [1/1] (0.00ns)   --->   "%tmp_data_V_3 = zext i31 %tmp_data_V_2 to i32" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:40]   --->   Operation 62 'zext' 'tmp_data_V_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 63 [1/1] (2.47ns)   --->   "%icmp_ln40 = icmp slt i32 %tmp_data_V_3, %vectorSize_read" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:40]   --->   Operation 63 'icmp' 'icmp_ln40' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 64 [1/1] (2.52ns)   --->   "%add_ln40 = add i31 %tmp_data_V_2, 1" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:40]   --->   Operation 64 'add' 'add_ln40' <Predicate = true> <Delay = 2.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 65 [1/1] (0.00ns)   --->   "br i1 %icmp_ln40, label %4, label %hls_label_0_end" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:40]   --->   Operation 65 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 66 [1/1] (0.00ns)   --->   "%empty_3 = call { i32, i4, i4, i2, i1, i5, i6 } @_ssdm_op_Read.axis.volatile.i32P.i4P.i4P.i2P.i1P.i5P.i6P(i32* %stream_in_V_data_V, i4* %stream_in_V_keep_V, i4* %stream_in_V_strb_V, i2* %stream_in_V_user_V, i1* %stream_in_V_last_V, i5* %stream_in_V_id_V, i6* %stream_in_V_dest_V)" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:42]   --->   Operation 66 'read' 'empty_3' <Predicate = (icmp_ln40)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_4 : Operation 67 [1/1] (0.00ns)   --->   "%tmp_data_V_1 = extractvalue { i32, i4, i4, i2, i1, i5, i6 } %empty_3, 0" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:42]   --->   Operation 67 'extractvalue' 'tmp_data_V_1' <Predicate = (icmp_ln40)> <Delay = 0.00>
+ST_4 : Operation 68 [1/1] (0.00ns)   --->   "%sum_load = load i64* @sum, align 8" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:43]   --->   Operation 68 'load' 'sum_load' <Predicate = (icmp_ln40)> <Delay = 0.00>
+ST_4 : Operation 69 [1/1] (0.00ns)   --->   "%random_value_load = load i32* @random_value, align 4" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:43]   --->   Operation 69 'load' 'random_value_load' <Predicate = (icmp_ln40)> <Delay = 0.00>
+ST_4 : Operation 70 [1/1] (0.00ns)   --->   "%zext_ln43 = zext i32 %random_value_load to i64" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:43]   --->   Operation 70 'zext' 'zext_ln43' <Predicate = (icmp_ln40)> <Delay = 0.00>
+ST_4 : Operation 71 [1/1] (2.77ns)   --->   "%icmp_ln43 = icmp ult i64 %sum_load, %zext_ln43" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:43]   --->   Operation 71 'icmp' 'icmp_ln43' <Predicate = (icmp_ln40)> <Delay = 2.77> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 72 [1/1] (0.00ns)   --->   "br i1 %icmp_ln43, label %5, label %._crit_edge28" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:43]   --->   Operation 72 'br' <Predicate = (icmp_ln40)> <Delay = 0.00>
+ST_4 : Operation 73 [1/1] (0.00ns)   --->   "%zext_ln45 = zext i32 %tmp_data_V_1 to i64" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:45]   --->   Operation 73 'zext' 'zext_ln45' <Predicate = (icmp_ln40 & icmp_ln43)> <Delay = 0.00>
+ST_4 : Operation 74 [2/2] (2.63ns)   --->   "%add_ln45 = add i64 %sum_load, %zext_ln45" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:45]   --->   Operation 74 'add' 'add_ln45' <Predicate = (icmp_ln40 & icmp_ln43)> <Delay = 2.63> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 2.63> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 75 [1/1] (2.47ns)   --->   "%icmp_ln46_1 = icmp ne i32 %tmp_data_V_3, %add_ln46" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:46]   --->   Operation 75 'icmp' 'icmp_ln46_1' <Predicate = (icmp_ln40 & icmp_ln43)> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 76 [1/1] (0.00ns)   --->   "%empty_4 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str5, i32 %tmp)" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:54]   --->   Operation 76 'specregionend' 'empty_4' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_4 : Operation 77 [1/1] (0.00ns)   --->   "%ip_index_load = load i32* @ip_index, align 4" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:26]   --->   Operation 77 'load' 'ip_index_load' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_4 : Operation 78 [1/1] (2.55ns)   --->   "%add_ln26 = add nsw i32 %ip_index_load, 1" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:26]   --->   Operation 78 'add' 'add_ln26' <Predicate = (!icmp_ln40)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 79 [1/1] (0.00ns)   --->   "br label %0" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:26]   --->   Operation 79 'br' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 2.63>
+ST_5 : Operation 80 [1/2] (2.63ns)   --->   "%add_ln45 = add i64 %sum_load, %zext_ln45" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:45]   --->   Operation 80 'add' 'add_ln45' <Predicate = true> <Delay = 2.63> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 2.63> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 2.77>
+ST_6 : Operation 81 [1/1] (1.76ns)   --->   "store i64 %add_ln45, i64* @sum, align 8" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:45]   --->   Operation 81 'store' <Predicate = true> <Delay = 1.76>
+ST_6 : Operation 82 [1/1] (2.77ns)   --->   "%icmp_ln46 = icmp ult i64 %add_ln45, %zext_ln43" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:46]   --->   Operation 82 'icmp' 'icmp_ln46' <Predicate = true> <Delay = 2.77> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 2.47>
+ST_7 : Operation 83 [1/1] (0.97ns)   --->   "%and_ln46 = and i1 %icmp_ln46, %icmp_ln46_1" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:46]   --->   Operation 83 'and' 'and_ln46' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 84 [1/1] (0.00ns)   --->   "br i1 %and_ln46, label %._crit_edge29, label %6" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:46]   --->   Operation 84 'br' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 85 [1/1] (0.00ns)   --->   "%ip_index_load_1 = load i32* @ip_index, align 4" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:48]   --->   Operation 85 'load' 'ip_index_load_1' <Predicate = (!and_ln46)> <Delay = 0.00>
+ST_7 : Operation 86 [1/1] (2.47ns)   --->   "%tmp_last_V = icmp eq i32 %ip_index_load_1, %add_ln48" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:48]   --->   Operation 86 'icmp' 'tmp_last_V' <Predicate = (!and_ln46)> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 87 [1/1] (0.00ns)   --->   "%tmp_keep_V_1 = load i4* @channel_keep_V, align 4" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:50]   --->   Operation 87 'load' 'tmp_keep_V_1' <Predicate = (!and_ln46)> <Delay = 0.00>
+ST_7 : Operation 88 [1/1] (0.00ns)   --->   "%tmp_strb_V_1 = load i4* @channel_strb_V, align 1" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:50]   --->   Operation 88 'load' 'tmp_strb_V_1' <Predicate = (!and_ln46)> <Delay = 0.00>
+ST_7 : Operation 89 [1/1] (0.00ns)   --->   "%tmp_user_V_1 = load i2* @channel_user_V, align 2" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:50]   --->   Operation 89 'load' 'tmp_user_V_1' <Predicate = (!and_ln46)> <Delay = 0.00>
+ST_7 : Operation 90 [1/1] (0.00ns)   --->   "%tmp_id_V_1 = load i5* @channel_id_V, align 4" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:50]   --->   Operation 90 'load' 'tmp_id_V_1' <Predicate = (!and_ln46)> <Delay = 0.00>
+ST_7 : Operation 91 [1/1] (0.00ns)   --->   "%tmp_dest_V_1 = load i6* @channel_dest_V, align 1" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:50]   --->   Operation 91 'load' 'tmp_dest_V_1' <Predicate = (!and_ln46)> <Delay = 0.00>
+ST_7 : Operation 92 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i4P.i4P.i2P.i1P.i5P.i6P(i32* %stream_out_V_data_V, i4* %stream_out_V_keep_V, i4* %stream_out_V_strb_V, i2* %stream_out_V_user_V, i1* %stream_out_V_last_V, i5* %stream_out_V_id_V, i6* %stream_out_V_dest_V, i32 %tmp_data_V_3, i4 %tmp_keep_V_1, i4 %tmp_strb_V_1, i2 %tmp_user_V_1, i1 %tmp_last_V, i5 %tmp_id_V_1, i6 %tmp_dest_V_1)" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:50]   --->   Operation 92 'write' <Predicate = (!and_ln46)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 93 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i4P.i4P.i2P.i1P.i5P.i6P(i32* %stream_out_V_data_V, i4* %stream_out_V_keep_V, i4* %stream_out_V_strb_V, i2* %stream_out_V_user_V, i1* %stream_out_V_last_V, i5* %stream_out_V_id_V, i6* %stream_out_V_dest_V, i32 %tmp_data_V_3, i4 %tmp_keep_V_1, i4 %tmp_strb_V_1, i2 %tmp_user_V_1, i1 %tmp_last_V, i5 %tmp_id_V_1, i6 %tmp_dest_V_1)" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:50]   --->   Operation 93 'write' <Predicate = (icmp_ln43 & !and_ln46)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_8 : Operation 94 [1/1] (0.00ns)   --->   "br label %._crit_edge29" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:51]   --->   Operation 94 'br' <Predicate = (icmp_ln43 & !and_ln46)> <Delay = 0.00>
+ST_8 : Operation 95 [1/1] (0.00ns)   --->   "br label %._crit_edge28" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:52]   --->   Operation 95 'br' <Predicate = (icmp_ln43)> <Delay = 0.00>
+ST_8 : Operation 96 [1/1] (0.00ns)   --->   "br label %3" [../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:40]   --->   Operation 96 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4ns, clock uncertainty: 0.5ns.
+
+ <State 1>: 1ns
+The critical path consists of the following:
+	s_axi read on port 'vectorSize' [42]  (1 ns)
+
+ <State 2>: 2.55ns
+The critical path consists of the following:
+	'add' operation ('add_ln46', ../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:46) [49]  (2.55 ns)
+
+ <State 3>: 3.45ns
+The critical path consists of the following:
+	'icmp' operation ('icmp_ln26', ../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:26) [55]  (2.47 ns)
+	blocking operation 0.978 ns on control path)
+
+ <State 4>: 4.73ns
+The critical path consists of the following:
+	'icmp' operation ('icmp_ln43', ../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:43) [92]  (2.78 ns)
+	blocking operation 1.96 ns on control path)
+
+ <State 5>: 2.64ns
+The critical path consists of the following:
+	'add' operation ('add_ln45', ../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:45) [96]  (2.64 ns)
+
+ <State 6>: 2.78ns
+The critical path consists of the following:
+	'icmp' operation ('icmp_ln46', ../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:46) [98]  (2.78 ns)
+
+ <State 7>: 2.47ns
+The critical path consists of the following:
+	'load' operation ('ip_index_load_1', ../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:48) on static variable 'ip_index' [103]  (0 ns)
+	'icmp' operation ('val', ../../GITHUB/app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_fixedpoint_spike.cpp:48) [104]  (2.47 ns)
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,7 @@
+Name,Type,LayerRows,LayerColumns,Neurons,KernelRows,KernelColumns,Partitions
+H1,Convolution,24,24,32,1,1,1
+H2,Pooling,12,12,32,2,2,1
+H3,Convolution,8,8,64,5,5,1
+H4,Pooling,4,4,64,2,2,1
+H5,Fully connected,1,1,1024,4,4,1
+HY,Output,1,1,10,1,1,1

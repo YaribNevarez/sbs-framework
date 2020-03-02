@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.1 (64-bit)
+# SW Build 2580384 on Sat Jun 29 08:04:45 MDT 2019
+# IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
+# Start of session at: Wed Feb 12 09:47:36 2020
+# Process ID: 27122
+# Current directory: /home/nevarez/work/vivado/hls/sbs_fixedpoint_spike/sbs_fixedpoint_spike/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/nevarez/work/vivado/hls/sbs_fixedpoint_spike/sbs_fixedpoint_spike/impl/ip/vivado.log
+# Journal file: /home/nevarez/work/vivado/hls/sbs_fixedpoint_spike/sbs_fixedpoint_spike/impl/ip/vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Wed Feb 12 09:47:45 2020...
