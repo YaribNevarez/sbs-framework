@@ -54,7 +54,7 @@ static unsigned int mt[N]; /* the array for the state vector  */
 static unsigned int mti=N+1; /* mti==N+1 means mt[N] is not initialized */
 
 /* initializing the array with a NONZERO seed */
-void sgenrand(unsigned int seed)
+void MT19937_sgenrand(unsigned int seed)
 {
     /* setting initial seeds to mt[N] using         */
     /* the generator Line 25 of Table 1 in          */
@@ -65,7 +65,7 @@ void sgenrand(unsigned int seed)
         mt[mti] = (69069 * mt[mti-1]) & 0xffffffff;
 }
 
-unsigned int genrand()
+unsigned int MT19937_genrand()
 {
     unsigned int y;
     static unsigned int mag01[2]={0x0, MATRIX_A};
@@ -75,7 +75,7 @@ unsigned int genrand()
         int kk;
 
         if (mti == N+1)   /* if sgenrand() has not been called, */
-            sgenrand(4357); /* a default initial seed is used   */
+          MT19937_sgenrand(4357); /* a default initial seed is used   */
 
         for (kk=0;kk<N-M;kk++) {
             y = (mt[kk]&UPPER_MASK)|(mt[kk+1]&LOWER_MASK);

@@ -18,11 +18,10 @@ if __name__ == '__main__':
     fig, axs = plt.subplots(2)
     plt.ion()
 
-    plot_x = np.array([])
-    plot_y = np.array([])
+    
     fig.suptitle('SbS platform')
 
-    port = '/dev/ttyUSB2'
+    port = '/dev/ttyUSB1'
     serial_port = serial.Serial(port=port, baudrate=115200, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE, bytesize=serial.EIGHTBITS)
     
     while True:
@@ -38,8 +37,12 @@ if __name__ == '__main__':
                 elif command == CMD_PLOT:
                     trace = int.from_bytes(serial_port.read(), byteorder='big', signed=False)
                     length = int.from_bytes(serial_port.read(), byteorder='big', signed=False)
+                    
+                    plot_x = np.array([])
+                    plot_y = np.array([])
                     Y = np.array([1])
                     X = np.array([1])
+
                     for i in range(length // 2):
                         x = np.float64(struct.unpack('d', serial_port.read(8))[0])
                         plot_x = np.append(plot_x, x)
@@ -48,6 +51,7 @@ if __name__ == '__main__':
                         plot_y = np.append(plot_y, y)
                     crc = int.from_bytes(serial_port.read(), byteorder='big', signed=False)
                     
+                    axs[trace].clear()
                     axs[trace].plot(plot_x, plot_y)
 
                     plt.show()
@@ -63,4 +67,4 @@ if __name__ == '__main__':
                     msg = serial_port.read(msgSize)
                     print(msg)
                     crc = int.from_bytes(serial_port.read(), byteorder='big', signed=False)
-        plt.pause(0.001)
+        plt.pause(0.01)

@@ -5,8 +5,8 @@
 extern "C" {
 #endif
 
-void sgenrand(unsigned int seed);
-unsigned int genrand();
+void MT19937_sgenrand(unsigned int seed);
+unsigned int MT19937_genrand();
 
 #ifdef __cplusplus
 }
