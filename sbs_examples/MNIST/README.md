@@ -1,3 +1,3 @@
 # MNIST Case study
-- **Pattern**. Input images in binary format
-- **W_Ha_Hb.bin**. Weight coefficients 
+- **sbs_app**. Tiny bare-metal application importing the software stack to build a SbS model for MNIST classification task
+- **model**. Weight-coefficients, and 100 input images in binary format
