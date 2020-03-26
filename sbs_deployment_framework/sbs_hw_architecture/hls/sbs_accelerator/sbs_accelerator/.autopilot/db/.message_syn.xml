@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1465" content="Validating synthesis directives ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 361.141 ; gain = 13.375 ; free physical = 385 ; free virtual = 9308" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 361.141 ; gain = 13.375 ; free physical = 383 ; free virtual = 9308" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1467" content="Starting code transformations ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 361.453 ; gain = 13.688 ; free physical = 357 ; free virtual = 9299" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1472" content="Checking synthesizability ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 361.453 ; gain = 13.688 ; free physical = 366 ; free virtual = 9293" tag=""/>
+	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="813" content="Unrolling all sub-loops inside loop &apos;Loop-1&apos; (../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:50) in function &apos;sbs_accelerator&apos; for pipelining." tag=""/>
+	<Message prefix="[XFORM 203-503]" severity="WARNING" keynum="887" content="Cannot unroll loop &apos;Loop-1.1&apos; (../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:65) in function &apos;sbs_accelerator&apos;: cannot completely unroll a loop with a variable trip count." tag=""/>
+	<Message prefix="[XFORM 203-503]" severity="WARNING" keynum="887" content="Cannot unroll loop &apos;Loop-1.2&apos; (../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:80) in function &apos;sbs_accelerator&apos;: cannot completely unroll a loop with a variable trip count." tag=""/>
+	<Message prefix="[XFORM 203-503]" severity="WARNING" keynum="887" content="Cannot unroll loop &apos;Loop-1.2.1&apos; (../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:84) in function &apos;sbs_accelerator&apos;: cannot completely unroll a loop with a variable trip count." tag=""/>
+	<Message prefix="[XFORM 203-503]" severity="WARNING" keynum="887" content="Cannot unroll loop &apos;Loop-1.2.2&apos; (../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:95) in function &apos;sbs_accelerator&apos;: cannot completely unroll a loop with a variable trip count." tag=""/>
+	<Message prefix="[XFORM 203-503]" severity="WARNING" keynum="887" content="Cannot unroll loop &apos;Loop-1.3&apos; (../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:104) in function &apos;sbs_accelerator&apos;: cannot completely unroll a loop with a variable trip count." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Pre-synthesis Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 489.137 ; gain = 141.371 ; free physical = 331 ; free virtual = 9268" tag=""/>
+	<Message prefix="[XFORM 203-542]" severity="WARNING" keynum="790" content="Cannot flatten a loop nest &apos;Loop-1.2&apos; (../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:80:10) in function &apos;sbs_accelerator&apos; : 
+
+more than one sub loop." tag=""/>
+	<Message prefix="[XFORM 203-542]" severity="WARNING" keynum="790" content="Cannot flatten a loop nest &apos;Loop-1&apos; (../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:50:8) in function &apos;sbs_accelerator&apos; : 
+
+more than one sub loop." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Architecture Synthesis Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 489.137 ; gain = 141.371 ; free physical = 331 ; free virtual = 9266" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1317" content="Starting hardware synthesis ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1385" content="Synthesizing &apos;sbs_accelerator&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;sbs_accelerator&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-65]" severity="WARNING" keynum="150" content="Unable to satisfy pipeline directive: Loop contains subloop(s) not being unrolled or flattened." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="107" content="Pipelining loop &apos;Loop 1.1&apos;." tag=""/>
+	<Message prefix="[SCHED 204-68]" severity="WARNING" keynum="98" content="Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0)
+   between &apos;phi&apos; operation (&apos;sum_load2&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72) with incoming values : (&apos;tmp_15&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72) and &apos;bitcast&apos; operation (&apos;sum_load_to_int&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72)." tag=""/>
+	<Message prefix="[SCHED 204-68]" severity="WARNING" keynum="98" content="Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0)
+   between &apos;phi&apos; operation (&apos;sum_load2&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72) with incoming values : (&apos;tmp_15&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72) and &apos;bitcast&apos; operation (&apos;sum_load_to_int&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72)." tag=""/>
+	<Message prefix="[SCHED 204-68]" severity="WARNING" keynum="98" content="Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0)
+   between &apos;phi&apos; operation (&apos;sum_load2&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72) with incoming values : (&apos;tmp_15&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72) and &apos;bitcast&apos; operation (&apos;sum_load_to_int&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72)." tag=""/>
+	<Message prefix="[SCHED 204-68]" severity="WARNING" keynum="98" content="Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0)
+   between &apos;phi&apos; operation (&apos;sum_load2&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72) with incoming values : (&apos;tmp_15&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72) and &apos;bitcast&apos; operation (&apos;sum_load_to_int&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72)." tag=""/>
+	<Message prefix="[SCHED 204-68]" severity="WARNING" keynum="98" content="Unable to enforce a carried dependence constraint (II = 11, distance = 1, offset = 0)
+   between &apos;phi&apos; operation (&apos;sum_load2&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72) with incoming values : (&apos;tmp_15&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72) and &apos;fcmp&apos; operation (&apos;tmp_50&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:70)." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 12, Depth = 18." tag=""/>
+	<Message prefix="[SCHED 204-65]" severity="WARNING" keynum="150" content="Unable to satisfy pipeline directive: Loop contains subloop(s) not being unrolled or flattened." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="107" content="Pipelining loop &apos;Loop 1.2.1&apos;." tag=""/>
+	<Message prefix="[SCHED 204-68]" severity="WARNING" keynum="100" content="Unable to enforce a carried constraint (II = 1)
+   between &apos;fadd&apos; operation (&apos;tmp_28&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89) and &apos;fadd&apos; operation (&apos;tmp_28&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89)." tag=""/>
+	<Message prefix="[SCHED 204-68]" severity="WARNING" keynum="100" content="Unable to enforce a carried constraint (II = 2)
+   between &apos;fadd&apos; operation (&apos;tmp_28&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89) and &apos;fadd&apos; operation (&apos;tmp_28&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89)." tag=""/>
+	<Message prefix="[SCHED 204-68]" severity="WARNING" keynum="100" content="Unable to enforce a carried constraint (II = 3)
+   between &apos;fadd&apos; operation (&apos;tmp_28&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89) and &apos;fadd&apos; operation (&apos;tmp_28&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89)." tag=""/>
+	<Message prefix="[SCHED 204-68]" severity="WARNING" keynum="100" content="Unable to enforce a carried constraint (II = 4)
+   between &apos;fadd&apos; operation (&apos;tmp_28&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89) and &apos;fadd&apos; operation (&apos;tmp_28&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89)." tag=""/>
+	<Message prefix="[SCHED 204-68]" severity="WARNING" keynum="100" content="Unable to enforce a carried constraint (II = 7)
+   between &apos;fadd&apos; operation (&apos;tmp_28&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89) and &apos;fadd&apos; operation (&apos;tmp_28&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89)." tag=""/>
+	<Message prefix="[SCHED 204-68]" severity="WARNING" keynum="100" content="Unable to enforce a carried constraint (II = 9)
+   between &apos;fadd&apos; operation (&apos;tmp_28&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89) and &apos;fadd&apos; operation (&apos;tmp_28&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89)." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 10, Depth = 20." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="107" content="Pipelining loop &apos;Loop 1.2.2&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 29." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="107" content="Pipelining loop &apos;Loop 1.3&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 3." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="107" content="Pipelining loop &apos;Loop 2&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 3." tag=""/>
+	<Message prefix="[SCHED 204-21]" severity="WARNING" keynum="137" content="Estimated clock period (5.43ns) exceeds the target (target clock period: 4ns, clock uncertainty: 0.5ns, effective delay budget: 3.5ns)." tag=""/>
+	<Message prefix="[SCHED 204-21]" severity="WARNING" keynum="135" content="The critical path consists of the following:
+	&apos;fcmp&apos; operation (&apos;tmp_50&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:70) (2.73 ns)
+	&apos;and&apos; operation (&apos;tmp_51&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:70) (0.931 ns)
+	multiplexor before &apos;phi&apos; operation (&apos;sum_load2&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72) with incoming values : (&apos;tmp_15&apos;, ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72) (1.77 ns)" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 33.75 seconds; current allocated memory: 82.103 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.54 seconds; current allocated memory: 83.502 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;sbs_accelerator&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_accelerator/stream_in_V_data_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_accelerator/stream_in_V_keep_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_accelerator/stream_in_V_strb_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_accelerator/stream_in_V_user_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_accelerator/stream_in_V_last_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_accelerator/stream_in_V_id_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_accelerator/stream_in_V_dest_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_accelerator/stream_out_V_data_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_accelerator/stream_out_V_keep_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_accelerator/stream_out_V_strb_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_accelerator/stream_out_V_user_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_accelerator/stream_out_V_last_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_accelerator/stream_out_V_id_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_accelerator/stream_out_V_dest_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_accelerator/layerSize&apos; to &apos;s_axilite &amp; ap_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_accelerator/kernelSize&apos; to &apos;s_axilite &amp; ap_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_accelerator/vectorSize&apos; to &apos;s_axilite &amp; ap_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_accelerator/epsilon&apos; to &apos;s_axilite &amp; ap_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on function &apos;sbs_accelerator&apos; to &apos;s_axilite &amp; ap_ctrl_hs&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;ip_index&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;channel_keep_V&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;channel_strb_V&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;channel_user_V&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;channel_last_V&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;channel_id_V&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;channel_dest_V&apos; is power-on initialization." tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;sbs_accelerator_state_vector&apos; to &apos;sbs_accelerator_sbkb&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;sbs_accelerator_spike_matrix&apos; to &apos;sbs_accelerator_scud&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;sbs_accelerator_temp_data&apos; to &apos;sbs_accelerator_tdEe&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="364" content="Bundling port &apos;return&apos;, &apos;layerSize&apos;, &apos;kernelSize&apos;, &apos;vectorSize&apos; and &apos;epsilon&apos; to AXI-Lite port CRTL_BUS." tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;sbs_accelerator_fadd_32ns_32ns_32_10_full_dsp_1&apos; to &apos;sbs_accelerator_feOg&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;sbs_accelerator_fmul_32ns_32ns_32_8_max_dsp_1&apos; to &apos;sbs_accelerator_ffYi&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;sbs_accelerator_fdiv_32ns_32ns_32_30_1&apos; to &apos;sbs_accelerator_fg8j&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;sbs_accelerator_fcmp_32ns_32ns_1_4_1&apos; to &apos;sbs_accelerator_fhbi&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;sbs_accelerator_feOg&apos;: 1 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;sbs_accelerator_ffYi&apos;: 2 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;sbs_accelerator_fg8j&apos;: 1 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;sbs_accelerator_fhbi&apos;: 1 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;sbs_accelerator&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.97 seconds; current allocated memory: 87.522 MB." tag=""/>
+	<Message prefix="[RTMG 210-278]" severity="INFO" keynum="RTMG_278_1792" content="Implementing memory &apos;sbs_accelerator_sbkb_ram (RAM)&apos; using block RAMs with power-on initialization." tag=""/>
+	<Message prefix="[RTMG 210-278]" severity="INFO" keynum="RTMG_278_1792" content="Implementing memory &apos;sbs_accelerator_scud_ram (RAM)&apos; using block RAMs with power-on initialization." tag=""/>
+	<Message prefix="[RTMG 210-278]" severity="INFO" keynum="RTMG_278_1792" content="Implementing memory &apos;sbs_accelerator_tdEe_ram (RAM)&apos; using block RAMs with power-on initialization." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished generating all RTL models Time (s): cpu = 00:00:27 ; elapsed = 00:00:38 . Memory (MB): peak = 489.137 ; gain = 141.371 ; free physical = 308 ; free virtual = 9251" tag=""/>
+	<Message prefix="[SYSC 207-301]" severity="INFO" keynum="SYSC_301_1065" content="Generating SystemC RTL for sbs_accelerator." tag=""/>
+	<Message prefix="[VHDL 208-304]" severity="INFO" keynum="VHDL_304_1066" content="Generating VHDL RTL for sbs_accelerator." tag=""/>
+	<Message prefix="[VLOG 209-307]" severity="INFO" keynum="VLOG_307_1067" content="Generating Verilog RTL for sbs_accelerator." tag=""/>
+	<Message prefix="[HLS 200-112]" severity="INFO" keynum="472" content="Total elapsed time: 37.62 seconds; peak allocated memory: 87.522 MB." tag=""/>
+</Messages>

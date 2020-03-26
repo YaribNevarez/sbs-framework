@@ -33,7 +33,7 @@ typedef enum
   COLUMN_SHIFT
 } WeightShift;
 
-typedef uint32_t  	NeuronState;
+typedef float     	NeuronState;
 typedef uint32_t    Epsilon;
 typedef void * 		  SbsWeightMatrix;
 

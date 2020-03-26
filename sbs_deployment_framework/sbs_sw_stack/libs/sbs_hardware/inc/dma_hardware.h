@@ -58,10 +58,24 @@ typedef struct
                                  DMAIRQMask mask,
                                  DMATransferDirection direction);
 
-  uint32_t  (*InterruptSetHandler) (void *InstancePtr,
-                                    uint32_t ID,
-                                    ARM_GIC_InterruptHandler handler,
-                                    void * data);
+  void        (*InterruptClear)       (void * instance,
+                                       DMAIRQMask mask,
+                                       DMATransferDirection direction);
+
+  DMAIRQMask  (*InterruptGetEnabled)  (void * instance,
+                                       DMATransferDirection direction);
+
+  DMAIRQMask  (*InterruptGetStatus)   (void * instance,
+                                       DMATransferDirection direction);
+
+  void        (*Reset)                (void * instance);
+
+  int         (*ResetIsDone)          (void * instance);
+
+  uint32_t    (*InterruptSetHandler)  (void *InstancePtr,
+                                       uint32_t ID,
+                                       ARM_GIC_InterruptHandler handler,
+                                       void * data);
 } DMAHardware;
 /************************** Constant Definitions *****************************/
 

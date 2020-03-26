@@ -13,7 +13,7 @@ extern "C" {
 
 /***************************** Include Files *********************************/
 #include "sbs_hardware.h"
-#include "xsbs_fixedpoint.h"
+#include "xsbs_accelerator.h"
 /***************** Macros (Inline Functions) Definitions *********************/
 
 /**************************** Type Definitions *******************************/

@@ -31,7 +31,9 @@
 static SbSUpdateAccelerator **  SbSUpdateAccelerator_list = NULL;
 static uint8_t SbSUpdateAccelerator_list_length = 0;
 
-int SbSUpdateAccelerator_getGroupFromList (SbsLayerType layerType, SbSUpdateAccelerator ** sub_list, int sub_list_size)
+int SbSUpdateAccelerator_getGroupFromList (SbsLayerType layerType,
+                                           SbSUpdateAccelerator ** sub_list,
+                                           int sub_list_size)
 {
   int sub_list_count = 0;
   int i;
@@ -59,85 +61,76 @@ int SbSUpdateAccelerator_getGroupFromList (SbsLayerType layerType, SbSUpdateAcce
 
 #define ACCELERATOR_DMA_RESET_TIMEOUT 10000
 
-static void Accelerator_txInterruptHandler(void * data)
+static void Accelerator_txInterruptHandler (void * data)
 {
-  XAxiDma *AxiDmaInst = ((SbSUpdateAccelerator *) data)->dmaHardware;
-  uint32_t IrqStatus = XAxiDma_IntrGetIrq(AxiDmaInst, XAXIDMA_DMA_TO_DEVICE);
+  DMAHardware * driver  = ((SbSUpdateAccelerator *) data)->hardwareConfig->dmaDriver;
+  void *        dma     = ((SbSUpdateAccelerator *) data)->dmaHardware;
+  DMAIRQMask irq_status = driver->InterruptGetStatus (dma, MEMORY_TO_HARDWARE);
 
-  XAxiDma_IntrAckIrq(AxiDmaInst, IrqStatus, XAXIDMA_DMA_TO_DEVICE);
+  driver->InterruptClear (dma, irq_status, MEMORY_TO_HARDWARE);
 
-  if (!(IrqStatus & XAXIDMA_IRQ_ALL_MASK))
-  {
-    return;
-  }
+  if (!(irq_status & DMA_IRQ_ALL)) return;
 
-  if ((IrqStatus & XAXIDMA_IRQ_ERROR_MASK))
+  if (irq_status & DMA_IRQ_DELAY) return;
+
+  if (irq_status & DMA_IRQ_ERROR)
   {
     int TimeOut;
 
     ((SbSUpdateAccelerator *) data)->errorFlags |= 0x01;
 
-    XAxiDma_Reset (AxiDmaInst);
+    driver->Reset (dma);
 
     for (TimeOut = ACCELERATOR_DMA_RESET_TIMEOUT; 0 < TimeOut; TimeOut--)
-      if (XAxiDma_ResetIsDone (AxiDmaInst)) break;
+      if (driver->ResetIsDone (dma)) break;
 
-    printf("Possible illegal address access\n");
     ASSERT(0);
     return;
   }
 
-  if (IrqStatus &  XAXIDMA_IRQ_IOC_MASK)
-  {
-    ((SbSUpdateAccelerator *) data)->txDone = 1;
-  }
+  if (irq_status & DMA_IRQ_IOC) ((SbSUpdateAccelerator *) data)->txDone = 1;
 }
 
 static void Accelerator_rxInterruptHandler (void * data)
 {
-  SbSUpdateAccelerator * accelerator = (SbSUpdateAccelerator *) data;
-  XAxiDma *AxiDmaInst = accelerator->dmaHardware;
-  uint32_t IrqStatus = XAxiDma_IntrGetIrq(AxiDmaInst, XAXIDMA_DEVICE_TO_DMA);
+  SbSUpdateAccelerator *  accelerator = (SbSUpdateAccelerator *) data;
+  DMAHardware *           driver      = accelerator->hardwareConfig->dmaDriver;
+  void *                  dma         = accelerator->dmaHardware;
+  DMAIRQMask              irq_status  = driver->InterruptGetStatus (dma, HARDWARE_TO_MEMORY);
 
-  XAxiDma_IntrAckIrq(AxiDmaInst, IrqStatus, XAXIDMA_DEVICE_TO_DMA);
+  driver->InterruptClear (dma, irq_status, HARDWARE_TO_MEMORY);
 
-  if (!(IrqStatus & XAXIDMA_IRQ_ALL_MASK))
-  {
-    return;
-  }
+  if (!(irq_status & DMA_IRQ_ALL)) return;
 
-  if (IrqStatus & XAXIDMA_IRQ_DELAY_MASK)
-  {
-    return;
-  }
+  if (irq_status & DMA_IRQ_DELAY) return;
 
-  if ((IrqStatus & XAXIDMA_IRQ_ERROR_MASK))
+  if (irq_status & DMA_IRQ_ERROR)
   {
     int TimeOut;
 
     ((SbSUpdateAccelerator *) data)->errorFlags |= 0x01;
 
-    XAxiDma_Reset (AxiDmaInst);
+    driver->Reset (dma);
 
     for (TimeOut = ACCELERATOR_DMA_RESET_TIMEOUT; 0 < TimeOut; TimeOut--)
-      if (XAxiDma_ResetIsDone (AxiDmaInst)) break;
+      if (driver->ResetIsDone (dma)) break;
 
-    printf("Possible illegal address access\n");
     ASSERT(0);
     return;
   }
 
-  if ((IrqStatus &  XAXIDMA_IRQ_IOC_MASK))
+  if (irq_status & DMA_IRQ_IOC)
   {
-    Xil_DCacheInvalidateRange((INTPTR)accelerator->rxBuffer, accelerator->rxBufferSize);
+    Xil_DCacheInvalidateRange ((INTPTR) accelerator->rxBuffer,
+                               accelerator->rxBufferSize);
 
     accelerator->txDone = 1;
     accelerator->rxDone = 1;
 
     if (accelerator->memory_cmd.cmdID == MEM_CMD_MOVE)
-      memcpy(accelerator->memory_cmd.dest,
-             accelerator->memory_cmd.src,
-             accelerator->memory_cmd.size);
+      memcpy (accelerator->memory_cmd.dest,
+              accelerator->memory_cmd.src,
+              accelerator->memory_cmd.size);
   }
 }
 
@@ -152,8 +145,8 @@ static void Accelerator_hardwareInterruptHandler (void * data)
   ASSERT (accelerator->hardwareConfig->hwDriver->InterruptGetStatus != NULL);
   ASSERT (accelerator->hardwareConfig->hwDriver->InterruptClear != NULL);
 
-  status = accelerator->hardwareConfig->hwDriver->InterruptGetStatus(accelerator->updateHardware);
-  accelerator->hardwareConfig->hwDriver->InterruptClear(accelerator->updateHardware, status);
+  status = accelerator->hardwareConfig->hwDriver->InterruptGetStatus (accelerator->updateHardware);
+  accelerator->hardwareConfig->hwDriver->InterruptClear (accelerator->updateHardware, status);
   accelerator->acceleratorReady = status & 1;
 }
 
@@ -177,18 +170,14 @@ int Accelerator_initialize(SbSUpdateAccelerator * accelerator,
   accelerator->dmaHardware = hardware_config->dmaDriver->new ();
 
   ASSERT(accelerator->dmaHardware != NULL);
-
-  if (accelerator->dmaHardware == NULL)
-    return XST_FAILURE;
+  if (accelerator->dmaHardware == NULL) return XST_FAILURE;
 
 
   status = hardware_config->dmaDriver->Initialize (accelerator->dmaHardware,
                                                    hardware_config->dmaDeviceID);
 
   ASSERT(status == XST_SUCCESS);
-
-  if (status != XST_SUCCESS)
-      return status;
+  if (status != XST_SUCCESS) return status;
 
   if (hardware_config->dmaTxIntVecID)
   {
@@ -200,9 +189,8 @@ int Accelerator_initialize(SbSUpdateAccelerator * accelerator,
                                                               hardware_config->dmaTxIntVecID,
                                                               Accelerator_txInterruptHandler,
                                                               accelerator);
-    ASSERT (status != XST_SUCCESS);
-    if (status != XST_SUCCESS)
-      return status;
+    ASSERT(status != XST_SUCCESS);
+    if (status != XST_SUCCESS) return status;
   }
 
   if (hardware_config->dmaRxIntVecID)
@@ -215,9 +203,8 @@ int Accelerator_initialize(SbSUpdateAccelerator * accelerator,
                                                               hardware_config->dmaRxIntVecID,
                                                               Accelerator_rxInterruptHandler,
                                                               accelerator);
-    ASSERT (status == XST_SUCCESS);
-    if (status != XST_SUCCESS)
-      return status;
+    ASSERT(status == XST_SUCCESS);
+    if (status != XST_SUCCESS) return status;
   }
 
 
@@ -230,13 +217,9 @@ int Accelerator_initialize(SbSUpdateAccelerator * accelerator,
 
   status = hardware_config->hwDriver->Initialize (accelerator->updateHardware,
                                                   hardware_config->hwDeviceID);
-  ASSERT (status == XST_SUCCESS);
-  if (status != XST_SUCCESS)
-  {
-    xil_printf ("Sbs update hardware initialization error: %d\r\n", status);
+  ASSERT(status == XST_SUCCESS);
+  if (status != XST_SUCCESS) return XST_FAILURE;
 
-    return XST_FAILURE;
-  }
 
 
   hardware_config->hwDriver->InterruptGlobalEnable (accelerator->updateHardware);
@@ -246,9 +229,8 @@ int Accelerator_initialize(SbSUpdateAccelerator * accelerator,
                                                            hardware_config->hwIntVecID,
                                                            Accelerator_hardwareInterruptHandler,
                                                            accelerator);
-  ASSERT (status == XST_SUCCESS);
-  if (status != XST_SUCCESS)
-    return status;
+  ASSERT(status == XST_SUCCESS);
+  if (status != XST_SUCCESS) return status;
 
   accelerator->acceleratorReady = 1;
   accelerator->rxDone = 1;
@@ -310,9 +292,9 @@ void Accelerator_delete (SbSUpdateAccelerator ** accelerator)
   }
 }
 
-void Accelerator_setup(SbSUpdateAccelerator * accelerator,
-                              SbsAcceleratorProfie * profile,
-                              AcceleratorMode mode)
+void Accelerator_setup (SbSUpdateAccelerator * accelerator,
+                        SbsAcceleratorProfie * profile,
+                        AcceleratorMode mode)
 {
   ASSERT (accelerator != NULL);
   ASSERT (profile != NULL);
@@ -380,13 +362,14 @@ inline void Accelerator_giveStateVector (SbSUpdateAccelerator * accelerator,
   ASSERT (0 < accelerator->profile->stateBufferSize);
   ASSERT (state_vector != NULL);
 
-  *((uint32_t *)accelerator->txBufferCurrentPtr) = ((uint32_t) MT19937_genrand ()) >> (32 - 21);
+  *((float *) accelerator->txBufferCurrentPtr) =
+      ((float) MT19937_genrand ()) * (1.0 / (float) 0xFFFFFFFF);
 
-  accelerator->txBufferCurrentPtr += sizeof(uint32_t);
+  accelerator->txBufferCurrentPtr += sizeof(float);
 
-  memcpy(accelerator->txBufferCurrentPtr,
-         state_vector,
-         accelerator->profile->stateBufferSize);
+  memcpy (accelerator->txBufferCurrentPtr,
+          state_vector,
+          accelerator->profile->stateBufferSize);
 
   accelerator->txBufferCurrentPtr += accelerator->profile->stateBufferSize;
 
@@ -414,9 +397,9 @@ inline void Accelerator_giveWeightVector (SbSUpdateAccelerator * accelerator,
   ASSERT(accelerator->txWeightCounter <= accelerator->profile->kernelSize * accelerator->profile->layerSize);
 #endif
 
-  memcpy(accelerator->txBufferCurrentPtr,
-         weight_vector,
-         accelerator->profile->weightBufferSize);
+  memcpy (accelerator->txBufferCurrentPtr,
+          weight_vector,
+          accelerator->profile->weightBufferSize);
 
   accelerator->txBufferCurrentPtr += accelerator->profile->weightBufferSize;
 

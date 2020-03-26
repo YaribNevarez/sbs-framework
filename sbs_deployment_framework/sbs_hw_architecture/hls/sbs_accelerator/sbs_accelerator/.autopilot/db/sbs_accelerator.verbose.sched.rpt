@@ -1,0 +1,1888 @@
+
+
+================================================================
+== Vivado HLS Report for 'sbs_accelerator'
+================================================================
+* Date:           Sun Mar 22 10:28:39 2020
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        sbs_accelerator
+* Solution:       sbs_accelerator
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   4.00|      5.43|        0.50|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                 |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name    | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1         |    ?|    ?|         ?|          -|          -|     ?|    no    |
+        | + Loop 1.1      |    ?|    ?|        18|         12|          1|     ?|    yes   |
+        | + Loop 1.2      |    ?|    ?|         ?|          -|          -|     ?|    no    |
+        |  ++ Loop 1.2.1  |    ?|    ?|        20|         10|          1|     ?|    yes   |
+        |  ++ Loop 1.2.2  |    ?|    ?|        29|          1|          1|     ?|    yes   |
+        | + Loop 1.3      |    ?|    ?|         3|          1|          1|     ?|    yes   |
+        |- Loop 2         |    ?|    ?|         3|          1|          1|     ?|    yes   |
+        +-----------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 12, depth = 18
+  * Pipeline-1: initiation interval (II) = 10, depth = 20
+  * Pipeline-2: initiation interval (II) = 1, depth = 29
+  * Pipeline-3: initiation interval (II) = 1, depth = 3
+  * Pipeline-4: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 155
+* Pipeline : 5
+  Pipeline-0 : II = 12, D = 18, States = { 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 }
+  Pipeline-1 : II = 10, D = 20, States = { 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 }
+  Pipeline-2 : II = 1, D = 29, States = { 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 }
+  Pipeline-3 : II = 1, D = 3, States = { 148 149 150 }
+  Pipeline-4 : II = 1, D = 3, States = { 152 153 154 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / (tmp_4)
+	152  / (!tmp_4)
+43 --> 
+	44  / true
+44 --> 
+	62  / (!tmp_11)
+	45  / (tmp_11)
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	50  / true
+50 --> 
+	51  / true
+51 --> 
+	52  / true
+52 --> 
+	53  / true
+53 --> 
+	54  / true
+54 --> 
+	55  / true
+55 --> 
+	56  / true
+56 --> 
+	57  / true
+57 --> 
+	58  / true
+58 --> 
+	59  / true
+59 --> 
+	60  / true
+60 --> 
+	61  / true
+61 --> 
+	44  / true
+62 --> 
+	63  / true
+63 --> 
+	64  / (tmp_18)
+	148  / (!tmp_18)
+64 --> 
+	84  / (!tmp_22)
+	65  / (tmp_22)
+65 --> 
+	66  / true
+66 --> 
+	67  / true
+67 --> 
+	68  / true
+68 --> 
+	69  / true
+69 --> 
+	70  / true
+70 --> 
+	71  / true
+71 --> 
+	72  / true
+72 --> 
+	73  / true
+73 --> 
+	74  / true
+74 --> 
+	75  / true
+75 --> 
+	76  / true
+76 --> 
+	77  / true
+77 --> 
+	78  / true
+78 --> 
+	79  / true
+79 --> 
+	80  / true
+80 --> 
+	81  / true
+81 --> 
+	82  / true
+82 --> 
+	83  / true
+83 --> 
+	64  / true
+84 --> 
+	85  / true
+85 --> 
+	86  / true
+86 --> 
+	87  / true
+87 --> 
+	88  / true
+88 --> 
+	89  / (tmp_61)
+	147  / (!tmp_61)
+89 --> 
+	90  / true
+90 --> 
+	91  / true
+91 --> 
+	92  / true
+92 --> 
+	93  / true
+93 --> 
+	94  / true
+94 --> 
+	95  / true
+95 --> 
+	96  / true
+96 --> 
+	97  / true
+97 --> 
+	98  / true
+98 --> 
+	99  / true
+99 --> 
+	100  / true
+100 --> 
+	101  / true
+101 --> 
+	102  / true
+102 --> 
+	103  / true
+103 --> 
+	104  / true
+104 --> 
+	105  / true
+105 --> 
+	106  / true
+106 --> 
+	107  / true
+107 --> 
+	108  / true
+108 --> 
+	109  / true
+109 --> 
+	110  / true
+110 --> 
+	111  / true
+111 --> 
+	112  / true
+112 --> 
+	113  / true
+113 --> 
+	114  / true
+114 --> 
+	115  / true
+115 --> 
+	116  / true
+116 --> 
+	117  / true
+117 --> 
+	118  / true
+118 --> 
+	147  / (!tmp_36)
+	119  / (tmp_36)
+119 --> 
+	120  / true
+120 --> 
+	121  / true
+121 --> 
+	122  / true
+122 --> 
+	123  / true
+123 --> 
+	124  / true
+124 --> 
+	125  / true
+125 --> 
+	126  / true
+126 --> 
+	127  / true
+127 --> 
+	128  / true
+128 --> 
+	129  / true
+129 --> 
+	130  / true
+130 --> 
+	131  / true
+131 --> 
+	132  / true
+132 --> 
+	133  / true
+133 --> 
+	134  / true
+134 --> 
+	135  / true
+135 --> 
+	136  / true
+136 --> 
+	137  / true
+137 --> 
+	138  / true
+138 --> 
+	139  / true
+139 --> 
+	140  / true
+140 --> 
+	141  / true
+141 --> 
+	142  / true
+142 --> 
+	143  / true
+143 --> 
+	144  / true
+144 --> 
+	145  / true
+145 --> 
+	146  / true
+146 --> 
+	118  / true
+147 --> 
+	63  / true
+148 --> 
+	151  / (!tmp_24)
+	149  / (tmp_24)
+149 --> 
+	150  / true
+150 --> 
+	148  / true
+151 --> 
+	42  / true
+152 --> 
+	155  / (!tmp_s)
+	153  / (tmp_s)
+153 --> 
+	154  / true
+154 --> 
+	152  / true
+155 --> 
+
+* FSM state operations: 
+
+ <State 1> : 1.00ns
+ST_1 : Operation 156 [1/1] (1.00ns)   --->   "%epsilon_read = call float @_ssdm_op_Read.s_axilite.float(float %epsilon)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 157 [1/1] (1.00ns)   --->   "%vectorSize_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %vectorSize)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 158 [1/1] (1.00ns)   --->   "%kernelSize_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %kernelSize)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 159 [1/1] (1.00ns)   --->   "%layerSize_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %layerSize)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+
+ <State 2> : 3.36ns
+ST_2 : Operation 160 [10/10] (3.35ns)   --->   "%tmp_1 = fadd float %epsilon_read, 1.000000e+00" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 3> : 3.36ns
+ST_3 : Operation 161 [9/10] (3.35ns)   --->   "%tmp_1 = fadd float %epsilon_read, 1.000000e+00" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 4> : 3.36ns
+ST_4 : Operation 162 [8/10] (3.35ns)   --->   "%tmp_1 = fadd float %epsilon_read, 1.000000e+00" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 5> : 3.36ns
+ST_5 : Operation 163 [7/10] (3.35ns)   --->   "%tmp_1 = fadd float %epsilon_read, 1.000000e+00" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 6> : 3.36ns
+ST_6 : Operation 164 [6/10] (3.35ns)   --->   "%tmp_1 = fadd float %epsilon_read, 1.000000e+00" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 7> : 3.36ns
+ST_7 : Operation 165 [5/10] (3.35ns)   --->   "%tmp_1 = fadd float %epsilon_read, 1.000000e+00" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 8> : 3.36ns
+ST_8 : Operation 166 [4/10] (3.35ns)   --->   "%tmp_1 = fadd float %epsilon_read, 1.000000e+00" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 9> : 3.36ns
+ST_9 : Operation 167 [3/10] (3.35ns)   --->   "%tmp_1 = fadd float %epsilon_read, 1.000000e+00" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 10> : 3.36ns
+ST_10 : Operation 168 [2/10] (3.35ns)   --->   "%tmp_1 = fadd float %epsilon_read, 1.000000e+00" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 11> : 3.36ns
+ST_11 : Operation 169 [1/10] (3.35ns)   --->   "%tmp_1 = fadd float %epsilon_read, 1.000000e+00" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 12> : 3.38ns
+ST_12 : Operation 170 [30/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 13> : 3.38ns
+ST_13 : Operation 171 [29/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 14> : 3.38ns
+ST_14 : Operation 172 [28/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 15> : 3.38ns
+ST_15 : Operation 173 [27/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 16> : 3.38ns
+ST_16 : Operation 174 [26/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 17> : 3.38ns
+ST_17 : Operation 175 [25/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 18> : 3.38ns
+ST_18 : Operation 176 [24/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 19> : 3.38ns
+ST_19 : Operation 177 [23/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 20> : 3.38ns
+ST_20 : Operation 178 [22/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 21> : 3.38ns
+ST_21 : Operation 179 [21/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 22> : 3.38ns
+ST_22 : Operation 180 [20/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 23> : 3.38ns
+ST_23 : Operation 181 [19/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 24> : 3.38ns
+ST_24 : Operation 182 [18/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 25> : 3.38ns
+ST_25 : Operation 183 [17/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 26> : 3.38ns
+ST_26 : Operation 184 [16/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 27> : 3.38ns
+ST_27 : Operation 185 [15/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 28> : 3.38ns
+ST_28 : Operation 186 [14/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 29> : 3.38ns
+ST_29 : Operation 187 [13/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 30> : 3.38ns
+ST_30 : Operation 188 [12/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 31> : 3.38ns
+ST_31 : Operation 189 [11/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 32> : 3.38ns
+ST_32 : Operation 190 [10/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 33> : 3.38ns
+ST_33 : Operation 191 [9/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 34> : 3.38ns
+ST_34 : Operation 192 [8/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 35> : 3.38ns
+ST_35 : Operation 193 [7/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 36> : 3.38ns
+ST_36 : Operation 194 [6/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 37> : 3.38ns
+ST_37 : Operation 195 [5/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 38> : 3.38ns
+ST_38 : Operation 196 [4/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 39> : 3.38ns
+ST_39 : Operation 197 [3/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 40> : 3.38ns
+ST_40 : Operation 198 [2/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 41> : 3.38ns
+ST_41 : Operation 199 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %stream_in_V_data_V), !map !48"
+ST_41 : Operation 200 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %stream_in_V_keep_V), !map !52"
+ST_41 : Operation 201 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %stream_in_V_strb_V), !map !56"
+ST_41 : Operation 202 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i2* %stream_in_V_user_V), !map !60"
+ST_41 : Operation 203 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %stream_in_V_last_V), !map !64"
+ST_41 : Operation 204 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i5* %stream_in_V_id_V), !map !68"
+ST_41 : Operation 205 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i6* %stream_in_V_dest_V), !map !72"
+ST_41 : Operation 206 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %stream_out_V_data_V), !map !76"
+ST_41 : Operation 207 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %stream_out_V_keep_V), !map !80"
+ST_41 : Operation 208 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %stream_out_V_strb_V), !map !84"
+ST_41 : Operation 209 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i2* %stream_out_V_user_V), !map !88"
+ST_41 : Operation 210 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %stream_out_V_last_V), !map !92"
+ST_41 : Operation 211 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i5* %stream_out_V_id_V), !map !96"
+ST_41 : Operation 212 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i6* %stream_out_V_dest_V), !map !100"
+ST_41 : Operation 213 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %layerSize), !map !104"
+ST_41 : Operation 214 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %kernelSize), !map !110"
+ST_41 : Operation 215 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %vectorSize), !map !114"
+ST_41 : Operation 216 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float %epsilon), !map !118"
+ST_41 : Operation 217 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([16 x i8]* @sbs_accelerator_str) nounwind"
+ST_41 : Operation 218 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %stream_in_V_data_V, i4* %stream_in_V_keep_V, i4* %stream_in_V_strb_V, i2* %stream_in_V_user_V, i1* %stream_in_V_last_V, i5* %stream_in_V_id_V, i6* %stream_in_V_dest_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:26]
+ST_41 : Operation 219 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %stream_out_V_data_V, i4* %stream_out_V_keep_V, i4* %stream_out_V_strb_V, i2* %stream_out_V_user_V, i1* %stream_out_V_last_V, i5* %stream_out_V_id_V, i6* %stream_out_V_dest_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:27]
+ST_41 : Operation 220 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %layerSize, [10 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [9 x i8]* @p_str4, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:28]
+ST_41 : Operation 221 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %kernelSize, [10 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [9 x i8]* @p_str4, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:29]
+ST_41 : Operation 222 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %vectorSize, [10 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [9 x i8]* @p_str4, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:30]
+ST_41 : Operation 223 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float %epsilon, [10 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [9 x i8]* @p_str4, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:31]
+ST_41 : Operation 224 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [9 x i8]* @p_str4, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:32]
+ST_41 : Operation 225 [1/30] (3.37ns)   --->   "%reverse_epsilon = fdiv float 1.000000e+00, %tmp_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 226 [1/1] (2.55ns)   --->   "%tmp_2 = add nsw i32 %vectorSize_read, -1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:73]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 227 [1/1] (1.76ns)   --->   "br label %0" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:50]
+
+ <State 42> : 3.40ns
+ST_42 : Operation 228 [1/1] (0.00ns)   --->   "%tmp_3 = phi i32 [ 0, %codeRepl ], [ %tmp_33, %16 ]" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:50]
+ST_42 : Operation 229 [1/1] (0.00ns)   --->   "store i32 %tmp_3, i32* @ip_index, align 4" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:50]
+ST_42 : Operation 230 [1/1] (2.47ns)   --->   "%tmp_4 = icmp slt i32 %tmp_3, %layerSize_read" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:50]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_42 : Operation 231 [1/1] (0.00ns)   --->   "br i1 %tmp_4, label %1, label %.preheader.preheader" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:50]
+ST_42 : Operation 232 [1/1] (2.47ns)   --->   "%tmp_5 = icmp eq i32 %tmp_3, 0" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:53]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_42 : Operation 233 [2/2] (0.00ns)   --->   "%empty = call { i32, i4, i4, i2, i1, i5, i6 } @_ssdm_op_Read.axis.volatile.i32P.i4P.i4P.i2P.i1P.i5P.i6P(i32* %stream_in_V_data_V, i4* %stream_in_V_keep_V, i4* %stream_in_V_strb_V, i2* %stream_in_V_user_V, i1* %stream_in_V_last_V, i5* %stream_in_V_id_V, i6* %stream_in_V_dest_V)" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:55]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_42 : Operation 234 [1/1] (2.55ns)   --->   "%tmp_6 = add nsw i32 %layerSize_read, -1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:117]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_42 : Operation 235 [1/1] (1.76ns)   --->   "br label %.preheader" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:113]
+
+ <State 43> : 2.45ns
+ST_43 : Operation 236 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str5)" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:51]
+ST_43 : Operation 237 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:52]
+ST_43 : Operation 238 [1/2] (0.00ns)   --->   "%empty = call { i32, i4, i4, i2, i1, i5, i6 } @_ssdm_op_Read.axis.volatile.i32P.i4P.i4P.i2P.i1P.i5P.i6P(i32* %stream_in_V_data_V, i4* %stream_in_V_keep_V, i4* %stream_in_V_strb_V, i2* %stream_in_V_user_V, i1* %stream_in_V_last_V, i5* %stream_in_V_id_V, i6* %stream_in_V_dest_V)" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:55]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_43 : Operation 239 [1/1] (0.00ns)   --->   "%tmp_data_V = extractvalue { i32, i4, i4, i2, i1, i5, i6 } %empty, 0" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:55]
+ST_43 : Operation 240 [1/1] (0.00ns)   --->   "br i1 %tmp_5, label %2, label %3" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:53]
+ST_43 : Operation 241 [1/1] (0.00ns)   --->   "%tmp_keep_V = extractvalue { i32, i4, i4, i2, i1, i5, i6 } %empty, 1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:55]
+ST_43 : Operation 242 [1/1] (0.00ns)   --->   "%tmp_strb_V = extractvalue { i32, i4, i4, i2, i1, i5, i6 } %empty, 2" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:55]
+ST_43 : Operation 243 [1/1] (0.00ns)   --->   "%tmp_user_V = extractvalue { i32, i4, i4, i2, i1, i5, i6 } %empty, 3" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:55]
+ST_43 : Operation 244 [1/1] (0.00ns)   --->   "%tmp_last_V = extractvalue { i32, i4, i4, i2, i1, i5, i6 } %empty, 4" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:55]
+ST_43 : Operation 245 [1/1] (0.00ns)   --->   "%tmp_id_V = extractvalue { i32, i4, i4, i2, i1, i5, i6 } %empty, 5" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:55]
+ST_43 : Operation 246 [1/1] (0.00ns)   --->   "%tmp_dest_V = extractvalue { i32, i4, i4, i2, i1, i5, i6 } %empty, 6" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:55]
+ST_43 : Operation 247 [1/1] (0.00ns)   --->   "store i4 %tmp_keep_V, i4* @channel_keep_V, align 4" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:55]
+ST_43 : Operation 248 [1/1] (0.00ns)   --->   "store i4 %tmp_strb_V, i4* @channel_strb_V, align 1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:55]
+ST_43 : Operation 249 [1/1] (0.00ns)   --->   "store i2 %tmp_user_V, i2* @channel_user_V, align 2" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:55]
+ST_43 : Operation 250 [1/1] (1.76ns)   --->   "store i1 %tmp_last_V, i1* @channel_last_V, align 1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:55]
+ST_43 : Operation 251 [1/1] (0.00ns)   --->   "store i5 %tmp_id_V, i5* @channel_id_V, align 4" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:55]
+ST_43 : Operation 252 [1/1] (0.00ns)   --->   "store i6 %tmp_dest_V, i6* @channel_dest_V, align 1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:55]
+ST_43 : Operation 253 [1/1] (0.00ns)   --->   "br label %3" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:57]
+ST_43 : Operation 254 [1/1] (0.00ns)   --->   "%tmp_7 = bitcast i32 %tmp_data_V to float" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:55]
+ST_43 : Operation 255 [1/1] (0.00ns)   --->   "%tmp_21 = trunc i32 %tmp_data_V to i23" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:55]
+ST_43 : Operation 256 [1/1] (2.44ns)   --->   "%notrhs8 = icmp eq i23 %tmp_21, 0" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:55]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_43 : Operation 257 [1/1] (1.76ns)   --->   "br label %4" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:65]
+
+ <State 44> : 3.40ns
+ST_44 : Operation 258 [1/1] (0.00ns)   --->   "%sum_load = phi float [ 0.000000e+00, %3 ], [ %sum_load2, %._crit_edge42 ]" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72]
+ST_44 : Operation 259 [1/1] (0.00ns)   --->   "%i_load_1 = phi i31 [ 0, %3 ], [ %tmp_20, %._crit_edge42 ]" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:65]
+ST_44 : Operation 260 [1/1] (0.00ns)   --->   "%i_load_1_cast = zext i31 %i_load_1 to i32" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:65]
+ST_44 : Operation 261 [1/1] (2.47ns)   --->   "%tmp_11 = icmp slt i32 %i_load_1_cast, %vectorSize_read" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:65]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_44 : Operation 262 [1/1] (2.52ns)   --->   "%tmp_20 = add i31 %i_load_1, 1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:65]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_44 : Operation 263 [1/1] (0.00ns)   --->   "br i1 %tmp_11, label %5, label %.preheader40.preheader" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:65]
+ST_44 : Operation 264 [1/1] (0.00ns)   --->   "%tmp_30 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %tmp_data_V, i32 23, i32 30)" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:55]
+ST_44 : Operation 265 [1/1] (1.55ns)   --->   "%notlhs7 = icmp ne i8 %tmp_30, -1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:55]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_44 : Operation 266 [4/4] (2.73ns)   --->   "%tmp_50 = fcmp olt float %sum_load, %tmp_7" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:70]   --->   Core 105 'FCmp' <Latency = 3> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+ <State 45> : 2.73ns
+ST_45 : Operation 267 [3/4] (2.73ns)   --->   "%tmp_50 = fcmp olt float %sum_load, %tmp_7" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:70]   --->   Core 105 'FCmp' <Latency = 3> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+ <State 46> : 2.73ns
+ST_46 : Operation 268 [2/2] (0.00ns)   --->   "%empty_4 = call { i32, i4, i4, i2, i1, i5, i6 } @_ssdm_op_Read.axis.volatile.i32P.i4P.i4P.i2P.i1P.i5P.i6P(i32* %stream_in_V_data_V, i4* %stream_in_V_keep_V, i4* %stream_in_V_strb_V, i2* %stream_in_V_user_V, i1* %stream_in_V_last_V, i5* %stream_in_V_id_V, i6* %stream_in_V_dest_V)" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:68]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_46 : Operation 269 [1/1] (0.00ns)   --->   "%sum_load_to_int = bitcast float %sum_load to i32" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72]
+ST_46 : Operation 270 [1/1] (0.00ns)   --->   "%tmp_16 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %sum_load_to_int, i32 23, i32 30)" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72]
+ST_46 : Operation 271 [1/1] (0.00ns)   --->   "%tmp_46 = trunc i32 %sum_load_to_int to i23" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72]
+ST_46 : Operation 272 [1/1] (1.55ns)   --->   "%notlhs5 = icmp ne i8 %tmp_16, -1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 273 [1/1] (2.44ns)   --->   "%notrhs6 = icmp eq i23 %tmp_46, 0" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 274 [2/4] (2.73ns)   --->   "%tmp_50 = fcmp olt float %sum_load, %tmp_7" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:70]   --->   Core 105 'FCmp' <Latency = 3> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+ <State 47> : 5.43ns
+ST_47 : Operation 275 [1/1] (0.00ns)   --->   "%tmp_14 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str6)" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:66]
+ST_47 : Operation 276 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:67]
+ST_47 : Operation 277 [1/2] (0.00ns)   --->   "%empty_4 = call { i32, i4, i4, i2, i1, i5, i6 } @_ssdm_op_Read.axis.volatile.i32P.i4P.i4P.i2P.i1P.i5P.i6P(i32* %stream_in_V_data_V, i4* %stream_in_V_keep_V, i4* %stream_in_V_strb_V, i2* %stream_in_V_user_V, i1* %stream_in_V_last_V, i5* %stream_in_V_id_V, i6* %stream_in_V_dest_V)" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:68]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_47 : Operation 278 [1/1] (0.00ns)   --->   "%tmp_data_V_2 = extractvalue { i32, i4, i4, i2, i1, i5, i6 } %empty_4, 0" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:68]
+ST_47 : Operation 279 [1/1] (0.00ns)   --->   "%tmp_12 = bitcast i32 %tmp_data_V_2 to float" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:68]
+ST_47 : Operation 280 [1/1] (0.00ns)   --->   "%tmp_13 = zext i31 %i_load_1 to i64" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:69]
+ST_47 : Operation 281 [1/1] (0.00ns)   --->   "%state_vector_addr = getelementptr inbounds [1024 x float]* @state_vector, i64 0, i64 %tmp_13" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:69]
+ST_47 : Operation 282 [1/1] (3.25ns)   --->   "store float %tmp_12, float* %state_vector_addr, align 4" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:69]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 31> <Depth = 3600> <RAM>
+ST_47 : Operation 283 [1/1] (0.00ns) (grouped into LUT with out node tmp_51)   --->   "%tmp_47 = or i1 %notrhs6, %notlhs5" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 284 [1/1] (0.00ns) (grouped into LUT with out node tmp_51)   --->   "%tmp_48 = or i1 %notrhs8, %notlhs7" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:55]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 285 [1/1] (0.00ns) (grouped into LUT with out node tmp_51)   --->   "%tmp_49 = and i1 %tmp_47, %tmp_48" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 286 [1/4] (2.73ns)   --->   "%tmp_50 = fcmp olt float %sum_load, %tmp_7" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:70]   --->   Core 105 'FCmp' <Latency = 3> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 287 [1/1] (0.93ns) (out node of the LUT)   --->   "%tmp_51 = and i1 %tmp_49, %tmp_50" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:70]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 288 [1/1] (1.76ns)   --->   "br i1 %tmp_51, label %6, label %._crit_edge42" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:70]
+ST_47 : Operation 289 [10/10] (3.35ns)   --->   "%tmp_15 = fadd float %sum_load, %tmp_12" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 290 [1/1] (2.47ns)   --->   "%tmp_17 = icmp eq i32 %i_load_1_cast, %tmp_2" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:73]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+
+ <State 48> : 3.36ns
+ST_48 : Operation 291 [9/10] (3.35ns)   --->   "%tmp_15 = fadd float %sum_load, %tmp_12" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 49> : 3.36ns
+ST_49 : Operation 292 [8/10] (3.35ns)   --->   "%tmp_15 = fadd float %sum_load, %tmp_12" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 50> : 3.36ns
+ST_50 : Operation 293 [7/10] (3.35ns)   --->   "%tmp_15 = fadd float %sum_load, %tmp_12" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 51> : 3.36ns
+ST_51 : Operation 294 [6/10] (3.35ns)   --->   "%tmp_15 = fadd float %sum_load, %tmp_12" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 52> : 3.36ns
+ST_52 : Operation 295 [5/10] (3.35ns)   --->   "%tmp_15 = fadd float %sum_load, %tmp_12" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 53> : 3.36ns
+ST_53 : Operation 296 [4/10] (3.35ns)   --->   "%tmp_15 = fadd float %sum_load, %tmp_12" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 54> : 3.36ns
+ST_54 : Operation 297 [3/10] (3.35ns)   --->   "%tmp_15 = fadd float %sum_load, %tmp_12" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 55> : 3.36ns
+ST_55 : Operation 298 [2/10] (3.35ns)   --->   "%tmp_15 = fadd float %sum_load, %tmp_12" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 56> : 5.12ns
+ST_56 : Operation 299 [1/10] (3.35ns)   --->   "%tmp_15 = fadd float %sum_load, %tmp_12" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_56 : Operation 300 [1/1] (1.76ns)   --->   "br label %._crit_edge42" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:77]
+ST_56 : Operation 301 [1/1] (0.00ns)   --->   "%sum_load2 = phi float [ %tmp_15, %._crit_edge43 ], [ %sum_load, %5 ]" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72]
+ST_56 : Operation 302 [1/1] (0.00ns)   --->   "%empty_5 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str6, i32 %tmp_14)" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:78]
+ST_56 : Operation 303 [1/1] (0.00ns)   --->   "br label %4" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:65]
+
+ <State 57> : 2.73ns
+ST_57 : Operation 304 [1/1] (0.00ns)   --->   "%tmp_15_to_int = bitcast float %tmp_15 to i32" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72]
+ST_57 : Operation 305 [1/1] (0.00ns)   --->   "%tmp_52 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %tmp_15_to_int, i32 23, i32 30)" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72]
+ST_57 : Operation 306 [1/1] (0.00ns)   --->   "%tmp_53 = trunc i32 %tmp_15_to_int to i23" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72]
+ST_57 : Operation 307 [1/1] (1.55ns)   --->   "%notlhs1 = icmp ne i8 %tmp_52, -1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 308 [1/1] (2.44ns)   --->   "%notrhs2 = icmp eq i23 %tmp_53, 0" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 309 [4/4] (2.73ns)   --->   "%tmp_55 = fcmp ole float %tmp_7, %tmp_15" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:73]   --->   Core 105 'FCmp' <Latency = 3> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+ <State 58> : 2.73ns
+ST_58 : Operation 310 [3/4] (2.73ns)   --->   "%tmp_55 = fcmp ole float %tmp_7, %tmp_15" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:73]   --->   Core 105 'FCmp' <Latency = 3> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+ <State 59> : 2.73ns
+ST_59 : Operation 311 [2/4] (2.73ns)   --->   "%tmp_55 = fcmp ole float %tmp_7, %tmp_15" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:73]   --->   Core 105 'FCmp' <Latency = 3> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+ <State 60> : 2.73ns
+ST_60 : Operation 312 [1/4] (2.73ns)   --->   "%tmp_55 = fcmp ole float %tmp_7, %tmp_15" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:73]   --->   Core 105 'FCmp' <Latency = 3> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+ <State 61> : 3.25ns
+ST_61 : Operation 313 [1/1] (0.00ns) (grouped into LUT with out node or_cond)   --->   "%tmp_54 = or i1 %notrhs2, %notlhs1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_61 : Operation 314 [1/1] (0.00ns) (grouped into LUT with out node or_cond)   --->   "%tmp_56 = and i1 %tmp_54, %tmp_55" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:73]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_61 : Operation 315 [1/1] (0.93ns) (out node of the LUT)   --->   "%or_cond = or i1 %tmp_56, %tmp_17" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:73]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_61 : Operation 316 [1/1] (0.00ns)   --->   "br i1 %or_cond, label %7, label %._crit_edge43" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:73]
+ST_61 : Operation 317 [1/1] (0.00ns)   --->   "%ip_index_load = load i32* @ip_index, align 4" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:75]
+ST_61 : Operation 318 [1/1] (0.00ns)   --->   "%tmp_19 = sext i32 %ip_index_load to i64" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:75]
+ST_61 : Operation 319 [1/1] (0.00ns)   --->   "%spike_matrix_addr_1 = getelementptr [3600 x i31]* @spike_matrix, i64 0, i64 %tmp_19" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:75]
+ST_61 : Operation 320 [1/1] (3.25ns)   --->   "store i31 %i_load_1, i31* %spike_matrix_addr_1, align 4" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:75]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 31> <Depth = 3600> <RAM>
+ST_61 : Operation 321 [1/1] (0.00ns)   --->   "br label %._crit_edge43" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:76]
+
+ <State 62> : 1.77ns
+ST_62 : Operation 322 [1/1] (1.76ns)   --->   "br label %.preheader40" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:80]
+
+ <State 63> : 3.40ns
+ST_63 : Operation 323 [1/1] (0.00ns)   --->   "%batch_load = phi i31 [ %tmp_42, %.loopexit ], [ 0, %.preheader40.preheader ]" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:80]
+ST_63 : Operation 324 [1/1] (0.00ns)   --->   "%batch_load_cast = zext i31 %batch_load to i32" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:80]
+ST_63 : Operation 325 [1/1] (2.47ns)   --->   "%tmp_18 = icmp slt i32 %batch_load_cast, %kernelSize_read" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:80]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_63 : Operation 326 [1/1] (2.52ns)   --->   "%tmp_42 = add i31 %batch_load, 1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:80]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_63 : Operation 327 [1/1] (0.00ns)   --->   "br i1 %tmp_18, label %8, label %.preheader39.preheader" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:80]
+ST_63 : Operation 328 [1/1] (0.00ns)   --->   "%tmp_23 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str7)" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:81]
+ST_63 : Operation 329 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:82]
+ST_63 : Operation 330 [1/1] (1.76ns)   --->   "br label %9" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:84]
+ST_63 : Operation 331 [1/1] (1.76ns)   --->   "br label %.preheader39" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:104]
+
+ <State 64> : 3.40ns
+ST_64 : Operation 332 [1/1] (0.00ns)   --->   "%sum_load_1 = phi float [ 0.000000e+00, %8 ], [ %tmp_28, %10 ]" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89]
+ST_64 : Operation 333 [1/1] (0.00ns)   --->   "%i_load_2 = phi i31 [ 0, %8 ], [ %tmp_29, %10 ]" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:84]
+ST_64 : Operation 334 [1/1] (0.00ns)   --->   "%i_load_2_cast = zext i31 %i_load_2 to i32" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:84]
+ST_64 : Operation 335 [1/1] (2.47ns)   --->   "%tmp_22 = icmp slt i32 %i_load_2_cast, %vectorSize_read" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:84]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_64 : Operation 336 [1/1] (2.52ns)   --->   "%tmp_29 = add i31 %i_load_2, 1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:84]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_64 : Operation 337 [1/1] (0.00ns)   --->   "br i1 %tmp_22, label %10, label %11" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:84]
+ST_64 : Operation 338 [1/1] (0.00ns)   --->   "%tmp_25 = zext i31 %i_load_2 to i64" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:88]
+ST_64 : Operation 339 [1/1] (0.00ns)   --->   "%state_vector_addr_1 = getelementptr inbounds [1024 x float]* @state_vector, i64 0, i64 %tmp_25" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:88]
+ST_64 : Operation 340 [2/2] (3.25ns)   --->   "%state_vector_load = load float* %state_vector_addr_1, align 4" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:88]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 31> <Depth = 3600> <RAM>
+
+ <State 65> : 3.25ns
+ST_65 : Operation 341 [2/2] (0.00ns)   --->   "%empty_6 = call { i32, i4, i4, i2, i1, i5, i6 } @_ssdm_op_Read.axis.volatile.i32P.i4P.i4P.i2P.i1P.i5P.i6P(i32* %stream_in_V_data_V, i4* %stream_in_V_keep_V, i4* %stream_in_V_strb_V, i2* %stream_in_V_user_V, i1* %stream_in_V_last_V, i5* %stream_in_V_id_V, i6* %stream_in_V_dest_V)" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:87]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_65 : Operation 342 [1/2] (3.25ns)   --->   "%state_vector_load = load float* %state_vector_addr_1, align 4" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:88]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 31> <Depth = 3600> <RAM>
+
+ <State 66> : 2.57ns
+ST_66 : Operation 343 [1/2] (0.00ns)   --->   "%empty_6 = call { i32, i4, i4, i2, i1, i5, i6 } @_ssdm_op_Read.axis.volatile.i32P.i4P.i4P.i2P.i1P.i5P.i6P(i32* %stream_in_V_data_V, i4* %stream_in_V_keep_V, i4* %stream_in_V_strb_V, i2* %stream_in_V_user_V, i1* %stream_in_V_last_V, i5* %stream_in_V_id_V, i6* %stream_in_V_dest_V)" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:87]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_66 : Operation 344 [1/1] (0.00ns)   --->   "%tmp_data_V_3 = extractvalue { i32, i4, i4, i2, i1, i5, i6 } %empty_6, 0" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:87]
+ST_66 : Operation 345 [1/1] (0.00ns)   --->   "%tmp_26 = bitcast i32 %tmp_data_V_3 to float" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:87]
+ST_66 : Operation 346 [8/8] (2.56ns)   --->   "%tmp_27 = fmul float %state_vector_load, %tmp_26" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:88]   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 2.56> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 67> : 2.57ns
+ST_67 : Operation 347 [7/8] (2.56ns)   --->   "%tmp_27 = fmul float %state_vector_load, %tmp_26" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:88]   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 2.56> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 68> : 2.57ns
+ST_68 : Operation 348 [6/8] (2.56ns)   --->   "%tmp_27 = fmul float %state_vector_load, %tmp_26" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:88]   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 2.56> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 69> : 2.57ns
+ST_69 : Operation 349 [5/8] (2.56ns)   --->   "%tmp_27 = fmul float %state_vector_load, %tmp_26" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:88]   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 2.56> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 70> : 2.57ns
+ST_70 : Operation 350 [4/8] (2.56ns)   --->   "%tmp_27 = fmul float %state_vector_load, %tmp_26" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:88]   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 2.56> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 71> : 2.57ns
+ST_71 : Operation 351 [3/8] (2.56ns)   --->   "%tmp_27 = fmul float %state_vector_load, %tmp_26" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:88]   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 2.56> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 72> : 2.57ns
+ST_72 : Operation 352 [2/8] (2.56ns)   --->   "%tmp_27 = fmul float %state_vector_load, %tmp_26" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:88]   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 2.56> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 73> : 2.57ns
+ST_73 : Operation 353 [1/8] (2.56ns)   --->   "%tmp_27 = fmul float %state_vector_load, %tmp_26" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:88]   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 2.56> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 74> : 3.36ns
+ST_74 : Operation 354 [1/1] (0.00ns)   --->   "%temp_data_addr = getelementptr inbounds [1024 x float]* @temp_data, i64 0, i64 %tmp_25" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:88]
+ST_74 : Operation 355 [1/1] (3.25ns)   --->   "store float %tmp_27, float* %temp_data_addr, align 4" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:88]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 31> <Depth = 3600> <RAM>
+ST_74 : Operation 356 [10/10] (3.35ns)   --->   "%tmp_28 = fadd float %sum_load_1, %tmp_27" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 75> : 3.36ns
+ST_75 : Operation 357 [9/10] (3.35ns)   --->   "%tmp_28 = fadd float %sum_load_1, %tmp_27" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 76> : 3.36ns
+ST_76 : Operation 358 [8/10] (3.35ns)   --->   "%tmp_28 = fadd float %sum_load_1, %tmp_27" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 77> : 3.36ns
+ST_77 : Operation 359 [7/10] (3.35ns)   --->   "%tmp_28 = fadd float %sum_load_1, %tmp_27" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 78> : 3.36ns
+ST_78 : Operation 360 [6/10] (3.35ns)   --->   "%tmp_28 = fadd float %sum_load_1, %tmp_27" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 79> : 3.36ns
+ST_79 : Operation 361 [5/10] (3.35ns)   --->   "%tmp_28 = fadd float %sum_load_1, %tmp_27" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 80> : 3.36ns
+ST_80 : Operation 362 [4/10] (3.35ns)   --->   "%tmp_28 = fadd float %sum_load_1, %tmp_27" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 81> : 3.36ns
+ST_81 : Operation 363 [3/10] (3.35ns)   --->   "%tmp_28 = fadd float %sum_load_1, %tmp_27" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 82> : 3.36ns
+ST_82 : Operation 364 [2/10] (3.35ns)   --->   "%tmp_28 = fadd float %sum_load_1, %tmp_27" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 83> : 3.36ns
+ST_83 : Operation 365 [1/1] (0.00ns)   --->   "%tmp_44 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str8)" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:85]
+ST_83 : Operation 366 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:86]
+ST_83 : Operation 367 [1/10] (3.35ns)   --->   "%tmp_28 = fadd float %sum_load_1, %tmp_27" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_83 : Operation 368 [1/1] (0.00ns)   --->   "%empty_7 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str8, i32 %tmp_44)" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:90]
+ST_83 : Operation 369 [1/1] (0.00ns)   --->   "br label %9" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:84]
+
+ <State 84> : 2.73ns
+ST_84 : Operation 370 [4/4] (2.73ns)   --->   "%tmp_60 = fcmp ogt float %sum_load_1, 0x3BC79CA100000000" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:92]   --->   Core 105 'FCmp' <Latency = 3> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+ <State 85> : 2.73ns
+ST_85 : Operation 371 [3/4] (2.73ns)   --->   "%tmp_60 = fcmp ogt float %sum_load_1, 0x3BC79CA100000000" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:92]   --->   Core 105 'FCmp' <Latency = 3> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+ <State 86> : 2.73ns
+ST_86 : Operation 372 [2/4] (2.73ns)   --->   "%tmp_60 = fcmp ogt float %sum_load_1, 0x3BC79CA100000000" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:92]   --->   Core 105 'FCmp' <Latency = 3> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+ <State 87> : 2.73ns
+ST_87 : Operation 373 [1/4] (2.73ns)   --->   "%tmp_60 = fcmp ogt float %sum_load_1, 0x3BC79CA100000000" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:92]   --->   Core 105 'FCmp' <Latency = 3> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+ <State 88> : 4.31ns
+ST_88 : Operation 374 [1/1] (0.00ns)   --->   "%sum_load_1_to_int = bitcast float %sum_load_1 to i32" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89]
+ST_88 : Operation 375 [1/1] (0.00ns)   --->   "%tmp_57 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %sum_load_1_to_int, i32 23, i32 30)" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89]
+ST_88 : Operation 376 [1/1] (0.00ns)   --->   "%tmp_58 = trunc i32 %sum_load_1_to_int to i23" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89]
+ST_88 : Operation 377 [1/1] (1.55ns)   --->   "%notlhs = icmp ne i8 %tmp_57, -1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 378 [1/1] (2.44ns)   --->   "%notrhs = icmp eq i23 %tmp_58, 0" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 379 [1/1] (0.00ns) (grouped into LUT with out node tmp_61)   --->   "%tmp_59 = or i1 %notrhs, %notlhs" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 380 [1/1] (0.93ns) (out node of the LUT)   --->   "%tmp_61 = and i1 %tmp_59, %tmp_60" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:92]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 381 [1/1] (0.00ns)   --->   "br i1 %tmp_61, label %12, label %.loopexit" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:92]
+ST_88 : Operation 382 [30/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 89> : 3.38ns
+ST_89 : Operation 383 [29/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 90> : 3.38ns
+ST_90 : Operation 384 [28/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 91> : 3.38ns
+ST_91 : Operation 385 [27/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 92> : 3.38ns
+ST_92 : Operation 386 [26/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 93> : 3.38ns
+ST_93 : Operation 387 [25/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 94> : 3.38ns
+ST_94 : Operation 388 [24/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 95> : 3.38ns
+ST_95 : Operation 389 [23/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 96> : 3.38ns
+ST_96 : Operation 390 [22/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 97> : 3.38ns
+ST_97 : Operation 391 [21/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 98> : 3.38ns
+ST_98 : Operation 392 [20/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 99> : 3.38ns
+ST_99 : Operation 393 [19/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 100> : 3.38ns
+ST_100 : Operation 394 [18/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 101> : 3.38ns
+ST_101 : Operation 395 [17/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 102> : 3.38ns
+ST_102 : Operation 396 [16/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 103> : 3.38ns
+ST_103 : Operation 397 [15/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 104> : 3.38ns
+ST_104 : Operation 398 [14/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 105> : 3.38ns
+ST_105 : Operation 399 [13/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 106> : 3.38ns
+ST_106 : Operation 400 [12/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 107> : 3.38ns
+ST_107 : Operation 401 [11/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 108> : 3.38ns
+ST_108 : Operation 402 [10/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 109> : 3.38ns
+ST_109 : Operation 403 [9/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 110> : 3.38ns
+ST_110 : Operation 404 [8/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 111> : 3.38ns
+ST_111 : Operation 405 [7/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 112> : 3.38ns
+ST_112 : Operation 406 [6/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 113> : 3.38ns
+ST_113 : Operation 407 [5/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 114> : 3.38ns
+ST_114 : Operation 408 [4/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 115> : 3.38ns
+ST_115 : Operation 409 [3/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 116> : 3.38ns
+ST_116 : Operation 410 [2/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 117> : 3.38ns
+ST_117 : Operation 411 [1/30] (3.37ns)   --->   "%tmp_34 = fdiv float %epsilon_read, %sum_load_1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94]   --->   Core 101 'FDiv' <Latency = 29> <II = 1> <Delay = 3.37> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_117 : Operation 412 [1/1] (1.76ns)   --->   "br label %13" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:95]
+
+ <State 118> : 3.40ns
+ST_118 : Operation 413 [1/1] (0.00ns)   --->   "%tmp_35 = phi i31 [ 0, %12 ], [ %tmp_41, %14 ]" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:95]
+ST_118 : Operation 414 [1/1] (0.00ns)   --->   "%tmp_35_cast = zext i31 %tmp_35 to i32" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:95]
+ST_118 : Operation 415 [1/1] (2.47ns)   --->   "%tmp_36 = icmp slt i32 %tmp_35_cast, %vectorSize_read" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:95]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_118 : Operation 416 [1/1] (2.52ns)   --->   "%tmp_41 = add i31 %tmp_35, 1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:95]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_118 : Operation 417 [1/1] (0.00ns)   --->   "br i1 %tmp_36, label %14, label %.loopexit.loopexit" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:95]
+ST_118 : Operation 418 [1/1] (0.00ns)   --->   "%tmp_37 = zext i31 %tmp_35 to i64" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]
+ST_118 : Operation 419 [1/1] (0.00ns)   --->   "%state_vector_addr_3 = getelementptr inbounds [1024 x float]* @state_vector, i64 0, i64 %tmp_37" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]
+ST_118 : Operation 420 [1/1] (0.00ns)   --->   "%temp_data_addr_1 = getelementptr inbounds [1024 x float]* @temp_data, i64 0, i64 %tmp_37" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]
+ST_118 : Operation 421 [2/2] (3.25ns)   --->   "%temp_data_load = load float* %temp_data_addr_1, align 4" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 31> <Depth = 3600> <RAM>
+
+ <State 119> : 3.25ns
+ST_119 : Operation 422 [1/2] (3.25ns)   --->   "%temp_data_load = load float* %temp_data_addr_1, align 4" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 31> <Depth = 3600> <RAM>
+
+ <State 120> : 2.57ns
+ST_120 : Operation 423 [8/8] (2.56ns)   --->   "%tmp_38 = fmul float %temp_data_load, %tmp_34" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 2.56> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 121> : 2.57ns
+ST_121 : Operation 424 [7/8] (2.56ns)   --->   "%tmp_38 = fmul float %temp_data_load, %tmp_34" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 2.56> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 122> : 2.57ns
+ST_122 : Operation 425 [6/8] (2.56ns)   --->   "%tmp_38 = fmul float %temp_data_load, %tmp_34" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 2.56> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 123> : 2.57ns
+ST_123 : Operation 426 [5/8] (2.56ns)   --->   "%tmp_38 = fmul float %temp_data_load, %tmp_34" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 2.56> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 124> : 2.57ns
+ST_124 : Operation 427 [4/8] (2.56ns)   --->   "%tmp_38 = fmul float %temp_data_load, %tmp_34" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 2.56> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 125> : 2.57ns
+ST_125 : Operation 428 [3/8] (2.56ns)   --->   "%tmp_38 = fmul float %temp_data_load, %tmp_34" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 2.56> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 126> : 3.25ns
+ST_126 : Operation 429 [2/2] (3.25ns)   --->   "%state_vector_load_2 = load float* %state_vector_addr_3, align 4" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 31> <Depth = 3600> <RAM>
+ST_126 : Operation 430 [2/8] (2.56ns)   --->   "%tmp_38 = fmul float %temp_data_load, %tmp_34" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 2.56> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 127> : 3.25ns
+ST_127 : Operation 431 [1/2] (3.25ns)   --->   "%state_vector_load_2 = load float* %state_vector_addr_3, align 4" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 31> <Depth = 3600> <RAM>
+ST_127 : Operation 432 [1/8] (2.56ns)   --->   "%tmp_38 = fmul float %temp_data_load, %tmp_34" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 2.56> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 128> : 3.36ns
+ST_128 : Operation 433 [10/10] (3.35ns)   --->   "%tmp_39 = fadd float %state_vector_load_2, %tmp_38" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 129> : 3.36ns
+ST_129 : Operation 434 [9/10] (3.35ns)   --->   "%tmp_39 = fadd float %state_vector_load_2, %tmp_38" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 130> : 3.36ns
+ST_130 : Operation 435 [8/10] (3.35ns)   --->   "%tmp_39 = fadd float %state_vector_load_2, %tmp_38" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 131> : 3.36ns
+ST_131 : Operation 436 [7/10] (3.35ns)   --->   "%tmp_39 = fadd float %state_vector_load_2, %tmp_38" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 132> : 3.36ns
+ST_132 : Operation 437 [6/10] (3.35ns)   --->   "%tmp_39 = fadd float %state_vector_load_2, %tmp_38" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 133> : 3.36ns
+ST_133 : Operation 438 [5/10] (3.35ns)   --->   "%tmp_39 = fadd float %state_vector_load_2, %tmp_38" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 134> : 3.36ns
+ST_134 : Operation 439 [4/10] (3.35ns)   --->   "%tmp_39 = fadd float %state_vector_load_2, %tmp_38" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 135> : 3.36ns
+ST_135 : Operation 440 [3/10] (3.35ns)   --->   "%tmp_39 = fadd float %state_vector_load_2, %tmp_38" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 136> : 3.36ns
+ST_136 : Operation 441 [2/10] (3.35ns)   --->   "%tmp_39 = fadd float %state_vector_load_2, %tmp_38" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 137> : 3.36ns
+ST_137 : Operation 442 [1/10] (3.35ns)   --->   "%tmp_39 = fadd float %state_vector_load_2, %tmp_38" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 99 'FAddSub' <Latency = 9> <II = 1> <Delay = 3.35> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 138> : 2.57ns
+ST_138 : Operation 443 [8/8] (2.56ns)   --->   "%tmp_40 = fmul float %reverse_epsilon, %tmp_39" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 2.56> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 139> : 2.57ns
+ST_139 : Operation 444 [7/8] (2.56ns)   --->   "%tmp_40 = fmul float %reverse_epsilon, %tmp_39" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 2.56> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 140> : 2.57ns
+ST_140 : Operation 445 [6/8] (2.56ns)   --->   "%tmp_40 = fmul float %reverse_epsilon, %tmp_39" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 2.56> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 141> : 2.57ns
+ST_141 : Operation 446 [5/8] (2.56ns)   --->   "%tmp_40 = fmul float %reverse_epsilon, %tmp_39" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 2.56> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 142> : 2.57ns
+ST_142 : Operation 447 [4/8] (2.56ns)   --->   "%tmp_40 = fmul float %reverse_epsilon, %tmp_39" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 2.56> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 143> : 2.57ns
+ST_143 : Operation 448 [3/8] (2.56ns)   --->   "%tmp_40 = fmul float %reverse_epsilon, %tmp_39" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 2.56> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 144> : 2.57ns
+ST_144 : Operation 449 [2/8] (2.56ns)   --->   "%tmp_40 = fmul float %reverse_epsilon, %tmp_39" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 2.56> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 145> : 2.57ns
+ST_145 : Operation 450 [1/8] (2.56ns)   --->   "%tmp_40 = fmul float %reverse_epsilon, %tmp_39" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 100 'FMul' <Latency = 7> <II = 1> <Delay = 2.56> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 146> : 3.25ns
+ST_146 : Operation 451 [1/1] (0.00ns)   --->   "%tmp_45 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str9)" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:96]
+ST_146 : Operation 452 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:97]
+ST_146 : Operation 453 [1/1] (3.25ns)   --->   "store float %tmp_40, float* %state_vector_addr_3, align 4" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 31> <Depth = 3600> <RAM>
+ST_146 : Operation 454 [1/1] (0.00ns)   --->   "%empty_8 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str9, i32 %tmp_45)" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:100]
+ST_146 : Operation 455 [1/1] (0.00ns)   --->   "br label %13" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:95]
+
+ <State 147> : 0.00ns
+ST_147 : Operation 456 [1/1] (0.00ns)   --->   "br label %.loopexit"
+ST_147 : Operation 457 [1/1] (0.00ns)   --->   "%empty_9 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str7, i32 %tmp_23)" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:102]
+ST_147 : Operation 458 [1/1] (0.00ns)   --->   "br label %.preheader40" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:80]
+
+ <State 148> : 3.40ns
+ST_148 : Operation 459 [1/1] (0.00ns)   --->   "%i_load_3 = phi i31 [ %tmp_32, %15 ], [ 0, %.preheader39.preheader ]" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:104]
+ST_148 : Operation 460 [1/1] (0.00ns)   --->   "%i_load_3_cast = zext i31 %i_load_3 to i32" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:104]
+ST_148 : Operation 461 [1/1] (2.47ns)   --->   "%tmp_24 = icmp slt i32 %i_load_3_cast, %vectorSize_read" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:104]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_148 : Operation 462 [1/1] (2.52ns)   --->   "%tmp_32 = add i31 %i_load_3, 1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:104]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_148 : Operation 463 [1/1] (0.00ns)   --->   "br i1 %tmp_24, label %15, label %16" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:104]
+ST_148 : Operation 464 [1/1] (0.00ns)   --->   "%tmp_31 = zext i31 %i_load_3 to i64" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:107]
+ST_148 : Operation 465 [1/1] (0.00ns)   --->   "%state_vector_addr_2 = getelementptr inbounds [1024 x float]* @state_vector, i64 0, i64 %tmp_31" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:107]
+ST_148 : Operation 466 [2/2] (3.25ns)   --->   "%state_vector_load_1 = load float* %state_vector_addr_2, align 4" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:107]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 31> <Depth = 3600> <RAM>
+
+ <State 149> : 3.25ns
+ST_149 : Operation 467 [1/2] (3.25ns)   --->   "%state_vector_load_1 = load float* %state_vector_addr_2, align 4" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:107]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 31> <Depth = 3600> <RAM>
+ST_149 : Operation 468 [1/1] (0.00ns)   --->   "%tmp_data_V_4 = bitcast float %state_vector_load_1 to i32" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:107]
+ST_149 : Operation 469 [1/1] (0.00ns)   --->   "%tmp_keep_V_2 = load i4* @channel_keep_V, align 4" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:109]
+ST_149 : Operation 470 [1/1] (0.00ns)   --->   "%tmp_strb_V_2 = load i4* @channel_strb_V, align 1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:109]
+ST_149 : Operation 471 [1/1] (0.00ns)   --->   "%tmp_user_V_2 = load i2* @channel_user_V, align 2" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:109]
+ST_149 : Operation 472 [1/1] (0.00ns)   --->   "%tmp_last_V_2 = load i1* @channel_last_V, align 1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:109]
+ST_149 : Operation 473 [1/1] (0.00ns)   --->   "%tmp_id_V_2 = load i5* @channel_id_V, align 4" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:109]
+ST_149 : Operation 474 [1/1] (0.00ns)   --->   "%tmp_dest_V_2 = load i6* @channel_dest_V, align 1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:109]
+ST_149 : Operation 475 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i4P.i4P.i2P.i1P.i5P.i6P(i32* %stream_out_V_data_V, i4* %stream_out_V_keep_V, i4* %stream_out_V_strb_V, i2* %stream_out_V_user_V, i1* %stream_out_V_last_V, i5* %stream_out_V_id_V, i6* %stream_out_V_dest_V, i32 %tmp_data_V_4, i4 %tmp_keep_V_2, i4 %tmp_strb_V_2, i2 %tmp_user_V_2, i1 %tmp_last_V_2, i5 %tmp_id_V_2, i6 %tmp_dest_V_2)" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:109]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+ <State 150> : 0.00ns
+ST_150 : Operation 476 [1/1] (0.00ns)   --->   "%tmp_43 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str10)" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:105]
+ST_150 : Operation 477 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:106]
+ST_150 : Operation 478 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i4P.i4P.i2P.i1P.i5P.i6P(i32* %stream_out_V_data_V, i4* %stream_out_V_keep_V, i4* %stream_out_V_strb_V, i2* %stream_out_V_user_V, i1* %stream_out_V_last_V, i5* %stream_out_V_id_V, i6* %stream_out_V_dest_V, i32 %tmp_data_V_4, i4 %tmp_keep_V_2, i4 %tmp_strb_V_2, i2 %tmp_user_V_2, i1 %tmp_last_V_2, i5 %tmp_id_V_2, i6 %tmp_dest_V_2)" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:109]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_150 : Operation 479 [1/1] (0.00ns)   --->   "%empty_10 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str10, i32 %tmp_43)" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:110]
+ST_150 : Operation 480 [1/1] (0.00ns)   --->   "br label %.preheader39" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:104]
+
+ <State 151> : 2.55ns
+ST_151 : Operation 481 [1/1] (0.00ns)   --->   "%empty_11 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str5, i32 %tmp)" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:111]
+ST_151 : Operation 482 [1/1] (0.00ns)   --->   "%ip_index_load_1 = load i32* @ip_index, align 4" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:50]
+ST_151 : Operation 483 [1/1] (2.55ns)   --->   "%tmp_33 = add nsw i32 %ip_index_load_1, 1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:50]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_151 : Operation 484 [1/1] (0.00ns)   --->   "br label %0" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:50]
+
+ <State 152> : 3.40ns
+ST_152 : Operation 485 [1/1] (0.00ns)   --->   "%i_load = phi i31 [ %tmp_10, %17 ], [ 0, %.preheader.preheader ]" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:113]
+ST_152 : Operation 486 [1/1] (0.00ns)   --->   "%i_load_cast = zext i31 %i_load to i32" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:113]
+ST_152 : Operation 487 [1/1] (2.47ns)   --->   "%tmp_s = icmp slt i32 %i_load_cast, %layerSize_read" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:113]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_152 : Operation 488 [1/1] (2.52ns)   --->   "%tmp_10 = add i31 %i_load, 1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:113]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_152 : Operation 489 [1/1] (0.00ns)   --->   "br i1 %tmp_s, label %17, label %18" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:113]
+ST_152 : Operation 490 [1/1] (0.00ns)   --->   "%tmp_8 = zext i31 %i_load to i64" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:116]
+ST_152 : Operation 491 [1/1] (0.00ns)   --->   "%spike_matrix_addr = getelementptr [3600 x i31]* @spike_matrix, i64 0, i64 %tmp_8" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:116]
+ST_152 : Operation 492 [2/2] (3.25ns)   --->   "%spike_matrix_load = load i31* %spike_matrix_addr, align 4" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:116]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 31> <Depth = 3600> <RAM>
+ST_152 : Operation 493 [1/1] (2.47ns)   --->   "%tmp_last_V_1 = icmp eq i32 %i_load_cast, %tmp_6" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:117]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+
+ <State 153> : 3.25ns
+ST_153 : Operation 494 [1/2] (3.25ns)   --->   "%spike_matrix_load = load i31* %spike_matrix_addr, align 4" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:116]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 31> <Depth = 3600> <RAM>
+ST_153 : Operation 495 [1/1] (0.00ns)   --->   "%tmp_data_V_1 = zext i31 %spike_matrix_load to i32" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:116]
+ST_153 : Operation 496 [1/1] (1.76ns)   --->   "store i1 %tmp_last_V_1, i1* @channel_last_V, align 1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:117]
+ST_153 : Operation 497 [1/1] (0.00ns)   --->   "%tmp_keep_V_1 = load i4* @channel_keep_V, align 4" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:118]
+ST_153 : Operation 498 [1/1] (0.00ns)   --->   "%tmp_strb_V_1 = load i4* @channel_strb_V, align 1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:118]
+ST_153 : Operation 499 [1/1] (0.00ns)   --->   "%tmp_user_V_1 = load i2* @channel_user_V, align 2" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:118]
+ST_153 : Operation 500 [1/1] (0.00ns)   --->   "%tmp_id_V_1 = load i5* @channel_id_V, align 4" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:118]
+ST_153 : Operation 501 [1/1] (0.00ns)   --->   "%tmp_dest_V_1 = load i6* @channel_dest_V, align 1" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:118]
+ST_153 : Operation 502 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i4P.i4P.i2P.i1P.i5P.i6P(i32* %stream_out_V_data_V, i4* %stream_out_V_keep_V, i4* %stream_out_V_strb_V, i2* %stream_out_V_user_V, i1* %stream_out_V_last_V, i5* %stream_out_V_id_V, i6* %stream_out_V_dest_V, i32 %tmp_data_V_1, i4 %tmp_keep_V_1, i4 %tmp_strb_V_1, i2 %tmp_user_V_1, i1 %tmp_last_V_1, i5 %tmp_id_V_1, i6 %tmp_dest_V_1)" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:118]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+ <State 154> : 0.00ns
+ST_154 : Operation 503 [1/1] (0.00ns)   --->   "%tmp_9 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str11)" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:114]
+ST_154 : Operation 504 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:115]
+ST_154 : Operation 505 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i4P.i4P.i2P.i1P.i5P.i6P(i32* %stream_out_V_data_V, i4* %stream_out_V_keep_V, i4* %stream_out_V_strb_V, i2* %stream_out_V_user_V, i1* %stream_out_V_last_V, i5* %stream_out_V_id_V, i6* %stream_out_V_dest_V, i32 %tmp_data_V_1, i4 %tmp_keep_V_1, i4 %tmp_strb_V_1, i2 %tmp_user_V_1, i1 %tmp_last_V_1, i5 %tmp_id_V_1, i6 %tmp_dest_V_1)" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:118]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_154 : Operation 506 [1/1] (0.00ns)   --->   "%empty_12 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str11, i32 %tmp_9)" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:119]
+ST_154 : Operation 507 [1/1] (0.00ns)   --->   "br label %.preheader" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:113]
+
+ <State 155> : 0.00ns
+ST_155 : Operation 508 [1/1] (0.00ns)   --->   "ret void" [../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:120]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4ns, clock uncertainty: 0.5ns.
+
+ <State 1>: 1ns
+The critical path consists of the following:
+	s_axi read on port 'epsilon' [48]  (1 ns)
+
+ <State 2>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_1', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [59]  (3.36 ns)
+
+ <State 3>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_1', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [59]  (3.36 ns)
+
+ <State 4>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_1', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [59]  (3.36 ns)
+
+ <State 5>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_1', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [59]  (3.36 ns)
+
+ <State 6>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_1', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [59]  (3.36 ns)
+
+ <State 7>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_1', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [59]  (3.36 ns)
+
+ <State 8>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_1', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [59]  (3.36 ns)
+
+ <State 9>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_1', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [59]  (3.36 ns)
+
+ <State 10>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_1', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [59]  (3.36 ns)
+
+ <State 11>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_1', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [59]  (3.36 ns)
+
+ <State 12>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 13>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 14>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 15>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 16>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 17>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 18>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 19>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 20>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 21>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 22>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 23>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 24>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 25>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 26>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 27>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 28>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 29>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 30>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 31>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 32>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 33>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 34>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 35>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 36>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 37>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 38>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 39>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 40>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 41>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('reverse_epsilon', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:47) [60]  (3.38 ns)
+
+ <State 42>: 3.4ns
+The critical path consists of the following:
+	'icmp' operation ('tmp_4', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:50) [66]  (2.47 ns)
+	blocking operation 0.931 ns on control path)
+
+ <State 43>: 2.45ns
+The critical path consists of the following:
+	axis read on port 'stream_in_V_data_V' (../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:55) [72]  (0 ns)
+	'icmp' operation ('notrhs8', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:55) [92]  (2.45 ns)
+
+ <State 44>: 3.4ns
+The critical path consists of the following:
+	'icmp' operation ('tmp_11', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:65) [98]  (2.47 ns)
+	blocking operation 0.931 ns on control path)
+
+ <State 45>: 2.73ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_50', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:70) [120]  (2.73 ns)
+
+ <State 46>: 2.73ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_50', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:70) [120]  (2.73 ns)
+
+ <State 47>: 5.43ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_50', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:70) [120]  (2.73 ns)
+	'and' operation ('tmp_51', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:70) [121]  (0.931 ns)
+	multiplexor before 'phi' operation ('sum_load2', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72) with incoming values : ('tmp_15', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72) [145]  (1.77 ns)
+
+ <State 48>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_15', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72) [124]  (3.36 ns)
+
+ <State 49>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_15', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72) [124]  (3.36 ns)
+
+ <State 50>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_15', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72) [124]  (3.36 ns)
+
+ <State 51>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_15', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72) [124]  (3.36 ns)
+
+ <State 52>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_15', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72) [124]  (3.36 ns)
+
+ <State 53>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_15', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72) [124]  (3.36 ns)
+
+ <State 54>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_15', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72) [124]  (3.36 ns)
+
+ <State 55>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_15', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72) [124]  (3.36 ns)
+
+ <State 56>: 5.12ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_15', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72) [124]  (3.36 ns)
+	multiplexor before 'phi' operation ('sum_load2', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72) with incoming values : ('tmp_15', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:72) [145]  (1.77 ns)
+
+ <State 57>: 2.73ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_55', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:73) [131]  (2.73 ns)
+
+ <State 58>: 2.73ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_55', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:73) [131]  (2.73 ns)
+
+ <State 59>: 2.73ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_55', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:73) [131]  (2.73 ns)
+
+ <State 60>: 2.73ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_55', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:73) [131]  (2.73 ns)
+
+ <State 61>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('ip_index_load', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:75) on static variable 'ip_index' [137]  (0 ns)
+	'getelementptr' operation ('spike_matrix_addr_1', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:75) [139]  (0 ns)
+	'store' operation (../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:75) of variable 'i_load_1', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:65 on array 'spike_matrix' [140]  (3.25 ns)
+
+ <State 62>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('batch_load', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:80) with incoming values : ('tmp_42', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:80) [151]  (1.77 ns)
+
+ <State 63>: 3.4ns
+The critical path consists of the following:
+	'icmp' operation ('tmp_18', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:80) [153]  (2.47 ns)
+	blocking operation 0.931 ns on control path)
+
+ <State 64>: 3.4ns
+The critical path consists of the following:
+	'icmp' operation ('tmp_22', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:84) [164]  (2.47 ns)
+	blocking operation 0.931 ns on control path)
+
+ <State 65>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('state_vector_load', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:88) on array 'state_vector' [174]  (3.25 ns)
+
+ <State 66>: 2.57ns
+The critical path consists of the following:
+	axis read on port 'stream_in_V_data_V' (../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:87) [170]  (0 ns)
+	'fmul' operation ('tmp_27', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:88) [176]  (2.57 ns)
+
+ <State 67>: 2.57ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_27', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:88) [176]  (2.57 ns)
+
+ <State 68>: 2.57ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_27', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:88) [176]  (2.57 ns)
+
+ <State 69>: 2.57ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_27', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:88) [176]  (2.57 ns)
+
+ <State 70>: 2.57ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_27', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:88) [176]  (2.57 ns)
+
+ <State 71>: 2.57ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_27', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:88) [176]  (2.57 ns)
+
+ <State 72>: 2.57ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_27', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:88) [176]  (2.57 ns)
+
+ <State 73>: 2.57ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_27', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:88) [176]  (2.57 ns)
+
+ <State 74>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_28', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89) [179]  (3.36 ns)
+
+ <State 75>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_28', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89) [179]  (3.36 ns)
+
+ <State 76>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_28', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89) [179]  (3.36 ns)
+
+ <State 77>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_28', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89) [179]  (3.36 ns)
+
+ <State 78>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_28', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89) [179]  (3.36 ns)
+
+ <State 79>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_28', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89) [179]  (3.36 ns)
+
+ <State 80>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_28', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89) [179]  (3.36 ns)
+
+ <State 81>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_28', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89) [179]  (3.36 ns)
+
+ <State 82>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_28', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89) [179]  (3.36 ns)
+
+ <State 83>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_28', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89) [179]  (3.36 ns)
+
+ <State 84>: 2.73ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_60', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:92) [189]  (2.73 ns)
+
+ <State 85>: 2.73ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_60', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:92) [189]  (2.73 ns)
+
+ <State 86>: 2.73ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_60', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:92) [189]  (2.73 ns)
+
+ <State 87>: 2.73ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_60', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:92) [189]  (2.73 ns)
+
+ <State 88>: 4.31ns
+The critical path consists of the following:
+	'icmp' operation ('notrhs', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89) [187]  (2.45 ns)
+	'or' operation ('tmp_59', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:89) [188]  (0 ns)
+	'and' operation ('tmp_61', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:92) [190]  (0.931 ns)
+	blocking operation 0.931 ns on control path)
+
+ <State 89>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 90>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 91>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 92>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 93>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 94>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 95>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 96>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 97>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 98>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 99>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 100>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 101>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 102>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 103>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 104>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 105>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 106>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 107>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 108>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 109>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 110>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 111>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 112>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 113>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 114>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 115>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 116>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 117>: 3.38ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_34', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:94) [193]  (3.38 ns)
+
+ <State 118>: 3.4ns
+The critical path consists of the following:
+	'icmp' operation ('tmp_36', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:95) [198]  (2.47 ns)
+	blocking operation 0.931 ns on control path)
+
+ <State 119>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('temp_data_load', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98) on array 'temp_data' [208]  (3.25 ns)
+
+ <State 120>: 2.57ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_38', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98) [209]  (2.57 ns)
+
+ <State 121>: 2.57ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_38', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98) [209]  (2.57 ns)
+
+ <State 122>: 2.57ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_38', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98) [209]  (2.57 ns)
+
+ <State 123>: 2.57ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_38', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98) [209]  (2.57 ns)
+
+ <State 124>: 2.57ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_38', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98) [209]  (2.57 ns)
+
+ <State 125>: 2.57ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_38', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98) [209]  (2.57 ns)
+
+ <State 126>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('state_vector_load_2', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98) on array 'state_vector' [206]  (3.25 ns)
+
+ <State 127>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('state_vector_load_2', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98) on array 'state_vector' [206]  (3.25 ns)
+
+ <State 128>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_39', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98) [210]  (3.36 ns)
+
+ <State 129>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_39', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98) [210]  (3.36 ns)
+
+ <State 130>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_39', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98) [210]  (3.36 ns)
+
+ <State 131>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_39', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98) [210]  (3.36 ns)
+
+ <State 132>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_39', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98) [210]  (3.36 ns)
+
+ <State 133>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_39', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98) [210]  (3.36 ns)
+
+ <State 134>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_39', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98) [210]  (3.36 ns)
+
+ <State 135>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_39', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98) [210]  (3.36 ns)
+
+ <State 136>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_39', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98) [210]  (3.36 ns)
+
+ <State 137>: 3.36ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_39', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98) [210]  (3.36 ns)
+
+ <State 138>: 2.57ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_40', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98) [211]  (2.57 ns)
+
+ <State 139>: 2.57ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_40', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98) [211]  (2.57 ns)
+
+ <State 140>: 2.57ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_40', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98) [211]  (2.57 ns)
+
+ <State 141>: 2.57ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_40', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98) [211]  (2.57 ns)
+
+ <State 142>: 2.57ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_40', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98) [211]  (2.57 ns)
+
+ <State 143>: 2.57ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_40', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98) [211]  (2.57 ns)
+
+ <State 144>: 2.57ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_40', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98) [211]  (2.57 ns)
+
+ <State 145>: 2.57ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_40', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98) [211]  (2.57 ns)
+
+ <State 146>: 3.25ns
+The critical path consists of the following:
+	'store' operation (../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98) of variable 'tmp_40', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:98 on array 'state_vector' [212]  (3.25 ns)
+
+ <State 147>: 0ns
+The critical path consists of the following:
+
+ <State 148>: 3.4ns
+The critical path consists of the following:
+	'icmp' operation ('tmp_24', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:104) [225]  (2.47 ns)
+	blocking operation 0.931 ns on control path)
+
+ <State 149>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('state_vector_load_1', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:107) on array 'state_vector' [233]  (3.25 ns)
+
+ <State 150>: 0ns
+The critical path consists of the following:
+
+ <State 151>: 2.55ns
+The critical path consists of the following:
+	'load' operation ('ip_index_load_1', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:50) on static variable 'ip_index' [246]  (0 ns)
+	'add' operation ('tmp_33', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:50) [247]  (2.55 ns)
+
+ <State 152>: 3.4ns
+The critical path consists of the following:
+	'icmp' operation ('tmp_s', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:113) [255]  (2.47 ns)
+	blocking operation 0.931 ns on control path)
+
+ <State 153>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('spike_matrix_load', ../../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_accelerator.cpp:116) on array 'spike_matrix' [263]  (3.25 ns)
+
+ <State 154>: 0ns
+The critical path consists of the following:
+
+ <State 155>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+	State 85
+	State 86
+	State 87
+	State 88
+	State 89
+	State 90
+	State 91
+	State 92
+	State 93
+	State 94
+	State 95
+	State 96
+	State 97
+	State 98
+	State 99
+	State 100
+	State 101
+	State 102
+	State 103
+	State 104
+	State 105
+	State 106
+	State 107
+	State 108
+	State 109
+	State 110
+	State 111
+	State 112
+	State 113
+	State 114
+	State 115
+	State 116
+	State 117
+	State 118
+	State 119
+	State 120
+	State 121
+	State 122
+	State 123
+	State 124
+	State 125
+	State 126
+	State 127
+	State 128
+	State 129
+	State 130
+	State 131
+	State 132
+	State 133
+	State 134
+	State 135
+	State 136
+	State 137
+	State 138
+	State 139
+	State 140
+	State 141
+	State 142
+	State 143
+	State 144
+	State 145
+	State 146
+	State 147
+	State 148
+	State 149
+	State 150
+	State 151
+	State 152
+	State 153
+	State 154
+	State 155
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

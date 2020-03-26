@@ -72,16 +72,16 @@ int ARM_GIC_connect (uint32_t ID, ARM_GIC_InterruptHandler handler, void * data)
 
   if (ID && (handler != NULL))
   {
-    int intr_target_reg = XScuGic_DistReadReg(&ARM_GIC_ScuGic,
-                                              XSCUGIC_SPI_TARGET_OFFSET_CALC(ID));
+    int intr_target_reg = XScuGic_DistReadReg (&ARM_GIC_ScuGic,
+                                               XSCUGIC_SPI_TARGET_OFFSET_CALC(ID));
 
     intr_target_reg &= ~(0x000000FF << ((ID % 4) * 8));
     intr_target_reg |=  (0x00000001 << ((ID % 4) * 8)); //CPU0 ack Timer0
   //intr_target_reg |=  (0x00000002 << ((XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR%4)*8));//CPU1 ack Timer0
 
-    XScuGic_DistWriteReg(&ARM_GIC_ScuGic,
-                         XSCUGIC_SPI_TARGET_OFFSET_CALC(ID),
-                         intr_target_reg);
+    XScuGic_DistWriteReg (&ARM_GIC_ScuGic,
+                          XSCUGIC_SPI_TARGET_OFFSET_CALC(ID),
+                          intr_target_reg);
 
     /***************************************************************************/
     XScuGic_SetPriorityTriggerType (&ARM_GIC_ScuGic, ID, 0xA0, 0x3);

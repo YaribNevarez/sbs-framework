@@ -83,31 +83,34 @@ typedef enum
 
 /************************** Function Prototypes ******************************/
 
-Multivector * Multivector_new(MemoryBlock * memory_def, Format * format, uint8_t dimensionality, ...);
+Multivector * Multivector_new (MemoryBlock * memory_def,
+                               Format * format,
+                               uint8_t dimensionality,
+                               ...);
 
 void * Multivector_2DAccess (Multivector * multivector,
-                                    uint16_t row,
-                                    uint16_t column);
+                             uint16_t row,
+                             uint16_t column);
 
 void * Multivector_3DAccess (Multivector * multivector,
-                                    uint16_t row,
-                                    uint16_t column,
-                                    uint16_t position);
+                             uint16_t row,
+                             uint16_t column,
+                             uint16_t position);
 
-Multivector * Multivector_duplicate(MemoryBlock * memory_def,
-                                           Multivector * original);
+Multivector * Multivector_duplicate (MemoryBlock * memory_def,
+                                     Multivector * original);
 
-size_t Multivector_dataSize(Multivector * multivector);
+size_t Multivector_dataSize (Multivector * multivector);
 
-void Multivector_cacheFlush(Multivector * multivector);
+void Multivector_cacheFlush (Multivector * multivector);
 
-void Multivector_delete(Multivector ** multivector);
+void Multivector_delete (Multivector ** multivector);
 
-void Multivector_float2Fixed(Multivector * multivector, Format * new_format);
+void Multivector_float2Fixed (Multivector * multivector, Format * new_format);
 
-Multivector * Multivector_convert2fixed16(MemoryBlock * memory_def,
-                                                 Multivector * original,
-                                                 Format * new_format);
+Multivector * Multivector_reformat (MemoryBlock * memory_def,
+                                    Multivector * original,
+                                    Format * new_format);
 #ifdef __cplusplus
 }
 #endif /* __cplusplus */

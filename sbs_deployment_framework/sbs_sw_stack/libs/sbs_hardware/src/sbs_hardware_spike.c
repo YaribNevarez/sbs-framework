@@ -17,7 +17,7 @@
 /************************** Variable Definitions *****************************/
 static void * SbsHardware_fixedpoint_spike_new (void)
 {
-  return malloc (sizeof(XSbs_fixedpoint_spike));
+  return malloc (sizeof(XSbs_spike_50));
 }
 
 static void SbsHardware_fixedpoint_spike_delete (void ** InstancePtr)
@@ -42,33 +42,35 @@ static uint32_t  SbsHardware_fixedpoint_spike_InterruptSetHandler (void *instanc
 SbsHardware SbsHardware_fixedpoint_spike = {
   .new = SbsHardware_fixedpoint_spike_new,
   .delete = SbsHardware_fixedpoint_spike_delete,
-  .Initialize = (int (*)(void *, u16)) XSbs_fixedpoint_spike_Initialize,
+  .Initialize = (int (*)(void *, u16)) XSbs_spike_50_Initialize,
 
-  .Start = (void (*)(void *)) XSbs_fixedpoint_spike_Start,
-  .IsDone = (uint32_t(*)(void *)) XSbs_fixedpoint_spike_IsDone,
-  .IsIdle = (uint32_t(*) (void *)) XSbs_fixedpoint_spike_IsIdle,
-  .IsReady = (uint32_t(*) (void *)) XSbs_fixedpoint_spike_IsReady,
-  .EnableAutoRestart = (void (*) (void *)) XSbs_fixedpoint_spike_EnableAutoRestart,
-  .DisableAutoRestart = (void (*) (void *)) XSbs_fixedpoint_spike_DisableAutoRestart,
+  .Start = (void (*)(void *)) XSbs_spike_50_Start,
+  .IsDone = (uint32_t(*)(void *)) XSbs_spike_50_IsDone,
+  .IsIdle = (uint32_t(*) (void *)) XSbs_spike_50_IsIdle,
+  .IsReady = (uint32_t(*) (void *)) XSbs_spike_50_IsReady,
+  .EnableAutoRestart = (void (*) (void *)) XSbs_spike_50_EnableAutoRestart,
+  .DisableAutoRestart = (void (*) (void *)) XSbs_spike_50_DisableAutoRestart,
 
   .Set_mode = (void (*) (void *, uint32_t )) NULL,
   .Get_mode = (uint32_t(*) (void *)) NULL,
-  .Set_layerSize = (void (*) (void *, uint32_t )) XSbs_fixedpoint_spike_Set_layerSize,
-  .Get_layerSize = (uint32_t(*) (void *)) XSbs_fixedpoint_spike_Get_layerSize,
+  .Set_layerSize = (void (*) (void *, uint32_t )) XSbs_spike_50_Set_layerSize,
+  .Get_layerSize = (uint32_t(*) (void *)) XSbs_spike_50_Get_layerSize,
   .Set_kernelSize = (void (*) (void *, uint32_t )) NULL,
   .Get_kernelSize = (uint32_t(*) (void *)) NULL,
-  .Set_vectorSize = (void (*) (void *, uint32_t )) XSbs_fixedpoint_spike_Set_vectorSize,
-  .Get_vectorSize = (uint32_t(*) (void *)) XSbs_fixedpoint_spike_Get_vectorSize,
+  .Set_vectorSize = (void (*) (void *, uint32_t )) XSbs_spike_50_Set_vectorSize,
+  .Get_vectorSize = (uint32_t(*) (void *)) XSbs_spike_50_Get_vectorSize,
   .Set_epsilon = (void (*) (void *, uint32_t )) NULL,
   .Get_epsilon = (uint32_t(*) (void *)) NULL,
+  .Set_debug = (void (*) (void *, uint32_t )) NULL,
+  .Get_debug = (uint32_t(*) (void *)) XSbs_spike_50_Get_debug,
 
-  .InterruptGlobalEnable = (void (*) (void *)) XSbs_fixedpoint_spike_InterruptGlobalEnable,
-  .InterruptGlobalDisable = (void (*) (void *)) XSbs_fixedpoint_spike_InterruptGlobalDisable,
-  .InterruptEnable = (void (*) (void *, uint32_t )) XSbs_fixedpoint_spike_InterruptEnable,
-  .InterruptDisable = (void (*) (void *, uint32_t )) XSbs_fixedpoint_spike_InterruptDisable,
-  .InterruptClear = (void (*) (void *, uint32_t )) XSbs_fixedpoint_spike_InterruptClear,
-  .InterruptGetEnabled = (uint32_t(*) (void *)) XSbs_fixedpoint_spike_InterruptGetEnabled,
-  .InterruptGetStatus = (uint32_t(*) (void *)) XSbs_fixedpoint_spike_InterruptGetStatus,
+  .InterruptGlobalEnable = (void (*) (void *)) XSbs_spike_50_InterruptGlobalEnable,
+  .InterruptGlobalDisable = (void (*) (void *)) XSbs_spike_50_InterruptGlobalDisable,
+  .InterruptEnable = (void (*) (void *, uint32_t )) XSbs_spike_50_InterruptEnable,
+  .InterruptDisable = (void (*) (void *, uint32_t )) XSbs_spike_50_InterruptDisable,
+  .InterruptClear = (void (*) (void *, uint32_t )) XSbs_spike_50_InterruptClear,
+  .InterruptGetEnabled = (uint32_t(*) (void *)) XSbs_spike_50_InterruptGetEnabled,
+  .InterruptGetStatus = (uint32_t(*) (void *)) XSbs_spike_50_InterruptGetStatus,
 
   .InterruptSetHandler = SbsHardware_fixedpoint_spike_InterruptSetHandler
 };

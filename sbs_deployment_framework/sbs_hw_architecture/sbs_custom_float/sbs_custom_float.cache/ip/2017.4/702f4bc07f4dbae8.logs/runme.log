@@ -1,0 +1,659 @@
+
+*** Running vivado
+    with args -log platform_sbs_spike_50_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source platform_sbs_spike_50_0_0.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source platform_sbs_spike_50_0_0.tcl -notrace
+Command: synth_design -top platform_sbs_spike_50_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 5904 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:36 . Memory (MB): peak = 1326.020 ; gain = 88.996 ; free physical = 946 ; free virtual = 17713
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'platform_sbs_spike_50_0_0' [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ip/platform_sbs_spike_50_0_0/synth/platform_sbs_spike_50_0_0.vhd:99]
+	Parameter C_S_AXI_CRTL_BUS_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_CRTL_BUS_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'sbs_spike_50' declared at '/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50.vhd:12' bound to instance 'U0' of component 'sbs_spike_50' [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ip/platform_sbs_spike_50_0_0/synth/platform_sbs_spike_50_0_0.vhd:199]
+INFO: [Synth 8-638] synthesizing module 'sbs_spike_50' [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50.vhd:58]
+	Parameter C_S_AXI_CRTL_BUS_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_CRTL_BUS_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50.vhd:121]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50.vhd:124]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50.vhd:318]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50.vhd:320]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50.vhd:326]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50.vhd:333]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50.vhd:342]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50.vhd:348]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50.vhd:359]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50.vhd:373]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50.vhd:391]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50.vhd:400]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50.vhd:406]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50.vhd:419]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50.vhd:425]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50.vhd:466]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50.vhd:470]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50.vhd:474]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'sbs_spike_50_CRTL_BUS_s_axi' declared at '/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50_CRTL_BUS_s_axi.vhd:12' bound to instance 'sbs_spike_50_CRTL_BUS_s_axi_U' of component 'sbs_spike_50_CRTL_BUS_s_axi' [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50.vhd:566]
+INFO: [Synth 8-638] synthesizing module 'sbs_spike_50_CRTL_BUS_s_axi' [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50_CRTL_BUS_s_axi.vhd:76]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'sbs_spike_50_CRTL_BUS_s_axi' (1#1) [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50_CRTL_BUS_s_axi.vhd:76]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 10 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'sbs_spike_50_faddbkb' declared at '/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50_faddbkb.vhd:11' bound to instance 'sbs_spike_50_faddbkb_U1' of component 'sbs_spike_50_faddbkb' [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50.vhd:599]
+INFO: [Synth 8-638] synthesizing module 'sbs_spike_50_faddbkb' [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50_faddbkb.vhd:29]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 10 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'sbs_spike_50_ap_fadd_8_full_dsp_32' declared at '/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/ip/sbs_spike_50_ap_fadd_8_full_dsp_32.vhd:59' bound to instance 'sbs_spike_50_ap_fadd_8_full_dsp_32_u' of component 'sbs_spike_50_ap_fadd_8_full_dsp_32' [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50_faddbkb.vhd:59]
+INFO: [Synth 8-638] synthesizing module 'sbs_spike_50_ap_fadd_8_full_dsp_32' [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/ip/sbs_spike_50_ap_fadd_8_full_dsp_32.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: virtex7 - type: string 
+	Parameter C_HAS_ADD bound to: 1 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 8 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 2 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_5' declared at '/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/b20f/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_5' [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/ip/sbs_spike_50_ap_fadd_8_full_dsp_32.vhd:203]
+INFO: [Synth 8-256] done synthesizing module 'sbs_spike_50_ap_fadd_8_full_dsp_32' (19#1) [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/ip/sbs_spike_50_ap_fadd_8_full_dsp_32.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'sbs_spike_50_faddbkb' (20#1) [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50_faddbkb.vhd:29]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'sbs_spike_50_fcmpcud' declared at '/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50_fcmpcud.vhd:11' bound to instance 'sbs_spike_50_fcmpcud_U2' of component 'sbs_spike_50_fcmpcud' [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50.vhd:614]
+INFO: [Synth 8-638] synthesizing module 'sbs_spike_50_fcmpcud' [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50_fcmpcud.vhd:30]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'sbs_spike_50_ap_fcmp_2_no_dsp_32' declared at '/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/ip/sbs_spike_50_ap_fcmp_2_no_dsp_32.vhd:59' bound to instance 'sbs_spike_50_ap_fcmp_2_no_dsp_32_u' of component 'sbs_spike_50_ap_fcmp_2_no_dsp_32' [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50_fcmpcud.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'sbs_spike_50_ap_fcmp_2_no_dsp_32' [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/ip/sbs_spike_50_ap_fcmp_2_no_dsp_32.vhd:74]
+	Parameter C_XDEVICEFAMILY bound to: virtex7 - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 1 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 0 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 2 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 0 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 1 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_5' declared at '/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/b20f/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_5' [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/ip/sbs_spike_50_ap_fcmp_2_no_dsp_32.vhd:208]
+INFO: [Synth 8-256] done synthesizing module 'sbs_spike_50_ap_fcmp_2_no_dsp_32' (24#1) [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/ip/sbs_spike_50_ap_fcmp_2_no_dsp_32.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'sbs_spike_50_fcmpcud' (25#1) [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50_fcmpcud.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'sbs_spike_50' (26#1) [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50.vhd:58]
+INFO: [Synth 8-256] done synthesizing module 'platform_sbs_spike_50_0_0' (27#1) [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ip/platform_sbs_spike_50_0_0/synth/platform_sbs_spike_50_0_0.vhd:99]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized3 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized3 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized3 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized3 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized3 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized19 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized19 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized19 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized19 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized19 has unconnected port SINIT
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[14]
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[13]
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[12]
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[11]
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[10]
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[9]
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[8]
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[7]
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[6]
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[5]
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[4]
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[3]
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[2]
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[1]
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[0]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized74 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized74 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized74 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized74 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized74 has unconnected port SINIT
+WARNING: [Synth 8-3331] design carry_chain__parameterized7 has unconnected port CARRYS_OUT[9]
+WARNING: [Synth 8-3331] design carry_chain__parameterized7 has unconnected port CARRYS_OUT[8]
+WARNING: [Synth 8-3331] design carry_chain__parameterized7 has unconnected port CARRYS_OUT[7]
+WARNING: [Synth 8-3331] design carry_chain__parameterized7 has unconnected port CARRYS_OUT[6]
+WARNING: [Synth 8-3331] design carry_chain__parameterized7 has unconnected port CARRYS_OUT[5]
+WARNING: [Synth 8-3331] design carry_chain__parameterized7 has unconnected port CARRYS_OUT[4]
+WARNING: [Synth 8-3331] design carry_chain__parameterized7 has unconnected port CARRYS_OUT[3]
+WARNING: [Synth 8-3331] design carry_chain__parameterized7 has unconnected port CARRYS_OUT[2]
+WARNING: [Synth 8-3331] design carry_chain__parameterized7 has unconnected port CARRYS_OUT[1]
+WARNING: [Synth 8-3331] design carry_chain__parameterized7 has unconnected port CARRYS_OUT[0]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized72 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized72 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized72 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized72 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized72 has unconnected port SINIT
+WARNING: [Synth 8-3331] design carry_chain__parameterized6 has unconnected port CARRYS_OUT[0]
+WARNING: [Synth 8-3331] design compare_eq_im__parameterized2 has unconnected port CARRYS_OUT[0]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized13 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized13 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized13 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized13 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized13 has unconnected port SINIT
+WARNING: [Synth 8-3331] design compare_ne_im has unconnected port CARRYS_OUT[0]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized70 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized70 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized70 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized70 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized70 has unconnected port SINIT
+WARNING: [Synth 8-3331] design carry_chain__parameterized4 has unconnected port CARRYS_OUT[1]
+WARNING: [Synth 8-3331] design carry_chain__parameterized4 has unconnected port CARRYS_OUT[0]
+WARNING: [Synth 8-3331] design compare_eq_im__parameterized1 has unconnected port CARRYS_OUT[0]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized11 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized11 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized11 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized33 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized33 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized33 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized68 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized68 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_4_viv__parameterized68 has unconnected port SINIT
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port m_axis_result_tuser[0]
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port m_axis_result_tlast
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port aresetn
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port s_axis_a_tuser[0]
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port s_axis_a_tlast
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port s_axis_b_tuser[0]
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port s_axis_b_tlast
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port s_axis_c_tvalid
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port s_axis_c_tdata[31]
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port s_axis_c_tdata[30]
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port s_axis_c_tdata[29]
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port s_axis_c_tdata[28]
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port s_axis_c_tdata[27]
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port s_axis_c_tdata[26]
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port s_axis_c_tdata[25]
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port s_axis_c_tdata[24]
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port s_axis_c_tdata[23]
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port s_axis_c_tdata[22]
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port s_axis_c_tdata[21]
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port s_axis_c_tdata[20]
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port s_axis_c_tdata[19]
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port s_axis_c_tdata[18]
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port s_axis_c_tdata[17]
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port s_axis_c_tdata[16]
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port s_axis_c_tdata[15]
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port s_axis_c_tdata[14]
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port s_axis_c_tdata[13]
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port s_axis_c_tdata[12]
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port s_axis_c_tdata[11]
+WARNING: [Synth 8-3331] design floating_point_v7_1_5_viv__parameterized1 has unconnected port s_axis_c_tdata[10]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:27 ; elapsed = 00:01:05 . Memory (MB): peak = 1422.551 ; gain = 185.527 ; free physical = 706 ; free virtual = 17474
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:27 ; elapsed = 00:01:06 . Memory (MB): peak = 1422.551 ; gain = 185.527 ; free physical = 707 ; free virtual = 17476
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 139 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ip/platform_sbs_spike_50_0_0/constraints/sbs_spike_50_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ip/platform_sbs_spike_50_0_0/constraints/sbs_spike_50_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.runs/platform_sbs_spike_50_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.runs/platform_sbs_spike_50_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 17 instances were transformed.
+  FDE => FDRE: 17 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1661.309 ; gain = 0.000 ; free physical = 548 ; free virtual = 17319
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:58 ; elapsed = 00:02:45 . Memory (MB): peak = 1661.309 ; gain = 424.285 ; free physical = 510 ; free virtual = 17288
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:58 ; elapsed = 00:02:45 . Memory (MB): peak = 1661.309 ; gain = 424.285 ; free physical = 509 ; free virtual = 17288
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  /home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.runs/platform_sbs_spike_50_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:58 ; elapsed = 00:02:45 . Memory (MB): peak = 1661.309 ; gain = 424.285 ; free physical = 506 ; free virtual = 17285
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'sbs_spike_50_CRTL_BUS_s_axi'
+INFO: [Synth 8-5544] ROM "ARREADY_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RVALID_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "BVALID" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "WREADY_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "AWREADY_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "det_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "op_tdata" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'tmp_data_V_reg_508_reg[31:0]' into 'tmp_7_reg_513_reg[31:0]' [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50.vhd:1433]
+WARNING: [Synth 8-6014] Unused sequential element tmp_data_V_reg_508_reg was removed.  [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50.vhd:1433]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "notlhs2_fu_335_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notlhs6_fu_417_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notrhs7_fu_423_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notlhs_fu_359_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notrhs_fu_365_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notrhs3_fu_305_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "stream_in_V_data_V_0_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "stream_in_V_dest_V_0_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "stream_in_V_id_V_0_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "stream_in_V_keep_V_0_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "stream_in_V_strb_V_0_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "stream_in_V_user_V_0_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "stream_out_V_data_V_1_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "stream_out_V_dest_V_1_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "stream_out_V_id_V_1_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "stream_out_V_keep_V_1_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "stream_out_V_last_V_1_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "stream_out_V_strb_V_1_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "stream_out_V_user_V_1_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "tmp_4_fu_241_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element tmp_12_reg_534_reg was removed.  [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50.vhd:1330]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                              011
+*
+                  wridle |                             0010 |                              000
+                  wrdata |                             0100 |                              001
+                  wrresp |                             1000 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'sbs_spike_50_CRTL_BUS_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:01 ; elapsed = 00:03:01 . Memory (MB): peak = 1661.309 ; gain = 424.285 ; free physical = 395 ; free virtual = 17158
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'U0/sbs_spike_50_faddbkb_U1/sbs_spike_50_ap_fadd_8_full_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'U0/sbs_spike_50_faddbkb_U1/sbs_spike_50_ap_fadd_8_full_dsp_32_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/sbs_spike_50_faddbkb_U1/sbs_spike_50_ap_fadd_8_full_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'U0/sbs_spike_50_faddbkb_U1/sbs_spike_50_ap_fadd_8_full_dsp_32_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/sbs_spike_50_faddbkb_U1/sbs_spike_50_ap_fadd_8_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_DELAY' (delay__parameterized6) to 'U0/sbs_spike_50_faddbkb_U1/sbs_spike_50_ap_fadd_8_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_ADD_IP_DELAY'
+INFO: [Synth 8-223] decloning instance 'U0/sbs_spike_50_fcmpcud_U2/sbs_spike_50_ap_fcmp_2_no_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'U0/sbs_spike_50_fcmpcud_U2/sbs_spike_50_ap_fcmp_2_no_dsp_32_u/U0/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/sbs_spike_50_fcmpcud_U2/sbs_spike_50_ap_fcmp_2_no_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'U0/sbs_spike_50_fcmpcud_U2/sbs_spike_50_ap_fcmp_2_no_dsp_32_u/U0/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/sbs_spike_50_fcmpcud_U2/sbs_spike_50_ap_fcmp_2_no_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'U0/sbs_spike_50_fcmpcud_U2/sbs_spike_50_ap_fcmp_2_no_dsp_32_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/sbs_spike_50_fcmpcud_U2/sbs_spike_50_ap_fcmp_2_no_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'U0/sbs_spike_50_fcmpcud_U2/sbs_spike_50_ap_fcmp_2_no_dsp_32_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "data31" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "notrhs_fu_365_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notlhs_fu_359_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notrhs3_fu_305_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notlhs2_fu_335_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notrhs7_fu_423_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notlhs6_fu_417_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "tmp_4_fu_241_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element tmp_12_reg_534_reg was removed.  [/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.srcs/sources_1/bd/platform/ipshared/1465/hdl/vhdl/sbs_spike_50.vhd:1330]
+INFO: [Synth 8-3886] merging instance 'U0/sbs_spike_50_faddbkb_U1/sbs_spike_50_ap_fadd_8_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[6]' (FDE) to 'U0/sbs_spike_50_faddbkb_U1/sbs_spike_50_ap_fadd_8_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_spike_50_faddbkb_U1/sbs_spike_50_ap_fadd_8_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[7]' (FDE) to 'U0/sbs_spike_50_faddbkb_U1/sbs_spike_50_ap_fadd_8_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_spike_50_faddbkb_U1/sbs_spike_50_ap_fadd_8_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'U0/sbs_spike_50_faddbkb_U1/sbs_spike_50_ap_fadd_8_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\sbs_spike_50_faddbkb_U1/sbs_spike_50_ap_fadd_8_full_dsp_32_u/U0 /i_synth/\ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[4] )
+INFO: [Synth 8-3886] merging instance 'U0/sbs_spike_50_fcmpcud_U2/opcode_buf1_reg[4]' (FDE) to 'U0/sbs_spike_50_fcmpcud_U2/opcode_buf1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/sbs_spike_50_fcmpcud_U2/opcode_buf1_reg[3]' (FDE) to 'U0/sbs_spike_50_fcmpcud_U2/opcode_buf1_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\sbs_spike_50_fcmpcud_U2/opcode_buf1_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\sbs_spike_50_fcmpcud_U2/opcode_buf1_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\sbs_spike_50_CRTL_BUS_s_axi_U/rstate_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\sbs_spike_50_fcmpcud_U2/sbs_spike_50_ap_fcmp_2_no_dsp_32_u/U0 /i_synth/\COMP_OP.SPD.OP/CMP_COND_DELAY/i_pipe/opt_has_pipe.first_q_reg[2] )
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_5_viv.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[3].pipe_reg[3][0]) is unused and will be removed from module floating_point_v7_1_5_viv.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[4].pipe_reg[4][0]) is unused and will be removed from module floating_point_v7_1_5_viv.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[5].pipe_reg[5][0]) is unused and will be removed from module floating_point_v7_1_5_viv.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[6].pipe_reg[6][0]) is unused and will be removed from module floating_point_v7_1_5_viv.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[7].pipe_reg[7][0]) is unused and will be removed from module floating_point_v7_1_5_viv.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[8].pipe_reg[8][0]) is unused and will be removed from module floating_point_v7_1_5_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/NORM_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]) is unused and will be removed from module floating_point_v7_1_5_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]) is unused and will be removed from module floating_point_v7_1_5_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.mux_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]) is unused and will be removed from module floating_point_v7_1_5_viv.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_5_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (COMP_OP.SPD.OP/CMP_COND_DELAY/i_pipe/opt_has_pipe.first_q_reg[2]) is unused and will be removed from module floating_point_v7_1_5_viv__parameterized1.
+WARNING: [Synth 8-3332] Sequential element (sbs_spike_50_CRTL_BUS_s_axi_U/rstate_reg[2]) is unused and will be removed from module sbs_spike_50.
+WARNING: [Synth 8-3332] Sequential element (sbs_spike_50_fcmpcud_U2/opcode_buf1_reg[2]) is unused and will be removed from module sbs_spike_50.
+WARNING: [Synth 8-3332] Sequential element (sbs_spike_50_fcmpcud_U2/opcode_buf1_reg[1]) is unused and will be removed from module sbs_spike_50.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:07 ; elapsed = 00:03:23 . Memory (MB): peak = 1693.332 ; gain = 456.309 ; free physical = 166 ; free virtual = 16930
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:22 ; elapsed = 00:03:54 . Memory (MB): peak = 1743.332 ; gain = 506.309 ; free physical = 82 ; free virtual = 16826
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:27 ; elapsed = 00:04:03 . Memory (MB): peak = 1803.371 ; gain = 566.348 ; free physical = 189 ; free virtual = 16861
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:28 ; elapsed = 00:04:07 . Memory (MB): peak = 1811.379 ; gain = 574.355 ; free physical = 138 ; free virtual = 16802
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5365] Flop ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.mux_DELAY/i_pipe/opt_has_pipe.first_q_reg[0] is being inverted and renamed to ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.mux_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]_inv.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:30 ; elapsed = 00:04:08 . Memory (MB): peak = 1811.379 ; gain = 574.355 ; free physical = 162 ; free virtual = 16830
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:30 ; elapsed = 00:04:08 . Memory (MB): peak = 1811.379 ; gain = 574.355 ; free physical = 159 ; free virtual = 16830
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:30 ; elapsed = 00:04:09 . Memory (MB): peak = 1811.379 ; gain = 574.355 ; free physical = 172 ; free virtual = 16858
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:30 ; elapsed = 00:04:09 . Memory (MB): peak = 1811.379 ; gain = 574.355 ; free physical = 171 ; free virtual = 16858
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:30 ; elapsed = 00:04:09 . Memory (MB): peak = 1811.379 ; gain = 574.355 ; free physical = 160 ; free virtual = 16850
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:30 ; elapsed = 00:04:09 . Memory (MB): peak = 1811.379 ; gain = 574.355 ; free physical = 160 ; free virtual = 16850
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |    49|
+|2     |DSP48E1   |     1|
+|3     |DSP48E1_1 |     1|
+|4     |LUT1      |    70|
+|5     |LUT2      |    47|
+|6     |LUT3      |   331|
+|7     |LUT4      |   225|
+|8     |LUT5      |   188|
+|9     |LUT6      |   267|
+|10    |MUXCY     |   100|
+|11    |SRL16E    |     3|
+|12    |XORCY     |    17|
+|13    |FDE       |    17|
+|14    |FDRE      |  1332|
+|15    |FDSE      |     3|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:30 ; elapsed = 00:04:09 . Memory (MB): peak = 1811.379 ; gain = 574.355 ; free physical = 160 ; free virtual = 16850
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 107 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:13 ; elapsed = 00:02:51 . Memory (MB): peak = 1811.379 ; gain = 335.598 ; free physical = 250 ; free virtual = 16928
+Synthesis Optimization Complete : Time (s): cpu = 00:01:30 ; elapsed = 00:04:10 . Memory (MB): peak = 1811.387 ; gain = 574.355 ; free physical = 260 ; free virtual = 16938
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 185 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 45 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 28 instances
+  FDE => FDRE: 17 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+137 Infos, 106 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:34 ; elapsed = 00:04:15 . Memory (MB): peak = 1811.387 ; gain = 599.191 ; free physical = 266 ; free virtual = 16947
+INFO: [Common 17-1381] The checkpoint '/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.runs/platform_sbs_spike_50_0_0_synth_1/platform_sbs_spike_50_0_0.dcp' has been generated.

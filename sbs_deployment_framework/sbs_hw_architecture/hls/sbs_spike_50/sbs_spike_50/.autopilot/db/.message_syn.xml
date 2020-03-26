@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1465" content="Validating synthesis directives ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:26 ; elapsed = 00:00:16 . Memory (MB): peak = 361.141 ; gain = 13.375 ; free physical = 521 ; free virtual = 7534" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:00:27 ; elapsed = 00:00:17 . Memory (MB): peak = 361.141 ; gain = 13.375 ; free physical = 518 ; free virtual = 7535" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1467" content="Starting code transformations ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:00:28 ; elapsed = 00:00:19 . Memory (MB): peak = 361.449 ; gain = 13.684 ; free physical = 507 ; free virtual = 7526" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1472" content="Checking synthesizability ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:00:28 ; elapsed = 00:00:19 . Memory (MB): peak = 361.449 ; gain = 13.684 ; free physical = 502 ; free virtual = 7521" tag=""/>
+	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="813" content="Unrolling all sub-loops inside loop &apos;Loop-1&apos; (../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:40) in function &apos;sbs_spike_50&apos; for pipelining." tag=""/>
+	<Message prefix="[XFORM 203-503]" severity="WARNING" keynum="887" content="Cannot unroll loop &apos;Loop-1.1&apos; (../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:57) in function &apos;sbs_spike_50&apos;: cannot completely unroll a loop with a variable trip count." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Pre-synthesis Time (s): cpu = 00:00:29 ; elapsed = 00:00:20 . Memory (MB): peak = 489.137 ; gain = 141.371 ; free physical = 473 ; free virtual = 7496" tag=""/>
+	<Message prefix="[XFORM 203-542]" severity="WARNING" keynum="790" content="Cannot flatten a loop nest &apos;Loop-1&apos; (../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:40:8) in function &apos;sbs_spike_50&apos; : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop header." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Architecture Synthesis Time (s): cpu = 00:00:29 ; elapsed = 00:00:20 . Memory (MB): peak = 489.137 ; gain = 141.371 ; free physical = 470 ; free virtual = 7495" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1317" content="Starting hardware synthesis ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1385" content="Synthesizing &apos;sbs_spike_50&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;sbs_spike_50&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-65]" severity="WARNING" keynum="150" content="Unable to satisfy pipeline directive: Loop contains subloop(s) not being unrolled or flattened." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="107" content="Pipelining loop &apos;Loop 1.1&apos;." tag=""/>
+	<Message prefix="[SCHED 204-68]" severity="WARNING" keynum="98" content="Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0)
+   between &apos;phi&apos; operation (&apos;sum_load8&apos;, ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) with incoming values : (&apos;tmp_16&apos;, ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) and &apos;bitcast&apos; operation (&apos;sum_load_to_int&apos;, ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64)." tag=""/>
+	<Message prefix="[SCHED 204-68]" severity="WARNING" keynum="98" content="Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0)
+   between &apos;phi&apos; operation (&apos;sum_load8&apos;, ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) with incoming values : (&apos;tmp_16&apos;, ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) and &apos;bitcast&apos; operation (&apos;sum_load_to_int&apos;, ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64)." tag=""/>
+	<Message prefix="[SCHED 204-68]" severity="WARNING" keynum="98" content="Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0)
+   between &apos;phi&apos; operation (&apos;sum_load8&apos;, ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) with incoming values : (&apos;tmp_16&apos;, ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) and &apos;bitcast&apos; operation (&apos;sum_load_to_int&apos;, ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64)." tag=""/>
+	<Message prefix="[SCHED 204-68]" severity="WARNING" keynum="98" content="Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0)
+   between &apos;phi&apos; operation (&apos;sum_load8&apos;, ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) with incoming values : (&apos;tmp_16&apos;, ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) and &apos;bitcast&apos; operation (&apos;sum_load_to_int&apos;, ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64)." tag=""/>
+	<Message prefix="[SCHED 204-68]" severity="WARNING" keynum="98" content="Unable to enforce a carried dependence constraint (II = 11, distance = 1, offset = 0)
+   between &apos;phi&apos; operation (&apos;sum_load8&apos;, ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) with incoming values : (&apos;tmp_16&apos;, ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) and &apos;bitcast&apos; operation (&apos;sum_load_to_int&apos;, ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64)." tag=""/>
+	<Message prefix="[SCHED 204-68]" severity="WARNING" keynum="98" content="Unable to enforce a carried dependence constraint (II = 13, distance = 1, offset = 0)
+   between &apos;phi&apos; operation (&apos;sum_load8&apos;, ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) with incoming values : (&apos;tmp_16&apos;, ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) and &apos;fcmp&apos; operation (&apos;tmp_28&apos;, ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:62)." tag=""/>
+	<Message prefix="[SCHED 204-68]" severity="WARNING" keynum="98" content="Unable to enforce a carried dependence constraint (II = 14, distance = 1, offset = 0)
+   between &apos;phi&apos; operation (&apos;sum_load8&apos;, ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) with incoming values : (&apos;tmp_16&apos;, ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) and &apos;fcmp&apos; operation (&apos;tmp_28&apos;, ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:62)." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 15, Depth = 18." tag=""/>
+	<Message prefix="[SCHED 204-21]" severity="WARNING" keynum="137" content="Estimated clock period (6.086ns) exceeds the target (target clock period: 4ns, clock uncertainty: 0.5ns, effective delay budget: 3.5ns)." tag=""/>
+	<Message prefix="[SCHED 204-21]" severity="WARNING" keynum="135" content="The critical path consists of the following:
+	&apos;fadd&apos; operation (&apos;tmp_16&apos;, ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) (3.36 ns)
+	&apos;fcmp&apos; operation (&apos;tmp_33&apos;, ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:66) (2.73 ns)" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 20.61 seconds; current allocated memory: 80.225 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.14 seconds; current allocated memory: 80.904 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;sbs_spike_50&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_spike_50/stream_in_V_data_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_spike_50/stream_in_V_keep_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_spike_50/stream_in_V_strb_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_spike_50/stream_in_V_user_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_spike_50/stream_in_V_last_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_spike_50/stream_in_V_id_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_spike_50/stream_in_V_dest_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_spike_50/stream_out_V_data_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_spike_50/stream_out_V_keep_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_spike_50/stream_out_V_strb_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_spike_50/stream_out_V_user_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_spike_50/stream_out_V_last_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_spike_50/stream_out_V_id_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_spike_50/stream_out_V_dest_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_spike_50/debug&apos; to &apos;s_axilite &amp; ap_vld&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_spike_50/layerSize&apos; to &apos;s_axilite &amp; ap_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sbs_spike_50/vectorSize&apos; to &apos;s_axilite &amp; ap_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on function &apos;sbs_spike_50&apos; to &apos;s_axilite &amp; ap_ctrl_hs&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;ip_index&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;channel_keep_V&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;channel_strb_V&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;channel_user_V&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;channel_id_V&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;channel_dest_V&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="364" content="Bundling port &apos;return&apos;, &apos;debug&apos;, &apos;layerSize&apos; and &apos;vectorSize&apos; to AXI-Lite port CRTL_BUS." tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;sbs_spike_50_fadd_32ns_32ns_32_10_full_dsp_1&apos; to &apos;sbs_spike_50_faddbkb&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;sbs_spike_50_fcmp_32ns_32ns_1_4_1&apos; to &apos;sbs_spike_50_fcmpcud&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;sbs_spike_50_faddbkb&apos;: 1 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;sbs_spike_50_fcmpcud&apos;: 1 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;sbs_spike_50&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.19 seconds; current allocated memory: 83.204 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished generating all RTL models Time (s): cpu = 00:00:31 ; elapsed = 00:00:22 . Memory (MB): peak = 489.137 ; gain = 141.371 ; free physical = 502 ; free virtual = 7490" tag=""/>
+	<Message prefix="[SYSC 207-301]" severity="INFO" keynum="SYSC_301_1065" content="Generating SystemC RTL for sbs_spike_50." tag=""/>
+	<Message prefix="[VHDL 208-304]" severity="INFO" keynum="VHDL_304_1066" content="Generating VHDL RTL for sbs_spike_50." tag=""/>
+	<Message prefix="[VLOG 209-307]" severity="INFO" keynum="VLOG_307_1067" content="Generating Verilog RTL for sbs_spike_50." tag=""/>
+	<Message prefix="[HLS 200-112]" severity="INFO" keynum="472" content="Total elapsed time: 22.45 seconds; peak allocated memory: 83.204 MB." tag=""/>
+</Messages>

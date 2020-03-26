@@ -427,7 +427,7 @@ void inline * Multivector_2DAccess(Multivector * multivector, uint16_t row, uint
       && (column <= multivector->dimension_size[1]))
   {
     uint16_t dimensionality = multivector->dimensionality;
-    size_t data_size = multivector->data_type_size;
+    size_t data_size = multivector->format.size;
 
     while (dimensionality-- > 2)
     {
@@ -461,7 +461,7 @@ void inline * Multivector_3DAccess (Multivector * multivector, uint16_t row, uin
       && (position <= multivector->dimension_size[2]))
   {
     uint16_t dimensionality = multivector->dimensionality;
-    size_t data_size = multivector->data_type_size;
+    size_t data_size = multivector->format.size;
 
     while (dimensionality-- > 3)
     {
@@ -721,14 +721,14 @@ void Multivector_float2Fixed(Multivector * multivector, Format * new_format)
   }
 }
 
-Multivector * Multivector_convert2fixed16(MemoryBlock * memory_def,
-                                                 Multivector * original,
-                                                 Format * new_format)
+Multivector * Multivector_reformat (MemoryBlock * memory_def,
+                                    Multivector * original,
+                                    Format * new_format)
 {
   Multivector * duplicate = NULL;
   ASSERT(original != NULL);
   ASSERT(0 < original->dimensionality);
-  ASSERT(original->format.size == sizeof(uint32_t));
+  ASSERT(new_format != NULL);
 
   if ((original != NULL)
       && (0 < original->dimensionality))
@@ -762,11 +762,50 @@ Multivector * Multivector_convert2fixed16(MemoryBlock * memory_def,
 
       if (duplicate->data != NULL)
       {
-        float *    original_data  = original->data;
-        uint16_t * duplicate_data = duplicate->data;
+        void * original_data  = original->data;
+        void * duplicate_data = duplicate->data;
+        int mantissa_index;
+        uint32_t data;
+
+        switch (original->format.size)
+        {
+          case sizeof(float):
+                mantissa_index = 23 - new_format->mantissa_bitlength;
+            break;
+          case sizeof(double):
+                mantissa_index = 52 - new_format->mantissa_bitlength;
+            break;
+          default:
+            ASSERT (0);
+        }
 
         for (int i = 0; i < matrix_size; i ++)
-          duplicate_data[i] = (uint16_t)(original_data[i] * (float)(0xFFFF));
+        {
+
+          switch (original->format.size)
+          {
+            case sizeof(float):
+                data = (((uint32_t*) original_data)[i] >> mantissa_index);
+              break;
+            case sizeof(double):
+                data = (((uint64_t*) original_data)[i] >> mantissa_index);
+              break;
+            default:
+              ASSERT (0);
+          }
+
+          switch (new_format->size)
+          {
+            case sizeof(uint8_t):
+                ((uint8_t *) duplicate_data)[i] = (uint8_t) data;
+              break;
+            case sizeof(uint16_t):
+                ((uint16_t *) duplicate_data)[i] = (uint16_t) data;
+              break;
+            default:
+              ASSERT (0);
+          }
+        }
 
 #ifndef MULTIVECTOR_USE_POINTER_ARITHMETICS
         duplicate->type_id = M32BitFormat_getTypeID (duplicate->format.size,

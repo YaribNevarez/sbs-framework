@@ -45,6 +45,8 @@ typedef struct
   uint32_t  (*Get_vectorSize) (void *InstancePtr);
   void      (*Set_epsilon)    (void *InstancePtr, uint32_t Data);
   uint32_t  (*Get_epsilon)    (void *InstancePtr);
+  void      (*Set_debug)      (void *InstancePtr, uint32_t Data);
+  uint32_t  (*Get_debug)      (void *InstancePtr);
 
   void      (*InterruptGlobalEnable)  (void *InstancePtr);
   void      (*InterruptGlobalDisable) (void *InstancePtr);

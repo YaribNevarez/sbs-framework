@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'channel_dest_V' is power-on initialization." projectName="sbs_spike_50" solutionName="sbs_spike_50" date="2020-03-25T12:49:42.643-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'channel_id_V' is power-on initialization." projectName="sbs_spike_50" solutionName="sbs_spike_50" date="2020-03-25T12:49:42.639-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'channel_user_V' is power-on initialization." projectName="sbs_spike_50" solutionName="sbs_spike_50" date="2020-03-25T12:49:42.633-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'channel_strb_V' is power-on initialization." projectName="sbs_spike_50" solutionName="sbs_spike_50" date="2020-03-25T12:49:42.630-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'channel_keep_V' is power-on initialization." projectName="sbs_spike_50" solutionName="sbs_spike_50" date="2020-03-25T12:49:42.627-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ip_index' is power-on initialization." projectName="sbs_spike_50" solutionName="sbs_spike_50" date="2020-03-25T12:49:42.624-0600" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path consists of the following:&#xA;&#x9;'fadd' operation ('tmp_16', ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) (3.36 ns)&#xA;&#x9;'fcmp' operation ('tmp_33', ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:66) (2.73 ns)" projectName="sbs_spike_50" solutionName="sbs_spike_50" date="2020-03-25T12:49:42.345-0600" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (6.086ns) exceeds the target (target clock period: 4ns, clock uncertainty: 0.5ns, effective delay budget: 3.5ns)." projectName="sbs_spike_50" solutionName="sbs_spike_50" date="2020-03-25T12:49:42.343-0600" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 14, distance = 1, offset = 0)&#xA;   between 'phi' operation ('sum_load8', ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) with incoming values : ('tmp_16', ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) and 'fcmp' operation ('tmp_28', ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:62)." projectName="sbs_spike_50" solutionName="sbs_spike_50" date="2020-03-25T12:49:42.314-0600" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 13, distance = 1, offset = 0)&#xA;   between 'phi' operation ('sum_load8', ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) with incoming values : ('tmp_16', ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) and 'fcmp' operation ('tmp_28', ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:62)." projectName="sbs_spike_50" solutionName="sbs_spike_50" date="2020-03-25T12:49:42.311-0600" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 11, distance = 1, offset = 0)&#xA;   between 'phi' operation ('sum_load8', ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) with incoming values : ('tmp_16', ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) and 'bitcast' operation ('sum_load_to_int', ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64)." projectName="sbs_spike_50" solutionName="sbs_spike_50" date="2020-03-25T12:49:42.304-0600" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0)&#xA;   between 'phi' operation ('sum_load8', ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) with incoming values : ('tmp_16', ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) and 'bitcast' operation ('sum_load_to_int', ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64)." projectName="sbs_spike_50" solutionName="sbs_spike_50" date="2020-03-25T12:49:42.294-0600" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0)&#xA;   between 'phi' operation ('sum_load8', ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) with incoming values : ('tmp_16', ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) and 'bitcast' operation ('sum_load_to_int', ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64)." projectName="sbs_spike_50" solutionName="sbs_spike_50" date="2020-03-25T12:49:42.270-0600" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0)&#xA;   between 'phi' operation ('sum_load8', ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) with incoming values : ('tmp_16', ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) and 'bitcast' operation ('sum_load_to_int', ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64)." projectName="sbs_spike_50" solutionName="sbs_spike_50" date="2020-03-25T12:49:42.266-0600" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0)&#xA;   between 'phi' operation ('sum_load8', ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) with incoming values : ('tmp_16', ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64) and 'bitcast' operation ('sum_load_to_int', ../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:64)." projectName="sbs_spike_50" solutionName="sbs_spike_50" date="2020-03-25T12:49:42.261-0600" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Loop contains subloop(s) not being unrolled or flattened." projectName="sbs_spike_50" solutionName="sbs_spike_50" date="2020-03-25T12:49:42.253-0600" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:40:8) in function 'sbs_spike_50' : &#xA;&#xA;&#xA;the outer loop is not a perfect loop because there is nontrivial logic in the loop header." projectName="sbs_spike_50" solutionName="sbs_spike_50" date="2020-03-25T12:49:42.188-0600" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.1' (../app-framework-baremetal/libs/sbs_neural_network/systemc/sbs_spike_50.cpp:57) in function 'sbs_spike_50': cannot completely unroll a loop with a variable trip count." projectName="sbs_spike_50" solutionName="sbs_spike_50" date="2020-03-25T12:49:41.499-0600" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'sbs_spike_50_ap_fcmp_2_no_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="sbs_spike_50" solutionName="sbs_spike_50" date="2020-03-25T12:53:13.733-0600" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'sbs_spike_50_ap_fadd_8_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="sbs_spike_50" solutionName="sbs_spike_50" date="2020-03-25T12:53:12.089-0600" type="Warning"/>
+      </packageLog>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

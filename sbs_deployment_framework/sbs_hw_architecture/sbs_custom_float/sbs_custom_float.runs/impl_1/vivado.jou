@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Mar 25 16:43:22 2020
+# Process ID: 23869
+# Current directory: /home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.runs/impl_1
+# Command line: vivado -log platform_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source platform_wrapper.tcl -notrace
+# Log file: /home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.runs/impl_1/platform_wrapper.vdi
+# Journal file: /home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source platform_wrapper.tcl -notrace

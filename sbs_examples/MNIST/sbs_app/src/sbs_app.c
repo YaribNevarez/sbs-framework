@@ -73,8 +73,8 @@ Result SnnApp_initialize(void)
   }
 
   rc = SbsPlatform_initialize (SbSHardwareConfig_list,
-                                sizeof(SbSHardwareConfig_list) / sizeof(SbSHardwareConfig),
-                                MT19937_SEED);
+                               sizeof(SbSHardwareConfig_list) / sizeof(SbSHardwareConfig),
+                               MT19937_SEED);
 
   if (rc != OK)
   {
@@ -88,11 +88,13 @@ Result SnnApp_initialize(void)
 Result SnnApp_run (void)
 {
   int pattern_index;
-  char input_pattern_file_name[128];
+  char string_text[128];
   NeuronState * output_vector;
   uint16_t output_vector_size;
   uint8_t input_label;
   uint8_t output_label;
+  int total_inference = 0;
+  int correct_inference = 0;
 
   // ********** Create SBS Neural Network **********
   printf ("\n==========  SbS Neural Network  ===============\n");
@@ -227,12 +229,12 @@ Result SnnApp_run (void)
          pattern_index <= SBS_INPUT_PATTERN_LAST;
          pattern_index++)
     {
-      sprintf (input_pattern_file_name,
+      sprintf (string_text,
                SBS_INPUT_PATTERN_FORMAT_NAME,
                pattern_index);
 
 
-      network->loadInput (network, input_pattern_file_name);
+      network->loadInput (network, string_text);
 
       EventLogger_timeReset ();
       EventLogger_logTransition (event_logger, RISE_EVENT);
@@ -241,26 +243,34 @@ Result SnnApp_run (void)
 
       EventLogger_flush(event_logger);
 
+      total_inference ++;
+
       output_label = network->getInferredOutput (network);
       input_label = network->getInputLabel (network);
 
       if (output_label == input_label)
       {
-        ToolCom_instance ()->textMsg(0, "PASS");
+        correct_inference ++;
+        ToolCom_instance ()->textMsg (0, "PASS");
       }
       else
       {
-        ToolCom_instance ()->textMsg(0, "Misclassification");
+        ToolCom_instance ()->textMsg (0, "Misclassification");
       }
 
       network->getOutputVector (network, &output_vector, &output_vector_size);
 
-/*
+      ToolCom_instance ()->sendByteBuffer (output_vector, sizeof(NeuronState) * output_vector_size);
+
       while (output_vector_size--)
       {
-        NeuronState h = output_vector[output_vector_size];  Ensure data alignment
+        NeuronState h = output_vector[output_vector_size];  //Ensure data alignment
+
+        sprintf(string_text,"[%d] = %f", output_vector_size, h);
+        ToolCom_instance ()->textMsg (0, string_text);
       }
-*/
+      sprintf(string_text,"Accuracy %f", ((float)correct_inference)/((float)total_inference));
+      ToolCom_instance ()->textMsg (0, string_text);
     }
   }
   network->delete (&network);

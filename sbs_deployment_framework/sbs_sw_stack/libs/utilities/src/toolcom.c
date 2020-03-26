@@ -156,6 +156,8 @@ static Result ToolCom_sendByteBuffer(void * buffer, size_t size)
     uint8_t cmd[] = {CMD_BYTE_BUFFER, 0, 0, 0, 0};
     uint32_t tx_size;
 
+    result = OK;
+
     for (int i = 0; (i < size) && (result == OK); i += tx_size)
     {
       if (i + ToolCom_byteBulkSize < size)

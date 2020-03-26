@@ -51,7 +51,7 @@ static int DMAHardware_Initialize (void * instance, uint16_t deviceId)
   ASSERT(status == XST_SUCCESS)
 
   if (status != XST_SUCCESS)
-    return XST_FAILURE;
+    return status;
 
   if (XAxiDma_HasSg((XAxiDma* )instance))
     return XST_FAILURE;
@@ -73,6 +73,35 @@ static void DMAHardware_InterruptDisable (void * instance,
   XAxiDma_IntrDisable ((XAxiDma* ) instance, mask, direction);
 }
 
+static void DMAHardware_InterruptClear(void * instance,
+                                       DMAIRQMask mask,
+                                       DMATransferDirection direction)
+{
+  XAxiDma_IntrAckIrq((XAxiDma* )instance, mask, direction);
+}
+
+static DMAIRQMask DMAHardware_InterruptGetEnabled (void * instance,
+                                                   DMATransferDirection direction)
+{
+  return XAxiDma_ReadReg (((XAxiDma* )instance)->RegBase + (XAXIDMA_RX_OFFSET * direction), XAXIDMA_CR_OFFSET) & XAXIDMA_IRQ_ALL_MASK;
+}
+
+static DMAIRQMask DMAHardware_InterruptGetStatus (void * instance,
+                                                  DMATransferDirection direction)
+{
+  return XAxiDma_IntrGetIrq ((XAxiDma* )instance, direction);
+}
+
+void DMAHardware_Reset (void * instance)
+{
+  XAxiDma_Reset ((XAxiDma*) instance);
+}
+
+int DMAHardware_ResetIsDone (void * instance)
+{
+  return XAxiDma_ResetIsDone ((XAxiDma*) instance);
+}
+
 static uint32_t  DMAHardware_InterruptSetHandler (void *instance,
                                                   uint32_t ID,
                                                   ARM_GIC_InterruptHandler handler,
@@ -85,12 +114,16 @@ static uint32_t  DMAHardware_InterruptSetHandler (void *instance,
 
 DMAHardware DMAHardware_mover =
 {
-  .new =    DMAHardware_new,
-  .delete = DMAHardware_delete,
-
-  .Initialize = DMAHardware_Initialize,
+  .new =                  DMAHardware_new,
+  .delete =               DMAHardware_delete,
+  .Initialize =           DMAHardware_Initialize,
   .Move = (uint32_t (*) (void *, void *, uint32_t, DMATransferDirection)) XAxiDma_SimpleTransfer,
-  .InterruptEnable = DMAHardware_InterruptEnable,
-  .InterruptDisable = DMAHardware_InterruptDisable,
-  .InterruptSetHandler = DMAHardware_InterruptSetHandler
+  .InterruptEnable =      DMAHardware_InterruptEnable,
+  .InterruptDisable =     DMAHardware_InterruptDisable,
+  .InterruptClear =       DMAHardware_InterruptClear,
+  .InterruptGetEnabled =  DMAHardware_InterruptGetEnabled,
+  .InterruptGetStatus =   DMAHardware_InterruptGetStatus,
+  .Reset =                DMAHardware_Reset,
+  .ResetIsDone =          DMAHardware_ResetIsDone,
+  .InterruptSetHandler =  DMAHardware_InterruptSetHandler
 };

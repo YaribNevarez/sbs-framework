@@ -25,11 +25,11 @@ static ap_uint<2*H_QF + EPSILON_DIV_SUM_EX_QF> wide_div(ap_uint<2*H_QF + EPSILON
 }
 
 void sbs_fixedpoint (hls::stream<StreamChannel> &stream_in,
-                 hls::stream<StreamChannel> &stream_out,
-                 unsigned int layerSize,
-                 unsigned int kernelSize,
-                 unsigned int vectorSize,
-                 unsigned int epsilon)
+                     hls::stream<StreamChannel> &stream_out,
+                     unsigned int layerSize,
+                     unsigned int kernelSize,
+                     unsigned int vectorSize,
+                     unsigned int epsilon)
 {
 #pragma HLS INTERFACE axis      port=stream_in
 #pragma HLS INTERFACE axis      port=stream_out

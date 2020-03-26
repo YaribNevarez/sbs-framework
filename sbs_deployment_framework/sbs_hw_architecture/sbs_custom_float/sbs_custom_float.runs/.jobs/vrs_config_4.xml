@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="platform_sbs_spike_50_0_0_synth_1" LaunchDir="/home/yarib/work/vivado/sbs_custom_float/sbs_custom_float.runs/platform_sbs_spike_50_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+
