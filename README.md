@@ -1,4 +1,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4784129.svg)](https://doi.org/10.5281/zenodo.4784129)
+
 
 # Accelerator Framework of Spike-by-Spike Neural Networks
 SbS Framework is a hardware-software solution for rapid prototyping and deployment of Spike-by-Spike (SbS) Neural Networks with customizable hardware acceleration in embedded systems (FPGA).
